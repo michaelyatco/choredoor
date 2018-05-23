@@ -45,29 +45,38 @@
   </div>
 
 <script>
-  //Hard-coded to 3 doors
-  const doors = 3;
   let highScore = 0;
   let score = 0;
 
-  function randomChoreDoorGenerator(doors) {
-    //console.log(doors.length);
-    const badDoor = Math.floor(Math.random() * doors.length);
-    //console.log(badDoor);
+  const randomChoreDoorGenerator = () => {
+    const doors = 3;
+    // console.log(doors);
+    const badDoor = Math.floor(Math.random() * doors);
+    // console.log(badDoor);
     return badDoor;
   }
 
-  function startGame() {
-    score = 0;
+  const startGame = () => {
     randomChoreDoorGenerator();
   }
 
-  function openDoor(e) {
+  const openDoor = () => {
     console.log(e);
-    score++;
+    doors--;
+    determineWinner();
   }
 
-  doors.forEach(door => door.addEventListener('click', openDoor));
+  const determineWinner = (userChoice) => {
+    if (userChoice !== badDoor && doors === 0) {
+      return "You have won!";
+      score++;
+    } else if (userChoice === badDoor) {
+      return "It's the chorebot! Get back to work!";
+      score = 0;
+    } else if (userChoice !== badDoor) {
+      return "Phew! Keep picking doors!";
+    }
+  }
 </script>
 </body>
 </html>
