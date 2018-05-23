@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+  <title>Chore Door!</title>
+  <link href='./style.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Chore Door!</h1>
+  <div class="instructions">
+    <h2 id="instructions">Instructions</h2>
+      <p> The dreaded chorebot is hiding behind one of these doors.
+        Click on all the doors without discovering the chorebot and you win!
+        See if you can score a winning streak</p>
+  </div>
+
+  <div class="remainingDoors">
+    <h2 id="remaining doors">Remaining Doors</h2>
+  </div>
+
+  <div class="game">
+    <div class="door1">
+      <div class="door">Door1</div>
+    </div>
+    <div class="door2">
+      <div class="door">Door2</div>
+    </div>
+    <div class="door3">
+      <div class="door">Door3</div>
+    </div>
+  </div>
+
+    <button onClick="startGame()">Start!</button>
+
+<script>
+  const doors = document.querySelectorAll('.door');
+  const scoreBoard = document.querySelector('.score');
+  const moles = document.querySelectorAll('.mole');
+  let score = 0;
+
+  function randomChoreDoorGenerator(doors) {
+    //console.log(doors.length);
+    const badDoor = Math.floor(Math.random() * doors.length);
+    //console.log(badDoor);
+    return badDoor;
+  }
+
+  function startGame() {
+    scoreBoard.textContent = 0;
+    score = 0;
+    randomChoreDoorGenerator();
+  }
+
+  function openDoor(e) {
+    console.log(e);
+    score++;
+  }
+
+  doors.forEach(door => door.addEventListener('click', openDoor));
+</script>
+</body>
+</html>
