@@ -3,6 +3,7 @@
   <title>Chore Door!</title>
   <link href='./style.css' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript"></script>
 </head>
 <body>
 
@@ -34,7 +35,8 @@
     <h2 id="instructions">Choose the next door to open!</h2>
   </div>
 
-    <button onClick="startGame()">Start!</button>
+<-- Move to Script JS!-->
+    <button=onClick="startGame">Start!</button>
 
   <div class="score">
     <h2 id="score">Current streak</h2>
@@ -45,38 +47,43 @@
   </div>
 
 <script>
+  //Default values:
   let highScore = 0;
   let score = 0;
+  let doors = 3;
+  let choreDoor = 0;
+
+  const startGame = () =>
+    randomChoreDoorGenerator();
 
   const randomChoreDoorGenerator = () => {
-    const doors = 3;
-    // console.log(doors);
-    const badDoor = Math.floor(Math.random() * doors);
-    // console.log(badDoor);
-    return badDoor;
-  }
-
-  const startGame = () => {
-    randomChoreDoorGenerator();
+    choreDoor = Math.floor(Math.random() * doors);
   }
 
   const openDoor = () => {
-    console.log(e);
     doors--;
     determineWinner();
   }
 
   const determineWinner = (userChoice) => {
-    if (userChoice !== badDoor && doors === 0) {
-      return "You have won!";
+    if (userChoice !== choreDoor && doors === 0) {
       score++;
-    } else if (userChoice === badDoor) {
-      return "It's the chorebot! Get back to work!";
+      console.log("You have won!");
+      determineHighScore();
+    } else if (userChoice === choreDoor) {
       score = 0;
-    } else if (userChoice !== badDoor) {
-      return "Phew! Keep picking doors!";
+      console.log("It's the chorebot! Get back to work!");
+    } else if (userChoice !== choreDoor) {
+      console.log("Phew! Keep picking doors!");
     }
   }
+
+  const determineHighScore = () => {
+    if (score > highScore) {
+      highScore = score;
+    }
+  }
+
 </script>
 </body>
 </html>
