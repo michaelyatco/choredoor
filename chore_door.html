@@ -33,11 +33,11 @@
   </div>
 
   <div class="instructions">
-    <h2 id="instructions">Choose the next door to open!</h2>
+    <h2 id="encouragement"></h2>
   </div>
 
-<-- Move to Script JS!-->
-    <button=onClick="startGame">Start!</button>
+
+    <h1 id="start">Start Game!</h1>
 
   <div class="score">
     <h2 id="score">Current streak:</h2>
@@ -56,17 +56,32 @@
   let doors = 3;
   let choreDoor = 0;
   let badEnding = true;
+  document.getElementById('start').addEventListener('click', function() {
+    startGame();
+    });
+
 
   //Reset the value of each door to false
   const startGame = () => {
     document.getElementById('door1').value = false;
     document.getElementById('door2').value = false;
     document.getElementById('door3').value = false;
+    document.getElementById('door1').addEventListener('click', function() {
+      openDoor();
+    });
+    document.getElementById('door2').addEventListener('click', function() {
+    openDoor();
+    });
+    document.getElementById('door3').addEventListener('click', function() {
+    openDoor();
+    });
     randomChoreDoorGenerator();
     document.getElementById("remainingDoorsNumber").innerHTML = doors;
+    document.getElementById("encouragement").innerHTML = "Choose any door...";
+    document.getElementById("start").innerHTML = "Good luck!";
   }
 
-  //One door is assigned the value of badEnding
+  //One door is assigned the boolean value of badEnding
   const randomChoreDoorGenerator = () => {
     choreDoor = Math.floor(Math.random() * doors);
     if (choreDoor === 0) {
@@ -79,7 +94,8 @@
   }
 
   //Doors variable decreases by 1, check to see if winning condition met
-  const openDoor = () => {
+  const openDoor = (number) => {
+    let userChoice = number;
     doors--;
     document.getElementById("remainingDoorsNumber").innerHTML = doors;
     determineWinner();
@@ -89,14 +105,16 @@
   const determineWinner = (userChoice) => {
     if (userChoice !== badEnding && doors === 0) {
       score++;
-      console.log("You have won!");
+      document.getElementById("encouragement").innerHTML = "You've won your freedom!"
       document.getElementById("scoreNumber").innerHTML = score;
       determineHighScore();
+      document.getElementById("start").innerHTML = "Play again?";
     } else if (userChoice === badEnding) {
       score = 0;
-      console.log("It's the chorebot! Get back to work!");
+      document.getElementById("encouragement").innerHTML = "It's the chorebot! Get back to work!";
+      document.getElementById("start").innerHTML = "Play again?"
     } else if (userChoice !== badEnding) {
-      console.log("Phew! Keep picking doors!");
+      document.getElementById("encouragement").innerHTML = "Phew! Keep picking doors!";
     }
   }
 
