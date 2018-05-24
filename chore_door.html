@@ -16,7 +16,8 @@
   </div>
 
   <div class="remainingDoors">
-    <h2 id="remainingDoors">Remaining Doors</h2>
+    <h2 id="remainingDoors">Remaining Doors:</h2>
+    <h2 id="remainingDoorsNumber"></h2>
   </div>
 
   <div class="game">
@@ -39,11 +40,13 @@
     <button=onClick="startGame">Start!</button>
 
   <div class="score">
-    <h2 id="score">Current streak</h2>
+    <h2 id="score">Current streak:</h2>
+    <h2 id="scoreNumber"></h2>
   </div>
 
   <div class="score">
-    <h2 id="highScore">Best streak</h2>
+    <h2 id="highScore">Best streak:</h2>
+    <h2 id="highScoreNumber"></h2>
   </div>
 
 <script>
@@ -60,6 +63,7 @@
     document.getElementById('door2').value = false;
     document.getElementById('door3').value = false;
     randomChoreDoorGenerator();
+    document.getElementById("remainingDoorsNumber").innerHTML = doors;
   }
 
   //One door is assigned the value of badEnding
@@ -77,26 +81,30 @@
   //Doors variable decreases by 1, check to see if winning condition met
   const openDoor = () => {
     doors--;
+    document.getElementById("remainingDoorsNumber").innerHTML = doors;
     determineWinner();
   }
 
   //User choice leads to a win, a loss, or the game continues
   const determineWinner = (userChoice) => {
-    if (userChoice !== choreDoor && doors === 0) {
+    if (userChoice !== badEnding && doors === 0) {
       score++;
       console.log("You have won!");
+      document.getElementById("scoreNumber").innerHTML = score;
       determineHighScore();
-    } else if (userChoice === choreDoor) {
+    } else if (userChoice === badEnding) {
       score = 0;
       console.log("It's the chorebot! Get back to work!");
-    } else if (userChoice !== choreDoor) {
+    } else if (userChoice !== badEnding) {
       console.log("Phew! Keep picking doors!");
     }
   }
 
+  //Check if current winning streak is the highest winning streak
   const determineHighScore = () => {
     if (score > highScore) {
       highScore = score;
+      document.getElementById("highScoreNumber").innerHTML = highScore;
     }
   }
 
