@@ -22,13 +22,13 @@
 
   <div class="game">
     <div id="door">
-      <div id="door1" value="">Door1</div>
+      <div id="door1">Door1</div>
     </div>
     <div id="door">
-      <div id="door2" value="">Door2</div>
+      <div id="door2">Door2</div>
     </div>
     <div id="door">
-      <div id="door3" value="">Door3</div>
+      <div id="door3">Door3</div>
     </div>
   </div>
 
@@ -37,7 +37,7 @@
   </div>
 
 
-    <h1 id="start">Start Game!</h1>
+    <h1 id="start">Start Round!</h1>
 
   <div class="score">
     <h2 id="score">Current streak:</h2>
@@ -50,28 +50,30 @@
   </div>
 
 <script>
-  //Default values:
+  //Default global values:
   let highScore = 0;
-  let score = document.createElement('score');
-  let doors = 3;
-  let choreDoor = 0;
-  let badEnding = true;
+  let score = 0;
   let door1Clicked = false;
   let door2Clicked = false;
   let door3Clicked = false;
   let door1Doom = false;
   let door2Doom = false;
   let door3Doom = false;
-  let defeat1 = door1Clicked && door1Doom;
-  let defeat2 = door2Clicked && door2Doom;
-  let defeat3 = door3Clicked && door3Doom;
+  let doors = 3;
+
   document.getElementById('start').onclick = () => {
     startGame();
   }
 
-
-  //Generate new random door
+  //Reset values for extra rounds and call new chore door function:
   const startGame = () => {
+    door1Clicked = false;
+    door2Clicked = false;
+    door3Clicked = false;
+    door1Doom = false;
+    door2Doom = false;
+    door3Doom = false;
+    doors = 3;
     randomChoreDoorGenerator();
     document.getElementById("remainingDoorsNumber").innerHTML = doors;
     document.getElementById("encouragement").innerHTML = "Choose any door...";
@@ -91,40 +93,46 @@
   }
 
   //Doors variable decreases by 1, check to see if losing conditions met
-  const openDoor = () => {
     document.getElementById('door1').onclick = () => {
       if (!door1Clicked) {
         door1Clicked = true;
-        defeat1 ? gameOver() : document.getElementById("encouragement").innerHTML = "Phew! Keep picking doors!";
+        doors--;
+        door1Doom ? gameOver() : determineWinner();
       }
     }
     document.getElementById('door2').onclick = () => {
       if (!door2Clicked) {
         door2Clicked = true;
-        defeat2 ? gameOver() : document.getElementById("encouragement").innerHTML = "Phew! Keep picking doors!";
+        doors--;
+        door2Doom ? gameOver() : determineWinner();
       }
     }
     document.getElementById('door3').onclick = () => {
       if (!door3Clicked) {
-        door2Clicked = true;
-        defeat3 ? gameOver() : document.getElementById("encouragement").innerHTML = "Phew! Keep picking doors!";
+        door3Clicked = true;
+        doors--;
+        door3Doom ? gameOver() : determineWinner();
       }
     }
-    doors--;
-    document.getElementById("remainingDoorsNumber").innerHTML = doors;
-    determineWinner();
-  }
 
   //1 door remaining means the player has not hit the chorebot
   const determineWinner = () => {
+      document.getElementById("remainingDoorsNumber").innerHTML = doors;
       if (doors === 1) {
         winnerGameOver()
+      } else {
+        document.getElementById("encouragement").innerHTML = "Keep going!";
       }
     }
 
   //gameOver function for losers
   const gameOver = () => {
     score = 0;
+    door1Clicked = true; //Prevents opening the other doors and overriding the loss
+    door2Clicked = true;
+    door3Clicked = true;
+    document.getElementById("scoreNumber").innerHTML = score;
+    document.getElementById("remainingDoorsNumber").innerHTML = doors;
     document.getElementById("encouragement").innerHTML = "It's the chorebot! Get back to work!";
     determineHighScore();
   }
@@ -132,14 +140,17 @@
   //gameOver function for winners
   const winnerGameOver = () => {
     score++;
+    door1Clicked = true; //Prevents opening the last door and triggering the defeat condition
+    door2Clicked = true;
+    door3Clicked = true;
     document.getElementById("encouragement").innerHTML = "You've won your freedom!"
+    document.getElementById("scoreNumber").innerHTML = score;
     determineHighScore();
   }
 
   //Still needs work
   const determineHighScore = () => {
-    document.getElementById("start").innerHTML = "Play again?";
-    score.appendChild('score');
+    document.getElementById("start").innerHTML = "Play again? Reset!";
     if (score > highScore) {
       highScore = score;
       document.getElementById("highScoreNumber").innerHTML = highScore;
