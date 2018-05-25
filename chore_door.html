@@ -53,20 +53,25 @@
   //Default global values:
   let highScore = 0;
   let score = 0;
-  let door1Clicked = false;
-  let door2Clicked = false;
-  let door3Clicked = false;
+  let door1Clicked = true; //Can't click on door until "Start Round!"" clicked
+  let door2Clicked = true;
+  let door3Clicked = true;
   let door1Doom = false;
   let door2Doom = false;
   let door3Doom = false;
   let doors = 3;
+  let currentlyPlaying = false;
 
+  //Prevents mid-round reset
   document.getElementById('start').onclick = () => {
-    startGame();
+    if(!currentlyPlaying) {
+      startRound();
+    }
   }
 
   //Reset values for extra rounds and call new chore door function:
-  const startGame = () => {
+  const startRound = () => {
+    currentlyPlaying = true;
     door1Clicked = false;
     door2Clicked = false;
     door3Clicked = false;
@@ -92,7 +97,7 @@
     }
   }
 
-  //Doors variable decreases by 1, check to see if losing conditions met
+  //Doors variable decreases by 1, clicked door cannot be clicked again, check to see if losing conditions met
     document.getElementById('door1').onclick = () => {
       if (!door1Clicked) {
         door1Clicked = true;
@@ -115,7 +120,7 @@
       }
     }
 
-  //1 door remaining means the player has not hit the chorebot
+  //1 door remaining means the player has not hit the losing doorDoom condition
   const determineWinner = () => {
       document.getElementById("remainingDoorsNumber").innerHTML = doors;
       if (doors === 1) {
@@ -148,8 +153,9 @@
     determineHighScore();
   }
 
-  //Still needs work
+  //Sets new high score if condition met
   const determineHighScore = () => {
+    currentlyPlaying = false;
     document.getElementById("start").innerHTML = "Play again? Reset!";
     if (score > highScore) {
       highScore = score;
