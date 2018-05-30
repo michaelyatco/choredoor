@@ -85,28 +85,26 @@ body {
 .doorFrame {
   display: inline;
   margin-right: 19px;
+  margin-bottom: 20px;
 }
 
 .startRow {
   margin: auto;
-  text-align: center;
   width: 120px;
   height: 43px;
   background-color: #eb6536;
-}
-
-#start {
-  width: 117px;
-  height: 10px;
+  position: relative;
+  padding-top: 18px;
   font-family: Work Sans;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: 0px;
   text-align: center;
   color: #010165;
+  margin-bottom: 21px;
 }
 
 .scoreRow {
@@ -114,7 +112,7 @@ body {
   text-align: center;
 }
 
-.score {
+.scoreText {
   margin-right: 28px;
   display: inline;
   width: 56px;
@@ -131,7 +129,19 @@ body {
 }
 
 .scoreBox {
+  margin-top: 9px;
+  display: inline-block;
+  margin-right: 24px;
   width: 59px;
   height: 55px;
   background-color: #00ffff;
+  position: relative;
+  font-family: Work Sans;
+  font-size: 45px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0px;
+  text-align: center;
 }

@@ -44,23 +44,16 @@
     <img class="doorFrame" src="images/closed_door.svg" id="door3">
   </div>
 
-  <div class="startRow">
-    <p id="start">Start Round</p>
+  <div class="startRow" id="start">Start Round</div>
+
+  <div class="scoreRow">
+    <p class="scoreText">Current streak:</p>
+    <p class="scoreText">Best streak:</p>
   </div>
 
   <div class="scoreRow">
-    <p class="score">Current streak:</p>
-    <p class="score">Best streak:</p>
-  </div>
-
-<!-- Needs work -->
-  <div class="scoreRow">
-    <div class="scoreBox">
-      <p id="scoreNumber"></p>
-    </div>
-    <div class="scoreBox">
-      <p id="highScoreNumber"></p>
-    </div>
+    <div class="scoreBox" id="scoreNumber">0</div>
+    <div class="scoreBox" id="highScoreNumber">0</div>
   </div>
 
 <script>
@@ -93,6 +86,9 @@
     door2Doom = false;
     door3Doom = false;
     doors = 3;
+    document.getElementById('door1').src = "images/closed_door.svg"
+    document.getElementById('door2').src = "images/closed_door.svg"
+    document.getElementById('door3').src = "images/closed_door.svg"
     randomChoreDoorGenerator();
     document.getElementById("start").innerHTML = "Good luck!";
   }
@@ -102,10 +98,19 @@
     choreDoor = Math.floor(Math.random() * doors);
     if (choreDoor === 0) {
       door1Doom = true;
+      document.getElementById('door1').style.backgroundImage = "url('images/Robot_open_door.svg')";
+      document.getElementById('door2').style.backgroundImage = "url('images/beach_open_door.svg')";
+      document.getElementById('door3').style.backgroundImage = "url('images/space_open_door.svg')";
     } else if (choreDoor === 1) {
       door2Doom = true;
+      document.getElementById('door2').style.backgroundImage = "url('images/Robot_open_door.svg')";
+      document.getElementById('door1').style.backgroundImage = "url('images/beach_open_door.svg')";
+      document.getElementById('door3').style.backgroundImage = "url('images/space_open_door.svg')";
     } else {
       door3Doom = true;
+      document.getElementById('door3').style.backgroundImage = "url('images/Robot_open_door.svg')";
+      document.getElementById('door1').style.backgroundImage = "url('images/beach_open_door.svg')";
+      document.getElementById('door2').style.backgroundImage = "url('images/space_open_door.svg')";
     }
   }
 
