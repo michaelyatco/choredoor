@@ -66,6 +66,12 @@
   let door1Doom = false;
   let door2Doom = false;
   let door3Doom = false;
+  let doorImage1 = document.getElementById('door1');
+  let doorImage2 = document.getElementById('door2');
+  let doorImage3 = document.getElementById('door3');
+  let openDoor1;
+  let openDoor2;
+  let openDoor3;
   let doors = 3;
   let currentlyPlaying = false;
 
@@ -86,9 +92,9 @@
     door2Doom = false;
     door3Doom = false;
     doors = 3;
-    document.getElementById('door1').src = "images/closed_door.svg"
-    document.getElementById('door2').src = "images/closed_door.svg"
-    document.getElementById('door3').src = "images/closed_door.svg"
+    doorImage1.src = "images/closed_door.svg"
+    doorImage2.src = "images/closed_door.svg"
+    doorImage3.src = "images/closed_door.svg"
     randomChoreDoorGenerator();
     document.getElementById("start").innerHTML = "Good luck!";
   }
@@ -98,19 +104,19 @@
     choreDoor = Math.floor(Math.random() * doors);
     if (choreDoor === 0) {
       door1Doom = true;
-      document.getElementById('door1').style.backgroundImage = "url('images/Robot_open_door.svg')";
-      document.getElementById('door2').style.backgroundImage = "url('images/beach_open_door.svg')";
-      document.getElementById('door3').style.backgroundImage = "url('images/space_open_door.svg')";
+      openDoor1 = "images/Robot_open_door.svg";
+      openDoor2 = "images/beach_open_door.svg";
+      openDoor3 = "images/space_open_door.svg";
     } else if (choreDoor === 1) {
       door2Doom = true;
-      document.getElementById('door2').style.backgroundImage = "url('images/Robot_open_door.svg')";
-      document.getElementById('door1').style.backgroundImage = "url('images/beach_open_door.svg')";
-      document.getElementById('door3').style.backgroundImage = "url('images/space_open_door.svg')";
+      openDoor2 = "images/Robot_open_door.svg";
+      openDoor1 = "images/beach_open_door.svg";
+      openDoor3 = "images/space_open_door.svg";
     } else {
       door3Doom = true;
-      document.getElementById('door3').style.backgroundImage = "url('images/Robot_open_door.svg')";
-      document.getElementById('door1').style.backgroundImage = "url('images/beach_open_door.svg')";
-      document.getElementById('door2').style.backgroundImage = "url('images/space_open_door.svg')";
+      openDoor3 = "images/Robot_open_door.svg";
+      openDoor1 = "images/beach_open_door.svg";
+      openDoor2 = "images/space_open_door.svg";
     }
   }
 
@@ -119,6 +125,7 @@
       if (!door1Clicked) {
         door1Clicked = true;
         doors--;
+        doorImage1.src = openDoor1;
         door1Doom ? gameOver() : determineWinner();
       }
     }
@@ -126,6 +133,7 @@
       if (!door2Clicked) {
         door2Clicked = true;
         doors--;
+        doorImage2.src = openDoor2;
         door2Doom ? gameOver() : determineWinner();
       }
     }
@@ -133,6 +141,7 @@
       if (!door3Clicked) {
         door3Clicked = true;
         doors--;
+        doorImage3.src = openDoor3;
         door3Doom ? gameOver() : determineWinner();
       }
     }
