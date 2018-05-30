@@ -1,31 +1,22 @@
 body {
   background-color: #010165;
+  margin: 0px;
 }
 
 .header {
-  height: 50px;
-  margin: auto;
   background-color: #00ffff;
   text-align: center;
 }
 
-.firstRow {
+.first-row {
   margin-top: 42px;
   text-align: center;
 }
 
-.instructionsTitle {
+.instructions-title {
   display: inline;
-  width: 111px;
-  height: 21px;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
   font-size: 18px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0px;
-  text-align: center;
   color: #00ffff;
 }
 
@@ -33,115 +24,78 @@ body {
   display: inline;
 }
 
-.secondRow {
+.second-row {
   position: absolute;
   margin-top: 17px;
   right: 25%;
-  margin-right: 92px;
 }
 
-.eachDirection {
+.each-direction  {
   margin-top: 15px;
-  margin-left: 42px;
 }
 
-.instructionsList {
+.instructions-list {
   display: inline;
   margin-top: 11px;
   margin-right: 23px;
-  width: 16px;
-  height: 42px;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
   font-size: 36px;
   font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0px;
-  text-align: center;
   color: #00ffff;
 }
 
 .instructions {
   display: inline;
-  width: 286px;
-  height: 32px;
-  font-family: WorkSans;
+  font-family: 'Work Sans';
   font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0px;
-  text-align: left;
   color: #ffffff;
 }
 
-.doorRow {
+.door-row {
   margin-top: 305px;
   text-align: center;
 }
 
-.doorFrame {
-  display: inline;
+.door-frame {
   margin-right: 19px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
-.startRow {
+.start-row {
   margin: auto;
   width: 120px;
   height: 43px;
   background-color: #eb6536;
-  position: relative;
   padding-top: 18px;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
   font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0px;
   text-align: center;
   color: #010165;
   margin-bottom: 21px;
+  cursor: pointer;
 }
 
-.scoreRow {
-  margin: auto;
+.score-row {
   text-align: center;
 }
 
-.scoreText {
+.score-text {
   margin-right: 28px;
   display: inline;
-  width: 56px;
-  height: 26px;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
   font-size: 12px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.08;
   letter-spacing: 1.1px;
-  text-align: center;
   color: #ffffff;
 }
 
-.scoreBox {
+.score-box {
   margin-top: 9px;
   display: inline-block;
   margin-right: 24px;
   width: 59px;
   height: 55px;
   background-color: #00ffff;
-  position: relative;
-  font-family: Work Sans;
+  font-family: 'Work Sans';
   font-size: 45px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0px;
-  text-align: center;
 }
