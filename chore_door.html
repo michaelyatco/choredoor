@@ -1,52 +1,66 @@
 <!DOCTYPE html>
+
 <head>
   <title>Chore Door!</title>
   <link href='./style.css' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type='text/css'>
   <script type="text/javascript"></script>
 </head>
+
 <body>
 
-  <h1>Chore Door!</h1>
-  <div class="instructions">
-    <h2 id="instructions">Instructions</h2>
-      <p> The dreaded chorebot is hiding behind one of these doors.
-        Click on all the doors without discovering the chorebot and you win!
-        See if you can score a winning streak!</p>
+  <div class="header">
+    <img src="images/logo.svg">
   </div>
 
-  <div class="remainingDoors">
-    <h2 id="remainingDoors">Remaining Doors:</h2>
-    <h2 id="remainingDoorsNumber"></h2>
+  <div class="firstRow">
+    <img class="star" src="images/Star.svg">
+    <p class="instructionsTitle">Instructions</p>
+    <img class="star" src="images/Star.svg">
   </div>
 
-  <div class="game">
-    <div id="door">
-      <div id="door1">Door1</div>
+  <div class="secondRow">
+    <div class="eachDirection">
+      <p class="instructionsList">1</p>
+      <p class="instructions">Hiding behind one of these doors is the ChoreBot.</p>
     </div>
-    <div id="door">
-      <div id="door2">Door2</div>
+    <div class="eachDirection">
+      <p class="instructionsList">2</p>
+      <p class="instructions">Your mission is to open all of the doors.</p>
     </div>
-    <div id="door">
-      <div id="door3">Door3</div>
+    <div class="eachDirection">
+      <p class="instructionsList">3</p>
+      <p class="instructions">If the last door you open has the Chorebot, you win!</p>
+    </div>
+    <div class="eachDirection">
+      <p class="instructionsList">4</p>
+      <p class="instructions">See if you can score a winning streak!</p>
     </div>
   </div>
 
-  <div class="instructions">
-    <h2 id="encouragement"></h2>
+  <div class="doorRow">
+    <img class="doorFrame" src="images/closed_door.svg" id="door1">
+    <img class="doorFrame" src="images/closed_door.svg" id="door2">
+    <img class="doorFrame" src="images/closed_door.svg" id="door3">
   </div>
 
-
-    <h1 id="start">Start Round!</h1>
-
-  <div class="score">
-    <h2 id="score">Current streak:</h2>
-    <h2 id="scoreNumber"></h2>
+  <div class="startRow">
+    <p id="start">Start Round</p>
   </div>
 
-  <div class="score">
-    <h2 id="highScore">Best streak:</h2>
-    <h2 id="highScoreNumber"></h2>
+  <div class="scoreRow">
+    <p class="score">Current streak:</p>
+    <p class="score">Best streak:</p>
+  </div>
+
+<!-- Needs work -->
+  <div class="scoreRow">
+    <div class="scoreBox">
+      <p id="scoreNumber"></p>
+    </div>
+    <div class="scoreBox">
+      <p id="highScoreNumber"></p>
+    </div>
   </div>
 
 <script>
@@ -80,8 +94,6 @@
     door3Doom = false;
     doors = 3;
     randomChoreDoorGenerator();
-    document.getElementById("remainingDoorsNumber").innerHTML = doors;
-    document.getElementById("encouragement").innerHTML = "Choose any door...";
     document.getElementById("start").innerHTML = "Good luck!";
   }
 
@@ -122,11 +134,10 @@
 
   //1 door remaining means the player has not hit the losing doorDoom condition
   const determineWinner = () => {
-      document.getElementById("remainingDoorsNumber").innerHTML = doors;
-      if (doors === 1) {
+      if (doors === 0) {
         winnerGameOver()
       } else {
-        document.getElementById("encouragement").innerHTML = "Keep going!";
+        document.getElementById('start').innerHTML = 'Keep going!';
       }
     }
 
@@ -136,9 +147,7 @@
     door1Clicked = true; //Prevents opening the other doors and overriding the loss
     door2Clicked = true;
     door3Clicked = true;
-    document.getElementById("scoreNumber").innerHTML = score;
-    document.getElementById("remainingDoorsNumber").innerHTML = doors;
-    document.getElementById("encouragement").innerHTML = "It's the chorebot! Get back to work!";
+    document.getElementById('scoreNumber').innerHTML = score;
     determineHighScore();
   }
 
@@ -148,7 +157,6 @@
     door1Clicked = true; //Prevents opening the last door and triggering the defeat condition
     door2Clicked = true;
     door3Clicked = true;
-    document.getElementById("encouragement").innerHTML = "You've won your freedom!"
     document.getElementById("scoreNumber").innerHTML = score;
     determineHighScore();
   }

@@ -1,0 +1,137 @@
+body {
+  background-color: #010165;
+}
+
+.header {
+  height: 50px;
+  margin: auto;
+  background-color: #00ffff;
+  text-align: center;
+}
+
+.firstRow {
+  margin-top: 42px;
+  text-align: center;
+}
+
+.instructionsTitle {
+  display: inline;
+  width: 111px;
+  height: 21px;
+  font-family: Work Sans;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #00ffff;
+}
+
+.star {
+  display: inline;
+}
+
+.secondRow {
+  position: absolute;
+  margin-top: 17px;
+  right: 25%;
+  margin-right: 92px;
+}
+
+.eachDirection {
+  margin-top: 15px;
+  margin-left: 42px;
+}
+
+.instructionsList {
+  display: inline;
+  margin-top: 11px;
+  margin-right: 23px;
+  width: 16px;
+  height: 42px;
+  font-family: Work Sans;
+  font-size: 36px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #00ffff;
+}
+
+.instructions {
+  display: inline;
+  width: 286px;
+  height: 32px;
+  font-family: WorkSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.doorRow {
+  margin-top: 305px;
+  text-align: center;
+}
+
+.doorFrame {
+  display: inline;
+  margin-right: 19px;
+}
+
+.startRow {
+  margin: auto;
+  text-align: center;
+  width: 120px;
+  height: 43px;
+  background-color: #eb6536;
+}
+
+#start {
+  width: 117px;
+  height: 10px;
+  font-family: Work Sans;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #010165;
+}
+
+.scoreRow {
+  margin: auto;
+  text-align: center;
+}
+
+.score {
+  margin-right: 28px;
+  display: inline;
+  width: 56px;
+  height: 26px;
+  font-family: Work Sans;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.08;
+  letter-spacing: 1.1px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.scoreBox {
+  width: 59px;
+  height: 55px;
+  background-color: #00ffff;
+}
