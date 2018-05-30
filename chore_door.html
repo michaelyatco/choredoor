@@ -52,28 +52,37 @@
   </div>
 
   <div class="scoreRow">
-    <div class="scoreBox" id="scoreNumber">0</div>
-    <div class="scoreBox" id="highScoreNumber">0</div>
+    <div class="scoreBox" id="scoreNumber"></div>
+    <div class="scoreBox" id="highScoreNumber"></div>
   </div>
 
 <script>
   //Default global values:
   let highScore = 0;
   let score = 0;
+  let doors = 3;
   let door1Clicked = true; //Can't click on door until "Start Round!"" clicked
   let door2Clicked = true;
   let door3Clicked = true;
+  let currentlyPlaying = false;
   let door1Doom = false;
   let door2Doom = false;
   let door3Doom = false;
   let doorImage1 = document.getElementById('door1');
   let doorImage2 = document.getElementById('door2');
   let doorImage3 = document.getElementById('door3');
+  let startButton = document.getElementById("start");
+  let scoreDisplay = document.getElementById('scoreNumber');
+  let highScoreDisplay = document.getElementById('highScoreNumber');
   let openDoor1;
   let openDoor2;
   let openDoor3;
-  let doors = 3;
-  let currentlyPlaying = false;
+  let closedDoor = "images/closed_door.svg"
+  let botDoor = "images/Robot_open_door.svg";
+  let beachDoor = "images/beach_open_door.svg";
+  let spaceDoor = "images/space_open_door.svg";
+  scoreDisplay.innerHTML = score;
+  highScoreDisplay.innerHTML = highScore;
 
   //Prevents mid-round reset
   document.getElementById('start').onclick = () => {
@@ -92,11 +101,11 @@
     door2Doom = false;
     door3Doom = false;
     doors = 3;
-    doorImage1.src = "images/closed_door.svg"
-    doorImage2.src = "images/closed_door.svg"
-    doorImage3.src = "images/closed_door.svg"
+    doorImage1.src = closedDoor;
+    doorImage2.src = closedDoor;
+    doorImage3.src = closedDoor;
     randomChoreDoorGenerator();
-    document.getElementById("start").innerHTML = "Good luck!";
+    startButton.innerHTML = "Good luck!";
   }
 
   //One door is assigned the game-ending boolean value of doorDoom
@@ -104,54 +113,57 @@
     choreDoor = Math.floor(Math.random() * doors);
     if (choreDoor === 0) {
       door1Doom = true;
-      openDoor1 = "images/Robot_open_door.svg";
-      openDoor2 = "images/beach_open_door.svg";
-      openDoor3 = "images/space_open_door.svg";
+      openDoor1 = botDoor;
+      openDoor2 = beachDoor;
+      openDoor3 = spaceDoor;
     } else if (choreDoor === 1) {
       door2Doom = true;
-      openDoor2 = "images/Robot_open_door.svg";
-      openDoor1 = "images/beach_open_door.svg";
-      openDoor3 = "images/space_open_door.svg";
+      openDoor2 = botDoor;
+      openDoor1 = beachDoor;
+      openDoor3 = spaceDoor;
     } else {
       door3Doom = true;
-      openDoor3 = "images/Robot_open_door.svg";
-      openDoor1 = "images/beach_open_door.svg";
-      openDoor2 = "images/space_open_door.svg";
+      openDoor3 = botDoor;
+      openDoor1 = beachDoor;
+      openDoor2 = spaceDoor;
     }
   }
 
   //Doors variable decreases by 1, clicked door cannot be clicked again, check to see if losing conditions met
-    document.getElementById('door1').onclick = () => {
+    doorImage1.onclick = () => {
       if (!door1Clicked) {
         door1Clicked = true;
         doors--;
         doorImage1.src = openDoor1;
-        door1Doom ? gameOver() : determineWinner();
+        if (doors === 0) {
+          winnerGameOver();
+        } else if (door1Doom) {
+          gameOver();
+        }
       }
     }
-    document.getElementById('door2').onclick = () => {
+    doorImage2.onclick = () => {
       if (!door2Clicked) {
         door2Clicked = true;
         doors--;
         doorImage2.src = openDoor2;
-        door2Doom ? gameOver() : determineWinner();
+        if (doors === 0) {
+          winnerGameOver();
+        } else if (door2Doom) {
+          gameOver();
+        }
       }
     }
-    document.getElementById('door3').onclick = () => {
+    doorImage3.onclick = () => {
       if (!door3Clicked) {
         door3Clicked = true;
         doors--;
         doorImage3.src = openDoor3;
-        door3Doom ? gameOver() : determineWinner();
-      }
-    }
-
-  //1 door remaining means the player has not hit the losing doorDoom condition
-  const determineWinner = () => {
-      if (doors === 0) {
-        winnerGameOver()
-      } else {
-        document.getElementById('start').innerHTML = 'Keep going!';
+        if (doors === 0) {
+          winnerGameOver();
+        } else if (door3Doom) {
+          gameOver();
+        }
       }
     }
 
@@ -161,27 +173,25 @@
     door1Clicked = true; //Prevents opening the other doors and overriding the loss
     door2Clicked = true;
     door3Clicked = true;
-    document.getElementById('scoreNumber').innerHTML = score;
+    scoreDisplay.innerHTML = score;
     determineHighScore();
   }
 
   //gameOver function for winners
   const winnerGameOver = () => {
+    console.log("You're there")
     score++;
-    door1Clicked = true; //Prevents opening the last door and triggering the defeat condition
-    door2Clicked = true;
-    door3Clicked = true;
-    document.getElementById("scoreNumber").innerHTML = score;
+    scoreDisplay.innerHTML = score;
     determineHighScore();
   }
 
   //Sets new high score if condition met
   const determineHighScore = () => {
     currentlyPlaying = false;
-    document.getElementById("start").innerHTML = "Play again? Reset!";
+    startButton.innerHTML = "Play again? Reset!";
     if (score > highScore) {
       highScore = score;
-      document.getElementById("highScoreNumber").innerHTML = highScore;
+      highScoreDisplay.innerHTML = highScore;
     }
   }
 
