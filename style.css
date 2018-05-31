@@ -20,17 +20,13 @@ body {
   color: #00ffff;
 }
 
-.star {
-  display: inline;
-}
-
 .second-row {
   position: absolute;
   margin-top: 17px;
   right: 25%;
 }
 
-.each-direction  {
+.each-direction {
   margin-top: 15px;
 }
 

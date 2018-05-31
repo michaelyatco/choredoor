@@ -41,7 +41,10 @@ Your mission is to construct a single-page website that plays a fully-functional
 ```
 Solution Code - HTML
 <!DOCTYPE html>
-  <head></head>
+  <head>
+    <title>Chore Door!</title>
+    <link href='style.css' rel='stylesheet'  type='text/css'>
+  </head>
   <body>
     <div class="door-row">
       <img class="door-frame" src="images/closed_door.svg" id="door1">
