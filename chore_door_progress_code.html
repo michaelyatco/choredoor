@@ -48,18 +48,41 @@
     let botDoor = "images/Robot_open_door.svg";
     let beachDoor = "images/beach_open_door.svg";
     let spaceDoor = "images/space_open_door.svg";
+    let doors = 3;
+    let openDoor1;
+    let openDoor2;
+    let openDoor3;
+
+    const randomChoreDoorGenerator = () => {
+      choreDoor = Math.floor(Math.random() * doors);
+      if (choreDoor === 0) {
+        openDoor1 = botDoor;
+        openDoor2 = beachDoor;
+        openDoor3 = spaceDoor;
+      } else if (choreDoor === 1) {
+        openDoor2 = botDoor;
+        openDoor1 = beachDoor;
+        openDoor3 = spaceDoor;
+      } else {
+        openDoor3 = botDoor;
+        openDoor1 = beachDoor;
+        openDoor2 = spaceDoor;
+      }
+    }
 
     doorImage1.onclick = () => {
-      doorImage1.src = botDoor;
+      doorImage1.src = openDoor1;
     }
 
     doorImage2.onclick = () => {
-      doorImage2.src = beachDoor;
+      doorImage2.src = openDoor2;
     }
 
     doorImage3.onclick = () => {
-      doorImage3.src = spaceDoor;
+      doorImage3.src = openDoor3;
     }
+
+    randomChoreDoorGenerator();
 
   </script>
 
