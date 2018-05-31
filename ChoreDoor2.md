@@ -13,28 +13,30 @@ Your mission is to construct a single-page website that plays a fully-functional
 
     >Hint - Make sure to wrap your link in quotation marks:    `<img src="image-location.jpg" />`. You can add the `id` attribute inside the `<img>` tag - just make sure your `id` is also wrapped in quotation marks.
 
-2. [ ] Navigate to the **style.css** starting code and create an `id` selector for the `door1`. Add one attribute so that a cursor becomes a pointer whenever you scroll over the image.
+2. [ ] Being a good programmer means doing your best to stay DRY("Don't repeat yourself"). Looking at the **style.css** code, it would be repetitive to create `id` selectors for `door2` and `door3` just to give them the same `cursor` property. In the HTML, assign each image a new class of `doorFrame`. Then, in the CSS transfer the `cursor` property from `#door1` to this new class. Delete the now-empty `#door1` selector afterwards.
+ 
+    >Hint - A class attribute is constructed with:
+`.class { property: value;}`
 
-    >Hint - An ID attribute is constructed with:
-`#id { property: value;}`
-`cursor: pointer;`
-
-3. [ ] Now we have a pointer that hover overs our closed door image, but it's the JavaScript that brings our image to life! Between the `<script>``</script>` create a global variable called `doorImage1` that accepts `door1` as its value.
+3. [ ] Now we have three doors and a pointer that hovers them, but only our first door opens. Let's put JavaScript to work to open those other two doors! Create two new global variables called `doorImage2` and `doorImage3` that accept `door2` and `door3` as their respective values.
 
     >Hint - Use the DOM method: `document.getElementById('id')`
 
-4. [ ] Give `doorImage1` an `onclick` event using arrow function syntax. The function will be empty for now.
+4. [ ] Under our `doorImage1.onclick` event, give `doorImage2` and `doorImage3` their own `onclick` event using arrow function syntax. These functions will be empty for now.
 
     >Hint - `object.onclick = () => {myScript};`
     
-5. [ ] Finally, let's have our closed door image change when we click it so that we see an open door with the ChoreBot ready to greet us!  Find the ChoreBot image in the **images** folder and assign that path to a global variable called `botDoor`. Then within our arrow function, change the `src` of `doorImage1` to the value of `botDoor`.
+5. [ ] Let's be careful **NOT** we copy and paste the logic from `doorImage1.onclick`, or else we'll have three ChoreBots! Instead, inside the **images** folder, find the path for the beach image and assign that path to a global variable called `beachDoor`. Then do the same for the space image and assing that path to another global variable called `spaceDoor`.
 
     >Hint - Global variables are declared outside of     	functions.
-    
+   
+
+6. [ ] Now within the arrow functions of `doorImage2` and `doorImage3`, write the logic so that `doorImage2` will change to the beach image and `doorImage3` will change to the space image.
+
     >Hint - An object's `src` value can be assigned a new 	value with:
    `obj.src = 'new image path'`
 
-6. [ ] Click on the door and watch as the closed door image changes to the ChoreBot ready to greet us with housework! 
+7. [ ] Click on each door and watch how each closed door opens to something different and exciting: a ChoreBot, a beach, and outer space!
 
 ```
 Solution Code - HTML
@@ -42,7 +44,9 @@ Solution Code - HTML
   <head></head>
   <body>
     <div class="door-row">
-      <img src="images/closed_door.svg" id="door1">
+      <img class="door-frame" src="images/closed_door.svg" id="door1">
+      <img class="door-frame" src="images/closed_door.svg" id="door2">
+      <img class="door-frame" src="images/closed_door.svg" id="door3">
     </div>
   </body>
   <script></script>
@@ -50,7 +54,13 @@ Solution Code - HTML
 ```
 ```
 Solution Code - CSS
-#door1 {
+
+body {
+  background-color: #010165;
+  margin: 0px;
+}
+
+.door-frame {
   cursor: pointer;
 }
 ```
@@ -59,11 +69,23 @@ Solution Code - CSS
 Solution Code - JavaScript
 
 <script>
-let doorImage1 = document.getElementById('door1');
-let botDoor = "images/Robot_open_door.svg";
-
-doorImage1.onclick = () => {
-  doorImage1.src = botDoor;
-}
+  let doorImage1 = document.getElementById('door1');
+  let doorImage2 = document.getElementById('door2');
+  let doorImage3 = document.getElementById('door3');
+  let botDoor = "images/Robot_open_door.svg";
+  let beachDoor = "images/beach_open_door.svg";
+  let spaceDoor = "images/space_open_door.svg";
+	
+  doorImage1.onclick = () => {
+    doorImage1.src = botDoor;
+  }
+	
+  doorImage2.onclick = () => {
+    doorImage2.src = beachDoor;
+  }
+	
+  doorImage3.onclick = () => {
+    doorImage3.src = spaceDoor;
+  }
 </script>
 

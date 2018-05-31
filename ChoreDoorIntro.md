@@ -7,7 +7,7 @@ Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript conc
 ###Project Overview
 Your mission is to construct a single-page website that plays a fully-functional game. You will see how HTML, CSS, and JavaScript interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
-###Getting Started - Get a door, open a door!
+###1. Getting Started - Get a door, open a door!
 
 1. [ ] Look at the **index.html** starting code and then navigate to the **images** folder. In between the`<div class=doorRow>``</div>`, create an `<img>` tag for the `closed_door.svg` image and assign that tag an `id` attribute with the value of `door1`.
 
@@ -19,7 +19,7 @@ Your mission is to construct a single-page website that plays a fully-functional
 `#id { property: value;}`
 `cursor: pointer;`
 
-3. [ ] Now we have a pointer that hover overs our closed door image, but it's the JavaScript that brings our image to life! Between the `<script>``</script>` create a global variable called `doorImage1` that accepts `door1` as its value.
+3. [ ] Now we have a pointer that hovers over our closed door image, but it's the JavaScript that brings our image to life! Between the `<script>``</script>` create a global variable called `doorImage1` that accepts `door1` as its value.
 
     >Hint - Use the DOM method: `document.getElementById('id')`
 
@@ -53,6 +53,11 @@ Solution Code - HTML
 ```
 ```
 Solution Code - CSS
+body {
+  background-color: #010165;
+  margin: 0px;
+}
+
 #door1 {
   cursor: pointer;
 }
@@ -69,4 +74,4 @@ doorImage1.onclick = () => {
   doorImage1.src = botDoor;
 }
 </script>
-
+```
