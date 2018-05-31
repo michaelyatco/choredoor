@@ -13,10 +13,10 @@ Your mission is to construct a single-page website that plays a fully-functional
 
     >Hint - Make sure to wrap your link in quotation marks:    `<img src="image-location.jpg" />`. Make sure your `<div>` also has a closing `</div>`.
 
-2. [ ] In the **style.css** folder, create a `header` selector and assign the `background-color` the value `#00ffff`. The logo is now visible in the corner so find the CSS property and value that would center the logo.
+2. [ ] In the **style.css** folder, create a `header` selector and assign the `background-color` the value `#00ffff`. The logo is now visible in the corner so assign the `text-align` a value of `center` in order to center the logo.
  
     >Hint - A class attribute is constructed with:
-`.class { property: value;}`. `{text-align: center}`
+`.class { property: value;}`.
 
 3. [ ] We have a game title, now let's establish the directions to the game. First, let's create a title for the instructions surrounded by pretty stars. Beneath the `<div class="header"></div>` but above the `<div class="door-row"></div>`, create a new `<div>` with the class name `"first-row"`. Inside this new `<div>` create two new `<img>` tags that take the `star.svg` image.
 

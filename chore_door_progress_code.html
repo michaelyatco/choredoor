@@ -39,12 +39,15 @@
       <img class="door-frame" src="images/closed_door.svg" id="door3">
     </div>
 
+    <div class="start-row" id="start">Good luck!</div>
+
   </body>
 
   <script>
     let doorImage1 = document.getElementById('door1');
     let doorImage2 = document.getElementById('door2');
     let doorImage3 = document.getElementById('door3');
+    let startButton = document.getElementById("start");
     let botDoor = "images/Robot_open_door.svg";
     let beachDoor = "images/beach_open_door.svg";
     let spaceDoor = "images/space_open_door.svg";
@@ -52,18 +55,24 @@
     let openDoor1;
     let openDoor2;
     let openDoor3;
+    let door1Doom;
+    let door2Doom;
+    let door3Doom;
 
     const randomChoreDoorGenerator = () => {
       choreDoor = Math.floor(Math.random() * doors);
       if (choreDoor === 0) {
+        door1Doom = true;
         openDoor1 = botDoor;
         openDoor2 = beachDoor;
         openDoor3 = spaceDoor;
       } else if (choreDoor === 1) {
+        door2Doom = true;
         openDoor2 = botDoor;
         openDoor1 = beachDoor;
         openDoor3 = spaceDoor;
       } else {
+        door3Doom = true;
         openDoor3 = botDoor;
         openDoor1 = beachDoor;
         openDoor2 = spaceDoor;
@@ -72,14 +81,23 @@
 
     doorImage1.onclick = () => {
       doorImage1.src = openDoor1;
+      if (door1Doom) {
+        startButton.innerHTML = 'Game Over!';
+      }
     }
 
     doorImage2.onclick = () => {
       doorImage2.src = openDoor2;
+      if (door2Doom) {
+        startButton.innerHTML = 'Game Over!';
+      }
     }
 
     doorImage3.onclick = () => {
       doorImage3.src = openDoor3;
+      if (door3Doom) {
+        startButton.innerHTML = 'Game Over!';
+      }
     }
 
     randomChoreDoorGenerator();

@@ -11,13 +11,12 @@ Your mission is to construct a single-page website that plays a fully-functional
 
 1. [ ] Look at the **index.html** starting code and then navigate to the **images** folder. In between the`<div class=doorRow>``</div>`, create an `<img>` tag for the `closed_door.svg` image and assign that tag an `id` attribute with the value of `door1`.
 
-    >Hint - Make sure to wrap your link in quotation marks:    `<img src="image-location.jpg" />`. You can add the `id` attribute inside the `<img>` tag - just make sure your `id` is also wrapped in quotation marks.
+    >Hint - Make sure to wrap your link in quotation marks:    `<img src="image-location.jpg" />`. You can add the `id` attribute inside the `<img>` tag - just make sure your `id` value is also wrapped in quotation marks.
 
-2. [ ] Navigate to the **style.css** starting code and create an `id` selector for the `door1`. Add one attribute so that a cursor becomes a pointer whenever you scroll over the image.
+2. [ ] Navigate to the **style.css** starting code and create an `id` selector for the `door1`. Add one attribute so that the `cursor` property is assigned to the value of `pointer` whenever you scroll over the image.
 
     >Hint - An ID attribute is constructed with:
 `#id { property: value;}`
-`cursor: pointer;`
 
 3. [ ] Now we have a pointer that hovers over our closed door image, but it's the JavaScript that brings our image to life! Between the `<script>``</script>` create a global variable called `doorImage1` that accepts `door1` as its value.
 

@@ -26,7 +26,7 @@ Your mission is to construct a single-page website that plays a fully-functional
 
     >Hint - `object.onclick = () => {myScript};`
     
-5. [ ] Let's be careful **NOT** we copy and paste the logic from `doorImage1.onclick`, or else we'll have three ChoreBots! Instead, inside the **images** folder, find the path for the beach image and assign that path to a global variable called `beachDoor`. Then do the same for the space image and assing that path to another global variable called `spaceDoor`.
+5. [ ] Be mindful to change the logic if you copy and paste the logic from `doorImage1.onclick`, or else you'll have three ChoreBots! Instead, look inside the **images** folder, find the path for the beach image and assign that path to a global variable called `beachDoor`. Then do the same for the space image and assing that path to another global variable called `spaceDoor`.
 
     >Hint - Global variables are declared outside of     	functions.
    
