@@ -20,6 +20,16 @@ body {
   color: #00ffff;
 }
 
+.instructions-list {
+  display: inline;
+  margin-top: 11px;
+  margin-right: 23px;
+  font-family: 'Work Sans';
+  font-size: 36px;
+  font-weight: 600;
+  color: #00ffff;
+}
+
 .second-row {
   position: absolute;
   margin-top: 17px;
@@ -58,4 +68,28 @@ body {
   color: #010165;
   margin-bottom: 21px;
   cursor: pointer;
+}
+
+.score-row {
+  text-align: center;
+}
+
+.score-text {
+  margin-right: 28px;
+  display: inline;
+  font-family: 'Work Sans';
+  font-size: 12px;
+  letter-spacing: 1.1px;
+  color: #ffffff;
+}
+
+.score-box {
+  margin-top: 9px;
+  display: inline-block;
+  margin-right: 24px;
+  width: 59px;
+  height: 55px;
+  background-color: #00ffff;
+  font-family: 'Work Sans';
+  font-size: 45px;
 }

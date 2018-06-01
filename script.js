@@ -118,20 +118,21 @@ const gameOver = () => {
   door2Clicked = true;
   door3Clicked = true;
   scoreDisplay.innerHTML = score;
-  determineHighScore();
+  startButton.innerHTML = 'Game over! Play again?';
+  currentlyPlaying = false;
 }
 
 //gameOver function for winners
 const winnerGameOver = () => {
   score++;
   scoreDisplay.innerHTML = score;
+  startButton.innerHTML = 'You win! Play again?';
+  currentlyPlaying = false;
   determineHighScore();
 }
 
 //Sets new high score if condition met
 const determineHighScore = () => {
-  currentlyPlaying = false;
-  startButton.innerHTML = 'Play again? Reset!';
   if (score > highScore) {
     highScore = score;
     highScoreDisplay.innerHTML = highScore;

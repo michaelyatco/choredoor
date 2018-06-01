@@ -9,11 +9,13 @@ Your mission is to construct a single-page website that plays a fully-functional
 
 ### Next Steps - HTML & CSS Styling
 
-1. [ ] Welcome to the the **Next Steps** section of the Milestone Project! This is an extra opportunity to improve the view and functionality of your ChoreBot game! First, let's focus on making the numbers larger and brighter, like this picture illustrates:
+Welcome to the the **Next Steps** section of the Milestone Project! This is an extra opportunity to improve the view and functionality of your ChoreBot game! First, focus on making the numbers larger and brighter, like this picture illustrates:
 
-    ![Instructions-list](images/instructions_list.png)
 
-    Inside each `each-direction` `<div>` in your **index.html* page, create a new `<p>` element with the class name `'instructions-list'` and number them accordingly.
+![Instructions-list](images/instructions_list.png)
+
+
+1. [ ] Inside each `each-direction` `<div>` in your **index.html** page, create a new `<p>` element with the class name `'instructions-list'` and number them accordingly.
     
 2. [ ] In the **style.css** file, create an `instructions-list` selector and add the following properties and values:
  
@@ -29,9 +31,13 @@ Your mission is to construct a single-page website that plays a fully-functional
 
 ### Next Steps - Creating Winning Streaks & High Scores
 
-1. [ ] Wouldn't it be great to play this game with the opportunity to record consecutive victories and establish a high score for all challengers to beat? You can build that feature using **HTML**, **CSS**, and **JavaScript**! First in the **index.html** page beneath the `<div class="start-two">`, add a `<div>` element with the class name `"score-row"` and nested inside this new `<div>`, add two `<p>` elements with the class name `"score-text"`. Type `Current streak` in the first `<p>` element and `Best streak` in the second `<p>` element. 
+Wouldn't it be great to play this game with the opportunity to record consecutive victories and establish a high score for all challengers to beat? You can build that feature using **HTML**, **CSS**, and **JavaScript**! It should look similar to this image:
 
-    >Hint - Make sure that your HTML elements are properly nested to make your 	code more readable.
+![High-Score](images/high_score.png)
+
+1. [ ] First in the **index.html** page beneath the `<div class="start-two">`, add a `<div>` element with the class name `"score-row"` and nested inside this new `<div>`, add two `<p>` elements with the class name `"score-text"`. Type `Current streak` in the first `<p>` element and `Best streak` in the second `<p>` element. 
+
+    >Hint - Make sure that your HTML elements are properly nested to make your code more readable.
     
     ```
     <div class="parent">
@@ -41,36 +47,45 @@ Your mission is to construct a single-page website that plays a fully-functional
     </div>
     ```
 		
-2. [ ] Wow - the game works! It lets you know when you opened all the doors to victory and when the ChoreBot found you and served you defeat. But refreshing the page to reset the values is annoying and games that annoy players will lose them quickly. So let's turn our `startButton` into exactly that - a start button for a new round! Directly underneath the global variables, write the logic to turn the `startButton` into an `.onclick` event that will trigger a new `startRound()` function.
+2. [ ] The `<p>` elements in their current state are very hard to see in the corner.  Navigate to the **style.css** file and add two selectors - `score-row` and `score-text`.  The `score-row` selector is responsible for `text-align` and the `score-text` is responsible for `margin-right: 28px`, `letter-spacing: 1.1px`, `display`, `font-family`, `font-size`, and `color`. See if you can determine the values for the last four properties!
 
-    >Hint - obj.onclick = () => {}
+    >Hint - experiment, look at other selectors for clues, and have fun!
     
-6. [ ] The `startRound()` function not only has to start a new game; it also has to reset the values from the previous rounds. Add a new global variable named `closedDoor` and set its value to the path in the **images** folder. Then write the function so that the following variables are reset: 
- * All `doorClick` variables
- * All `doorDoom` variables
- * `doors` variable
- * `doorImage.src` variable
- * `startButton.innerHTML` variable
+3. [ ] The next task is to build the boxes that will hold the `score` and `highScore` values.  Beneath the `score-row` `<div>`, add another `<div>` and set its class name to `score-row`. Inside this second `score-row` `<div>`, nest two more `<div>` elements with the class name `score-box`. Give this first nested `<div>` an `id` of `score-number` and give the second nested `<div>` an `id` of `high-score-number`.
+
+	>Hint - You can add the `id` attribute inside the `<img>` tag.
+
+4. [ ] These boxes cannot be seen yet because the **style.css** needs the selector `score-box`. This selector is responsible for `margin-top: 9px`, `margin-right: 24px`, `display`, `width`, `height`, `background-color`, `font-family`, and `font-size`. See if you can determine the last six properties!
+
+    Hint - experiment, look at other selectors for clues, and have fun!
+
+5. [ ] This takes care of the **HTML** and **CSS** components of the scores. Now it's time to tackle the **JavaScript** logic! In the `<script></script>` tags, add two global variables - `score` and `highScore` and set their values to `0`. Then add two more global variables - `scoreDisplay` and `highScoreDisplay`. The `scoreDisplay` variable should accept the `id` value of `"score-number"` and the `highScoreDisplay` variable should accept the `id` value of `"high-score-number"`. Finally, at the bottom of your global variable list, set `scoreDisplay.innerHTML` to `score` and set `highScoreDisplay.innerHTML` to `highScore`.
  
-After all these variables are reset, call the `randomChoreDoorGenerator()` function.
+    >Hint - Use the DOM method: `document.getElementById('id')`
+     and `obj.innerHTML = 'New text'`
 
-    >Hint - the `doorClick` and `doorDoom` variables are set to `false`, the `doors` variable is set to `3`, the `doorImage.src` variable is set to the `closedDoor` variable, and the `startButton.innerHTML` is set to 'Good luck!`
+6. [ ] Now add the logic `winnerGameOver()` function to increase the `score` each time the function is called. Then set the `scoreDisplay.innerHTML` to reflect the updated score. 
 
-7. [ ] Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` tag needs to be replaced by the `startRound()` function so that the game resets correctly for each new round.
-
-8. [ ] We're almost at the finish line! We just need to add some finishing touches. Add the text `Play again?` to the end of the current `startButton.innerHTML` so players are guided to click on that button to reset the game. 
-
-    >Hint - 'Game over! Play again?' / 'You win! Play again?'
-
-8. [ ] One minor bug is that the game can reset mid-round if the player clicks on the door. Create a global variable called `currentlyPlaying` and set its value to `false`. Then use that variable as a condition where the `startButton.onClick` event can only be clicked if the `currentlyPlaying` variable is `false`. The variable must be set to `true` during the round and reset back to `false` when the game is over - win or lose.
-
-    > Hint - Anytime you see `startButton.innerHTML` asking to 'Play again?', that's where `currentlyPlaying` should be set to `false`.
+    > Hint - `score++;`
     
-9. [ ] In an effort to DRY up the code, the logic in the `else if (doorDoom)` in each `doorImage.onclick` event should be condensed. Create one last function called `gameOver()` directly above the `winnerGameOver()` function. The `gameOver()` function should change the `startButton.innerHTML` to `Game over! Play again?`, prevent any door from being clicked, and set the `currentlyPlaying` variable to `false`.
+7. [ ] Alright! The `score` is displayed but we need the `highScore` to reflect the best winning streak. Create a new function called `determineHighScore()` and write an `if-else` statement that will update the `highScore` if the current `score` is greater than the current `highScore` (which has the default value of `0`).
 
-    >Hint - `doorClicked = true;`
+    >Hint - the `if-else` statement should follow this logic:
+    
+    ```
+    if (valueA > valueB) {
+    	valueB = valueA;
+    	valueBDisplay.innerHTML = valueB;
+    	}
+       ```
 
-Congratulations! You completed your first Milestone Project and created a fun interactive game utilizing your HTML, CSS, and JavaScript knowledge. Be proud of how far you've come. If you feel like taking this project to the next level (ie. adding more flourish to the HTML/CSS, score keeping, determining highest winning streak, etc.), we invite you to take on the challenges presented in the **Next Steps** section of this Milestone Project.
+8. [ ] Now you need to call the `determineHighScore()` every time the `winnerGameOver()` function is called. Place the `determineHighScore()` function at the bottom of the `winnerGameOver()` function.
+
+9. [ ] Notice how the current `score` doesn't reset back to `0` even if you lose. Add logic to the `gameOver()` function to set the `score` back to `0` when the function is called and then adjust the `scoreDisplay.innerHTML` reflect the score's reset back to `0`.
+
+	>Hint - `obj.innerHTML = 'New text'`
+	
+Wow! Now you have a legitmate scoreboard that reflects your current winning streak and records your highest streak. See if you can think of any other features from your favorite games that would integrate well with ChoreBot!
 
 ```
 Solution Code - HTML
@@ -83,9 +98,6 @@ Solution Code - HTML
 
   <body>
 
-    <div class="header">
-      <img src="images/logo.svg">
-    </div>
 
     <div class="first-row">
       <img src="images/Star.svg">
@@ -117,8 +129,18 @@ Solution Code - HTML
       <img class="door-frame" src="images/closed_door.svg" id="door2">
       <img class="door-frame" src="images/closed_door.svg" id="door3">
     </div>
-    
+
     <div class="start-row" id="start">Good luck!</div>
+
+    <div class="score-row">
+      <p class="score-text">Current streak:</p>
+      <p class="score-text">Best streak:</p>
+    </div>
+
+    <div class="score-row">
+      <div class="score-box" id="score-number"></div>
+      <div class="score-box" id="high-score-number"></div>
+    </div>
     
   </body>
   <script></script>
@@ -149,16 +171,6 @@ body {
   color: #00ffff;
 }
 
-.second-row {
-  position: absolute;
-  margin-top: 17px;
-  right: 25%;
-}
-
-.each-direction {
-  margin-top: 15px;
-}
-
 .instructions-list {
   display: inline;
   margin-top: 11px;
@@ -167,6 +179,16 @@ body {
   font-size: 36px;
   font-weight: 600;
   color: #00ffff;
+}
+
+.second-row {
+  position: absolute;
+  margin-top: 17px;
+  right: 25%;
+}
+
+.each-direction {
+  margin-top: 15px;
 }
 
 .instructions {
@@ -199,6 +221,30 @@ body {
   cursor: pointer;
 }
 
+.score-row {
+  text-align: center;
+}
+
+.score-text {
+  margin-right: 28px;
+  display: inline;
+  font-family: 'Work Sans';
+  font-size: 12px;
+  letter-spacing: 1.1px;
+  color: #ffffff;
+}
+
+.score-box {
+  margin-top: 9px;
+  display: inline-block;
+  margin-right: 24px;
+  width: 59px;
+  height: 55px;
+  background-color: #00ffff;
+  font-family: 'Work Sans';
+  font-size: 45px;
+}
+
 ```
 
 ```
@@ -224,6 +270,12 @@ Solution Code - JavaScript
   let door2Clicked = false;
   let door3Clicked = false;
   let currentlyPlaying = false;
+  let score = 0;
+  let highScore = 0;
+  let scoreDisplay = document.getElementById('score-number');
+  let highScoreDisplay = document.getElementById('high-score-number');
+  scoreDisplay.innerHTML = score;
+  highScoreDisplay.innerHTML = highScore;
 
   startButton.onclick = () => {
     if (!currentlyPlaying) {
@@ -282,8 +334,8 @@ Solution Code - JavaScript
 
   doorImage2.onclick = () => {
     if (!door2Clicked) {
-      door2Clicked = true;
-      doorImage2.src = openDoor2;
+     door2Clicked = true;
+     doorImage2.src = openDoor2;
       doors--;
       if (doors===0) {
         winnerGameOver();
@@ -302,11 +354,13 @@ Solution Code - JavaScript
         winnerGameOver();
       } else if (door3Doom) {
         gameOver();
-     }
+      }
     }
   }
 
-  const gameOver = () {
+  const gameOver = () => {
+    score = 0;
+    scoreDisplay.innerHTML = score;
     startButton.innerHTML = 'Game Over! Play again?';
     door1Clicked = true;
     door2Clicked = true;
@@ -315,8 +369,18 @@ Solution Code - JavaScript
   }
 
   const winnerGameOver = () => {
+    score++;
+    scoreDisplay.innerHTML = score;
     startButton.innerHTML = 'You win! Play again?';
     currentlyPlaying = false;
+    determineHighScore();
+  }
+
+  const determineHighScore = () => {
+    if (score > highScore) {
+      highScore = score;
+      highScoreDisplay.innerHTML = highScore;
+    }
   }
 
   startRound();

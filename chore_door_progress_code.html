@@ -45,6 +45,16 @@
 
     <div class="start-row" id="start">Good luck!</div>
 
+    <div class="score-row">
+      <p class="score-text">Current streak:</p>
+      <p class="score-text">Best streak:</p>
+    </div>
+
+    <div class="score-row">
+      <div class="score-box" id="score-number"></div>
+      <div class="score-box" id="high-score-number"></div>
+    </div>
+
   </body>
 
   <script>
@@ -67,6 +77,12 @@
     let door2Clicked = false;
     let door3Clicked = false;
     let currentlyPlaying = false;
+    let score = 0;
+    let highScore = 0;
+    let scoreDisplay = document.getElementById('score-number');
+    let highScoreDisplay = document.getElementById('high-score-number');
+    scoreDisplay.innerHTML = score;
+    highScoreDisplay.innerHTML = highScore;
 
     startButton.onclick = () => {
       if (!currentlyPlaying) {
@@ -149,7 +165,9 @@
       }
     }
 
-    const gameOver = () {
+    const gameOver = () => {
+      score = 0;
+      scoreDisplay.innerHTML = score;
       startButton.innerHTML = 'Game Over! Play again?';
       door1Clicked = true;
       door2Clicked = true;
@@ -158,8 +176,18 @@
     }
 
     const winnerGameOver = () => {
+      score++;
+      scoreDisplay.innerHTML = score;
       startButton.innerHTML = 'You win! Play again?';
       currentlyPlaying = false;
+      determineHighScore();
+    }
+
+    const determineHighScore = () => {
+      if (score > highScore) {
+        highScore = score;
+        highScoreDisplay.innerHTML = highScore;
+      }
     }
 
     startRound();
