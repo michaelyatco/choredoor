@@ -7,15 +7,25 @@ Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript conc
 ###Project Overview
 Your mission is to construct a single-page website that plays a fully-functional game. You will see how HTML, CSS, and JavaScript interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
-### 6. Let's Build a Winner
+### Next Steps - HTML & CSS Styling
 
-1. [ ] But what about winning? How do we determine the winner in this game? Think about the winning condition - find the ChoreBot in the *last* door. If there are no more `doors` left, that means you opened them all and won the game! So our winning condition must be `if(doors===0)`. If that condition is fulfilled, a `winnerGameOver()` function is carried out. Let's focus for now on writing the logic to bring `doors` to `0`. If a door is clicked, that door is open so add logic to the `doorImage.onclick` event to decrease the `doors` value. 
+1. [ ] Welcome to the the **Next Steps** section of the Milestone Project! This is an extra opportunity to improve the view and functionality of your ChoreBot game! First, let's focus on making the numbers larger and brighter, like this picture illustrates:
 
-    >Hint - `doors--;`
+    ![Instructions-list](images/instructions_list.png)
+
+    Inside each `each-direction` `<div>`, create a new `<p>` element with the class name `'instructions-list'` and number them accordingly.
     
-2. [ ] One common complaint about poorly-built games is when the logic has a flaw that a player can exploit to win easily. If `(doors===0)` is the winning condition, a player can just click the same door until he or she wins. Add logic to make each door clickable only once.
-
-	>Hint - Place `clickDoor = true;` in the correct line of your three`.onclick` events.
+2. [ ] In the **style.css** file, create an `instructions-list` selector and add the following properties and values:
+3. 
+    ````
+    display: inline;
+    margin-top: 11px;
+    margin-right: 23px;
+    font-family: 'Work Sans';
+    font-size: 36px;
+    font-weight: 600;
+    color: #00ffff;
+    ````
 
 
 3. [ ] Now we have the logic and failsafe in place for an honest game. Modify your `if` statement in the three `.onclick` events so that `if` `(doors===0)`, the code will execute a new function called `winnerGameOver()`. Otherwise, the logic should check if the `doorDoom` game over boolean is `true`.
@@ -37,7 +47,7 @@ Your mission is to construct a single-page website that plays a fully-functional
  * `doorImage.src` variable
  * `startButton.innerHTML` variable
  
- After all these variables are reset, call the `randomChoreDoorGenerator()` function.
+After all these variables are reset, call the `randomChoreDoorGenerator()` function.
 
     >Hint - the `doorClick` and `doorDoom` variables are set to `false`, the `doors` variable is set to `3`, the `doorImage.src` variable is set to the `closedDoor` variable, and the `startButton.innerHTML` is set to 'Good luck!`
 
@@ -80,16 +90,20 @@ Solution Code - HTML
 
     <div class="second-row">
       <div class="each-direction">
-        <p class="instructions">1. Hiding behind one of these doors is the ChoreBot.</p>
+        <p class="instructions-list">1</p>
+        <p class="instructions">Hiding behind one of these doors is the ChoreBot.</p>
       </div>
       <div class="each-direction">
-        <p class="instructions">2. Your mission is to open all of the doors without running into the ChoreBot.</p>
+        <p class="instructions-list">2</p>
+        <p class="instructions">Your mission is to open all of the doors without running into the ChoreBot.</p>
       </div>
       <div class="each-direction">
-        <p class="instructions">3. If you manage to avoid the ChoreBot until the very last door, you win!</p>
+        <p class="instructions-list">3</p>
+        <p class="instructions">If you manage to avoid the ChoreBot until the very last door, you win!</p>
       </div>
       <div class="each-direction">
-        <p class="instructions">4. See if you can score a winning streak!</p>
+        <p class="instructions-list">4</p>
+        <p class="instructions">See if you can score a winning streak!</p>
       </div>
     </div>
 
@@ -138,6 +152,16 @@ body {
 
 .each-direction {
   margin-top: 15px;
+}
+
+.instructions-list {
+  display: inline;
+  margin-top: 11px;
+  margin-right: 23px;
+  font-family: 'Work Sans';
+  font-size: 36px;
+  font-weight: 600;
+  color: #00ffff;
 }
 
 .instructions {
