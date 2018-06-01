@@ -51,6 +51,7 @@
     let botDoor = "images/Robot_open_door.svg";
     let beachDoor = "images/beach_open_door.svg";
     let spaceDoor = "images/space_open_door.svg";
+    let closedDoor = "images/closed_door.svg";
     let doors = 3;
     let openDoor1;
     let openDoor2;
@@ -61,6 +62,29 @@
     let door1Clicked = false;
     let door2Clicked = false;
     let door3Clicked = false;
+    let currentlyPlaying = false;
+
+    startButton.onclick = () => {
+      if (!currentlyPlaying) {
+        startRound();
+      }
+    }
+
+    const startRound = () => {
+      currentlyPlaying = true;
+      door1Clicked = false;
+      door2Clicked = false;
+      door3Clicked = false;
+      door1Doom = false;
+      door2Doom = false;
+      door3Doom = false;
+      doors = 3;
+      doorImage1.src = closedDoor;
+      doorImage2.src = closedDoor;
+      doorImage3.src = closedDoor;
+      startButton.innerHTML = 'Good luck!';
+      randomChoreDoorGenerator();
+    }
 
     const randomChoreDoorGenerator = () => {
       choreDoor = Math.floor(Math.random() * doors);
@@ -84,38 +108,57 @@
 
     doorImage1.onclick = () => {
       if (!door1Clicked) {
+        door1Clicked = true;
         doorImage1.src = openDoor1;
-        if (door1Doom) {
-          startButton.innerHTML = 'Game Over!';
-          door2Clicked = true;
-          door3Clicked = true;
+        doors--;
+        if (doors===0) {
+          winnerGameOver();
+        } else if (door1Doom) {
+          gameOver();
         }
       }
     }
 
     doorImage2.onclick = () => {
       if (!door2Clicked) {
+        door2Clicked = true;
         doorImage2.src = openDoor2;
-        if (door2Doom) {
-          startButton.innerHTML = 'Game Over!';
-          door1Clicked = true;
-          door3Clicked = true;
+        doors--;
+        if (doors===0) {
+          winnerGameOver();
+        } else if (door2Doom) {
+          gameOver();
         }
       }
     }
 
     doorImage3.onclick = () => {
       if (!door3Clicked) {
-      doorImage3.src = openDoor3;
-        if (door3Doom) {
-          startButton.innerHTML = 'Game Over!';
-          door1Clicked = true;
-          door2Clicked = true;
+        door3Clicked = true;
+        doorImage3.src = openDoor3;
+        doors--;
+        if (doors===0) {
+          winnerGameOver();
+        } else if (door3Doom) {
+          gameOver();
         }
       }
     }
 
-    randomChoreDoorGenerator();
+    const gameOver = () {
+      startButton.innerHTML = 'Game Over! Play again?';
+      door1Clicked = true;
+      door2Clicked = true;
+      door3Clicked = true;
+      currentlyPlaying = false;
+    }
+
+    const winnerGameOver = () => {
+      startButton.innerHTML = 'You win! Play again?';
+      currentlyPlaying = false;
+    }
+
+    startRound();
 
   </script>
 

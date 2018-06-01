@@ -9,60 +9,53 @@ Your mission is to construct a single-page website that plays a fully-functional
 
 ### 6. Let's Build a Winner
 
-1. [ ] But what about winning? How do we determine the winner in this game? Think about the winning condition - find the ChoreBot in the *last* door. If there are no more `doors` left, that means you opened them all and won the game! So our winning condition must be `if(doors===0)`. If that condition is fulfilled, a `winnerGameOver()` function is carried out. Let's focus for now on writing the logic to bring `doors` to `0`.  
+1. [ ] But what about winning? How do we determine the winner in this game? Think about the winning condition - find the ChoreBot in the *last* door. If there are no more `doors` left, that means you opened them all and won the game! So our winning condition must be `if(doors===0)`. If that condition is fulfilled, a `winnerGameOver()` function is carried out. Let's focus for now on writing the logic to bring `doors` to `0`. If a door is clicked, that door is open so add logic to the `doorImage.onclick` event to decrease the `doors` value. 
 
-    >Hint - Make sure to wrap your `class` and `id` values are wrapped in quotation marks.
-    >Hint - Use the DOM method: `document.getElementById('id')`
+    >Hint - `doors--;`
     
-2. [ ] In the **style.css** file, create a `start-row` selector and paste in the following:
+2. [ ] One common complaint about poorly-built games is when the logic has a flaw that a player can exploit to win easily. If `(doors===0)` is the winning condition, a player can just click the same door until he or she wins. Add logic to make each door clickable only once.
 
-    ```
-  margin: auto;
-  width: 120px;
-  height: 43px;
-  background-color: #eb6536;
-  padding-top: 18px;
-  font-family: 'Work Sans';
-  font-size: 18px;
-  text-align: center;
-  color: #010165;
-  margin-bottom: 21px;
-  cursor: pointer;
-    ```
-    
-    >Hint - A class attribute is constructed with:
-`.class { property: value;}`
+	>Hint - Place `clickDoor = true;` in the correct line of your three`.onclick` events.
 
-3. [ ] Create three new global variables, `door1Doom`, `door2Doom`, and `door3Doom` but do not assign any value to these global variables.  In the `randomChoreDoorGenerator()` function, however, insert each `doorDoom` variable in each "if-else" statement and set each `doorDoom` variable to `true`. This is the **game over** boolean value. 
+
+3. [ ] Now we have the logic and failsafe in place for an honest game. Modify your `if` statement in the three `.onclick` events so that `if` `(doors===0)`, the code will execute a new function called `winnerGameOver()`. Otherwise, the logic should check if the `doorDoom` game over boolean is `true`.
  
-    >Hint - The `door1Doom` should be with the logic that has `openDoor1` having the `botDoor` value. The other two boolean variables should follow the same pattern.
+    >Hint - the current `if` logic should be moved to the `else if` section of the statement.
 
-4. [ ] Now we have the **game over** boolean value attached to one random door. The next step is having this value act as a condition in an "if-else" statement within the `doorImage.onclick` event. Beneath the current logic, write an "if" statement that will change the text in the `startButton` variable to `'Game over!'`. 
+4. [ ] What does the `winnerGameOver()` function do? It should let us know that we won the game! Write the logic to change the `startButton` innerHTML to `'You win!`
 
-    >Hint - The syntax for this "if-else" statement follows:
-    
-     ``` 
-      if(doorDoom) {
-	     startButton.innerHTML = 'New text'
-	   } ...
-    ```
+    >Hint - obj.innerHTML = 'New text'
 		
-5. [ ] Great! The text changes to 'Game Over!' but notice that you can still open the other doors and play the game. Add three new global variables: `door1Clicked`, `door2Clicked`, and `door3Clicked` and set their value to `false`. Now add an `if` statement to the beginning of each `doorImage.onclick` event so that the function within is only executed if the door was never clicked. Then determine how to use these boolean values to prevent clicking the other doors once the game is over. 
+5. [ ] Wow - the game works! It lets you know when you opened all the doors to victory and when the ChoreBot found you and served you defeat. But refreshing the page to reset the values is annoying and games that annoy players will lose them quickly. So let's turn our `startButton` into exactly that - a start button for a new round! Directly underneath the global variables, write the logic to turn the `startButton` into an `.onclick` event that will trigger a new `startRound()` function.
 
-    >Hint - The syntax for this "if-else" statement follows:
+    >Hint - obj.onclick = () => {}
     
-     ``` 
-      if(!door1Clicked) {
-	     (execute function)
-	     if(gameOver) {
-	     	startButton.innerHTML = 'Game over'
-	     	door2Clicked = true;
-	     	...
-	     }
-	   } 
-     ```
+6. [ ] The `startRound()` function not only has to start a new game; it also has to reset the values from the previous rounds. Add a new global variable named `closedDoor` and set its value to the path in the **images** folder. Then write the function so that the following variables are reset: 
+ * All `doorClick` variables
+ * All `doorDoom` variables
+ * `doors` variable
+ * `doorImage.src` variable
+ * `startButton.innerHTML` variable
+ 
+After all these variables are reset, call the `randomChoreDoorGenerator()` function.
 
-  Huzzah! You've made a game that can't be played once you've hit the losing **game over** condition. But games aren't much fun if they just point out when we lose; they're much more fun when they point out that we've won! JavaScript has helped us establish the losing conditions. Soon, JavaScript will help us establish winning conditions, as well.
+    >Hint - the `doorClick` and `doorDoom` variables are set to `false`, the `doors` variable is set to `3`, the `doorImage.src` variable is set to the `closedDoor` variable, and the `startButton.innerHTML` is set to 'Good luck!`
+
+7. [ ] Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` tag needs to be replaced by the `startRound()` function so that the game resets correctly for each new round.
+
+8. [ ] We're almost at the finish line! We just need to add some finishing touches. Add the text `Play again?` to the end of the current `startButton.innerHTML` so players are guided to click on that button to reset the game. 
+
+    >Hint - 'Game over! Play again?' / 'You win! Play again?'
+
+8. [ ] One minor bug is that the game can reset mid-round if the player clicks on the door. Create a global variable called `currentlyPlaying` and set its value to `false`. Then use that variable as a condition where the `startButton.onClick` event can only be clicked if the `currentlyPlaying` variable is `false`. The variable must be set to `true` during the round and reset back to `false` when the game is over - win or lose.
+
+    > Hint - Anytime you see `startButton.innerHTML` asking to 'Play again?', that's where `currentlyPlaying` should be set to `false`.
+    
+9. [ ] In an effort to DRY up the code, the logic in the `else if (doorDoom)` in each `doorImage.onclick` event should be condensed. Create one last function called `gameOver()` directly above the `winnerGameOver()` function. The `gameOver()` function should change the `startButton.innerHTML` to `Game over! Play again?`, prevent any door from being clicked, and set the `currentlyPlaying` variable to `false`.
+
+    >Hint - `doorClicked = true;`
+
+Congratulations! You completed your first Milestone Project and created a fun interactive game utilizing your HTML, CSS, and JavaScript knowledge. Be proud of how far you've come. If you feel like taking this project to the next level (ie. adding more flourish to the HTML/CSS, score keeping, determining highest winning streak, etc.), we invite you to take on the challenges presented in the **Next Steps** section of this Milestone Project.
 
 ```
 Solution Code - HTML
@@ -190,6 +183,7 @@ Solution Code - JavaScript
   let botDoor = "images/Robot_open_door.svg";
   let beachDoor = "images/beach_open_door.svg";
   let spaceDoor = "images/space_open_door.svg";
+  let closedDoor = "images/closed_door.svg";
   let doors = 3;
   let openDoor1;
   let openDoor2;
@@ -197,6 +191,32 @@ Solution Code - JavaScript
   let door1Doom;
   let door2Doom;
   let door3Doom;
+  let door1Clicked = false;
+  let door2Clicked = false;
+  let door3Clicked = false;
+  let currentlyPlaying = false;
+
+  startButton.onclick = () => {
+    if (!currentlyPlaying) {
+      startRound();
+    }
+  }
+
+  const startRound = () => {
+    currentlyPlaying = true;
+    door1Clicked = false;
+    door2Clicked = false;
+    door3Clicked = false;
+    door1Doom = false;
+    door2Doom = false;
+    door3Doom = false;
+    doors = 3;
+    doorImage1.src = closedDoor;
+    doorImage2.src = closedDoor;
+    doorImage3.src = closedDoor;
+    startButton.innerHTML = 'Good luck!';
+    randomChoreDoorGenerator();
+  }
 
   const randomChoreDoorGenerator = () => {
     choreDoor = Math.floor(Math.random() * doors);
@@ -219,27 +239,58 @@ Solution Code - JavaScript
   }
 
   doorImage1.onclick = () => {
-    doorImage1.src = openDoor1;
-    if (door1Doom) {
-      startButton.innerHTML = 'Game Over!';
+    if (!door1Clicked) {
+      door1Clicked = true;
+      doorImage1.src = openDoor1;
+      doors--;
+      if (doors===0) {
+        winnerGameOver();
+      } else if (door1Doom) {
+        gameOver();
+      }
     }
   }
 
   doorImage2.onclick = () => {
-    doorImage2.src = openDoor2;
-    if (door2Doom) {
-      startButton.innerHTML = 'Game Over!';
+    if (!door2Clicked) {
+      door2Clicked = true;
+      doorImage2.src = openDoor2;
+      doors--;
+      if (doors===0) {
+        winnerGameOver();
+      } else if (door2Doom) {
+        gameOver();
+      }
     }
   }
 
   doorImage3.onclick = () => {
-    doorImage3.src = openDoor3;
-    if (door3Doom) {
-      startButton.innerHTML = 'Game Over!';
+    if (!door3Clicked) {
+      door3Clicked = true;
+      doorImage3.src = openDoor3;
+      doors--;
+      if (doors===0) {
+        winnerGameOver();
+      } else if (door3Doom) {
+        gameOver();
+     }
     }
   }
 
-  randomChoreDoorGenerator();
+  const gameOver = () {
+    startButton.innerHTML = 'Game Over! Play again?';
+    door1Clicked = true;
+    door2Clicked = true;
+    door3Clicked = true;
+    currentlyPlaying = false;
+  }
+
+  const winnerGameOver = () => {
+    startButton.innerHTML = 'You win! Play again?';
+    currentlyPlaying = false;
+  }
+
+  startRound();
 
 </script>
 
