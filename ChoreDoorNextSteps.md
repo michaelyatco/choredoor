@@ -85,6 +85,8 @@ Wouldn't it be great to play this game with the opportunity to record consecutiv
 
 	>Hint - `obj.innerHTML = 'New text'`
 	
+10. [ ] Excellent work! Now the only task left is to separate the **JavaScrip** from the **index.html** file. Transfer (via copy & paste) all the **JavaScript** logic between the `<script></script>` tags to a new file called `script.js`. Make sure not to include the actual `<script></script>` tags in this new file. Finally, to load this `script.js` file onto the **index.html** file, you need to add this line at the *bottom* of the `<body>` tag: `<script type="text/javascript" src="script.js"></script>`. 
+	
 Wow! Now you have a legitmate scoreboard that reflects your current winning streak and records your highest streak. See if you can think of any other features from your favorite games that would integrate well with ChoreBot!
 
 ```
