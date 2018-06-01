@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <head>
+    <title>Chore Door!</title>
+    <link href='chore_door3_style.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type='text/css'>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <img src="images/logo.svg">
+    </div>
+
+    <div class="first-row">
+      <img src="images/Star.svg">
+      <p class="instructions-title">Instructions</p>
+      <img src="images/Star.svg">
+    </div>
+
+    <div class="second-row">
+      <div class="each-direction">
+        <p class="instructions">1. Hiding behind one of these doors is the ChoreBot.</p>
+      </div>
+      <div class="each-direction">
+        <p class="instructions">2. Your mission is to open all of the doors without running into the ChoreBot.</p>
+      </div>
+      <div class="each-direction">
+        <p class="instructions">3. If you manage to avoid the ChoreBot until the very last door, you win!</p>
+      </div>
+      <div class="each-direction">
+        <p class="instructions">4. See if you can score a winning streak!</p>
+      </div>
+    </div>
+
+    <div class="door-row">
+      <img class="door-frame" src="images/closed_door.svg" id="door1">
+      <img class="door-frame" src="images/closed_door.svg" id="door2">
+      <img class="door-frame" src="images/closed_door.svg" id="door3">
+    </div>
+
+  </body>
+  <script>
+
+    let doorImage1 = document.getElementById('door1');
+    let doorImage2 = document.getElementById('door2');
+    let doorImage3 = document.getElementById('door3');
+    let botDoor = "images/Robot_open_door.svg";
+    let beachDoor = "images/beach_open_door.svg";
+    let spaceDoor = "images/space_open_door.svg";
+
+    doorImage1.onclick = () => {
+      doorImage1.src = botDoor;
+    }
+
+    doorImage2.onclick = () => {
+      doorImage2.src = beachDoor;
+    }
+
+    doorImage3.onclick = () => {
+      doorImage3.src = spaceDoor;
+    }
+
+  </script>
+</html>

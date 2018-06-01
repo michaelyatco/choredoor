@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+  <head>
+    <title>Chore Door!</title>
+    <link href='./chore_door4_style.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type='text/css'>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <img src="images/logo.svg">
+    </div>
+
+    <div class="first-row">
+      <img src="images/Star.svg">
+      <p class="instructions-title">Instructions</p>
+      <img src="images/Star.svg">
+    </div>
+
+    <div class="second-row">
+      <div class="each-direction">
+        <p class="instructions">1. Hiding behind one of these doors is the ChoreBot.</p>
+      </div>
+      <div class="each-direction">
+        <p class="instructions">2. Your mission is to open all of the doors without running into the ChoreBot.</p>
+      </div>
+      <div class="each-direction">
+        <p class="instructions">3. If you manage to avoid the ChoreBot until the very last door, you win!</p>
+      </div>
+      <div class="each-direction">
+        <p class="instructions">4. See if you can score a winning streak!</p>
+      </div>
+    </div>
+
+    <div class="door-row">
+      <img class="door-frame" src="images/closed_door.svg" id="door1">
+      <img class="door-frame" src="images/closed_door.svg" id="door2">
+      <img class="door-frame" src="images/closed_door.svg" id="door3">
+    </div>
+
+  </body>
+  <script>
+    let doorImage1 = document.getElementById('door1');
+    let doorImage2 = document.getElementById('door2');
+    let doorImage3 = document.getElementById('door3');
+    let botDoor = "images/Robot_open_door.svg";
+    let beachDoor = "images/beach_open_door.svg";
+    let spaceDoor = "images/space_open_door.svg";
+    let doors = 3;
+    let openDoor1;
+    let openDoor2;
+    let openDoor3;
+
+    const randomChoreDoorGenerator = () => {
+      choreDoor = Math.floor(Math.random() * doors);
+      if (choreDoor === 0) {
+        openDoor1 = botDoor;
+        openDoor2 = beachDoor;
+        openDoor3 = spaceDoor;
+      } else if (choreDoor === 1) {
+        openDoor2 = botDoor;
+        openDoor1 = beachDoor;
+        openDoor3 = spaceDoor;
+      } else {
+        openDoor3 = botDoor;
+        openDoor1 = beachDoor;
+        openDoor2 = spaceDoor;
+      }
+    }
+
+    doorImage1.onclick = () => {
+      doorImage1.src = openDoor1;
+    }
+
+    doorImage2.onclick = () => {
+      doorImage2.src = openDoor2;
+    }
+
+    doorImage3.onclick = () => {
+      doorImage3.src = openDoor3;
+    }
+
+    randomChoreDoorGenerator();
+  </script>
+</html>
