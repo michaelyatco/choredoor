@@ -9,16 +9,16 @@ Your mission is to construct a single-page website that plays a fully-functional
 
 ### 6. Let's Build a Winner
 
-1. [ ] But what about winning? How do we determine the winner in this game? Think about the winning condition - find the ChoreBot in the *last* door. If there are no more `doors` left, that means you opened them all and won the game! So our winning condition must be `if(doors===0)`. If that condition is fulfilled, a `winnerGameOver()` function is carried out. Let's focus for now on writing the logic to bring `doors` to `0`. If a door is clicked, that door is open so add logic to the `doorImage.onclick` event to decrease the `doors` value. 
+1. [ ] So far, the game tells you when you lost - but what about when you win? How *do* you determine the winner in your game? Think about the winning condition (ie. finding the ChoreBot in the *last* door). If there are no more `doors` left, that means you've opened them all and won the game! So your winning condition must be `if(doors===0)`. If that condition is fulfilled, a `winnerGameOver()` function is carried out. Focus for now on writing the logic to bring `doors` to `0`. If a door is clicked, that door is open so add logic to the `doorImage.onclick` event to decrease the `doors` value. 
 
     >Hint - `doors--;`
     
-2. [ ] One common complaint about poorly-built games is when the logic has a flaw that a player can exploit to win easily. If `(doors===0)` is the winning condition, a player can just click the same door until he or she wins. Add logic to make each door clickable only once.
+2. [ ] One common complaint about poorly-built games is that many have flawed logic which a player can exploit to win easily. If `(doors===0)` is the winning condition, a player can click the same door (even if it's opened) multiple times to decrease the `doors` count down to `0` and win the game. Don't let your players exploit your game! Add logic to make each door clickable only once.
 
 	>Hint - Place `clickDoor = true;` in the correct line of your three`.onclick` events.
 
 
-3. [ ] Now we have the logic and failsafe in place for an honest game. Modify your `if` statement in the three `.onclick` events so that `if` `(doors===0)`, the code will execute a new function called `winnerGameOver()`. Otherwise, the logic should check if the `doorDoom` game over boolean is `true`.
+3. [ ] Now you have the logic and failsafe in place for an honest game. Modify your `if` statement in the three `.onclick` events so that `if` `(doors===0)`, the code will execute a new function called `winnerGameOver()`. Otherwise, the logic should check if the `doorDoom` game over boolean is `true`.
  
     >Hint - the current `if` logic should be moved to the `else if` section of the statement.
 
@@ -26,7 +26,7 @@ Your mission is to construct a single-page website that plays a fully-functional
 
     >Hint - obj.innerHTML = 'New text'
 		
-5. [ ] Wow - the game works! It lets you know when you opened all the doors to victory and when the ChoreBot found you and served you defeat. But refreshing the page to reset the values is annoying and games that annoy players will lose them quickly. So let's turn our `startButton` into exactly that - a start button for a new round! Directly underneath the global variables, write the logic to turn the `startButton` into an `.onclick` event that will trigger a new `startRound()` function.
+5. [ ] Wow - the game works! It lets you know if you've opened all the doors to victory and it tells you if you've lost because you found the ChoreBot before all the doors were opened. There's one problem though - the only way to reset the values for a new round is to refresh the page. Your next task is to turn your `startButton` into exactly that - a start button for a new round! Directly underneath the global variables, write the logic to turn the `startButton` into an `.onclick` event that will trigger a new `startRound()` function.
 
     >Hint - obj.onclick = () => {}
     
@@ -43,19 +43,19 @@ Your mission is to construct a single-page website that plays a fully-functional
 
 7. [ ] Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` tag needs to be replaced by the `startRound()` function so that the game resets correctly for each new round.
 
-8. [ ] We're almost at the finish line! We just need to add some finishing touches. Add the text `Play again?` to the end of the current `startButton.innerHTML` so players are guided to click on that button to reset the game. 
+8. [ ] You're almost at the finish line! You just need to add some finishing touches. Add the text `Play again?` to the end of the current `startButton.innerHTML` so players are guided to click on that button to reset the game. 
 
     >Hint - 'Game over! Play again?' / 'You win! Play again?'
 
-8. [ ] One minor bug is that the game can reset mid-round if the player clicks on the door. Create a global variable called `currentlyPlaying` and set its value to `false`. Then use that variable as a condition where the `startButton.onClick` event can only be clicked if the `currentlyPlaying` variable is `false`. The variable must be set to `true` during the round and reset back to `false` when the game is over - win or lose.
+8. [ ] One minor bug is that the game can reset mid-round if the player clicks on the `startRound` button. Create a global variable called `currentlyPlaying` and set its value to `false`. Then use that variable as a condition where the `startButton.onclick` event can only be clicked if the `currentlyPlaying` variable is `false`. The variable must be set to `true` during the round and reset back to `false` when the game is over - win or lose.
 
     > Hint - Anytime you see `startButton.innerHTML` asking to 'Play again?', that's where `currentlyPlaying` should be set to `false`.
     
-9. [ ] In an effort to DRY up the code, the logic in the `else if (doorDoom)` in each `doorImage.onclick` event should be condensed. Create one last function called `gameOver()` directly above the `winnerGameOver()` function. The `gameOver()` function should change the `startButton.innerHTML` to `Game over! Play again?`, prevent any door from being clicked, and set the `currentlyPlaying` variable to `false`.
+9. [ ] In an effort to DRY up the code, the logic in the `else if (doorDoom)` in each `doorImage.onclick` event should be condensed. Create one last function called `gameOver()` directly above the `winnerGameOver()` function. The `gameOver()` function should change the `startButton.innerHTML` to `Game over! Play again?`, prevent any door from being clicked, and set the `currentlyPlaying` variable to `false`. Then replace all the logic within each `else if (doorDoom)` statement to `gameOver()`.
 
     >Hint - `doorClicked = true;`
 
-Congratulations! You completed your first Milestone Project and created a fun interactive game utilizing your HTML, CSS, and JavaScript knowledge. Be proud of how far you've come. If you feel like taking this project to the next level (ie. adding more flourish to the HTML/CSS, score keeping, determining highest winning streak, etc.), we invite you to take on the challenges presented in the **Next Steps** section of this Milestone Project.
+Congratulations! You've successfully built your first Milestone Project and created a fun interactive game utilizing your HTML, CSS, and JavaScript knowledge. Be proud of how far you've come. If, however, you feel like taking this project to the next level (ie. adding more flourish to the HTML/CSS, score keeping, determining highest winning streak, etc.), we invite you to take on the challenges presented in the **Next Steps** section of this Milestone Project.
 
 ```
 Solution Code - HTML

@@ -9,7 +9,7 @@ Your mission is to construct a single-page website that plays a fully-functional
 
 ### 5. Let's Make This ACT Like a Game! - Part II
 
-1. [ ] Our game is randomly hiding the ChoreBot behind one of the doors but it currently doesn't care whether you find the ChoreBot in the first door you open or the last. Let's work towards incorporating **game over** logic - win or lose! First, let's build a button that will respond to the status of the game. Beneath the `<door-row>` `<div>` create a new `<div>` element with the class name `"start-row"` and an `id` of `"start"`. Type `Good luck!` in between the `<div></div>`. Finally, create a `startButton` global variable that accepts `start` as its value.  
+1. [ ] Your game is randomly hiding the ChoreBot behind one of the doors but the current logic doesn't care whether you find the ChoreBot in the first door you open or the last. Now you're going to work towards incorporating **game over** logic - win or lose! First, build a button that will respond to the status of the game. Beneath the `<door-row>` `<div>` create a new `<div>` element with the class name `"start-row"` and an `id` of `"start"`. Type `Good luck!` in between the `<div></div>`. Finally, create a `startButton` global variable that accepts `start` as its value.  
 
     >Hint - Make sure to wrap your `class` and `id` values are wrapped in quotation marks.
     >Hint - Use the DOM method: `document.getElementById('id')`
@@ -37,9 +37,9 @@ Your mission is to construct a single-page website that plays a fully-functional
  
     >Hint - The `door1Doom` should be with the logic that has `openDoor1` having the `botDoor` value. The other two boolean variables should follow the same pattern.
 
-4. [ ] Now we have the **game over** boolean value attached to one random door. The next step is having this value act as a condition in an "if-else" statement within the `doorImage.onclick` event. Beneath the current logic, write an "if" statement that will change the text in the `startButton` variable to `'Game over!'`. 
+4. [ ] Now you have the **game over** boolean value attached to one random door. The next step is having this value act as a condition in an `if-else` statement within the `doorImage.onclick` event. Beneath the current logic, write an `if` statement that will change the text in the `startButton` variable to `'Game over!'`. 
 
-    >Hint - The syntax for this "if-else" statement follows:
+    >Hint - The syntax for this `if-else` statement follows:
     
      ``` 
       if(doorDoom) {
@@ -49,7 +49,7 @@ Your mission is to construct a single-page website that plays a fully-functional
 		
 5. [ ] Great! The text changes to 'Game Over!' but notice that you can still open the other doors and play the game. Add three new global variables: `door1Clicked`, `door2Clicked`, and `door3Clicked` and set their value to `false`. Now add an `if` statement to the beginning of each `doorImage.onclick` event so that the function within is only executed if the door was never clicked. Then determine how to use these boolean values to prevent clicking the other doors once the game is over. 
 
-    >Hint - The syntax for this "if-else" statement follows:
+    >Hint - The syntax for this `if-else` statement follows:
     
      ``` 
       if(!door1Clicked) {
@@ -62,7 +62,7 @@ Your mission is to construct a single-page website that plays a fully-functional
 	   } 
      ```
 
-  Huzzah! You've made a game that can't be played once you've hit the losing **game over** condition. But games aren't much fun if they just point out when we lose; they're much more fun when they point out that we've won! JavaScript has helped us establish the losing conditions. Soon, JavaScript will help us establish winning conditions, as well.
+  Huzzah! You've made a game that can't be played once you've hit the losing **game over** condition. JavaScript has helped you establish the losing conditions. But games aren't much fun if they just point out when you lose; they're much more exciting when they point out that you've won, as well! Next, you'll be using JavaScript to give your game winning conditons.
 
 ```
 Solution Code - HTML

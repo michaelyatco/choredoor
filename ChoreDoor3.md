@@ -9,20 +9,20 @@ Your mission is to construct a single-page website that plays a fully-functional
 
 ### 3. Let's Make This LOOK Like a Game!
 
-1. [ ] Nice! We have three doors but they're all huddled in the top left corner. Let's give our website some flavor and symmetry by expanding our **HTML** and **CSS** pages. Right after the opening `<body>` tag, create a new `<div>` with the class name `"header"`. Inside this new `<div>`, create an `<img>` tag for the `logo.svg` image.  Be aware that the logo is the same color as that current background so don't fret if you can't see the image. This is where the **CSS** come in in the next step! 
+1. [ ] Nice! You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding our **HTML** and **CSS** pages. Right after the opening `<body>` tag, create a new `<div>` with the class name `"header"`. Inside this new `<div>`, create an `<img>` tag for the `logo.svg` image.  Be aware that the logo is the same color as that current background so don't fret if you can't see the image. This is where the **CSS** gets its chance to contribute! 
 
     >Hint - Make sure to wrap your link in quotation marks:    `<img src="image-location.jpg" />`. Make sure your `<div>` also has a closing `</div>`.
 
-2. [ ] In the **style.css** folder, create a `header` selector and assign the `background-color` the value `#00ffff`. The logo is now visible in the corner so assign the `text-align` a value of `center` in order to center the logo.
+2. [ ] In the **style.css** file, create a `header` selector and assign the `background-color` the value `#00ffff`. The logo is now visible in the corner so assign the `text-align` a value of `center` in order to center the logo.
  
     >Hint - A class attribute is constructed with:
 `.class { property: value;}`.
 
-3. [ ] We have a game title, now let's establish the directions to the game. First, let's create a title for the instructions surrounded by pretty stars. Beneath the `<div class="header"></div>` but above the `<div class="door-row"></div>`, create a new `<div>` with the class name `"first-row"`. Inside this new `<div>` create two new `<img>` tags that take the `star.svg` image.
+3. [ ] You have a game title, now write the directions to the game. First, create a title for the instructions surrounded by pretty stars. Beneath the `<div class="header"></div>` but above the `<div class="door-row"></div>`, create a new `<div>` with the class name `"first-row"`. Inside this new `<div>` create two new `<img>` tags that take the `star.svg` image.
 
     >Hint - Make sure to wrap your link in quotation marks:    `<img src="image-location.jpg" />`. Also make sure your `<div>` also has a closing `</div>`.
 
-4. [ ] So we have two stars resting in the top left corner of their `<div>`. In between these two `<img>` tags, place a `<p>` tag with the class name `"instructions-title"`. Write 'Instructions' inside this `<p>` element. When you run the program, the stars will have shifted to different lines. Navigate to the style.css folder and create two new selectors for `first-row` and `instructions-title`. For the `first-row` selector, assign the `margin-top` property a value `42px` and set the property to align the text to be center. 
+4. [ ] So you have two stars resting in the top left corner of their `<div>`. In between these two `<img>` tags, place a `<p>` tag with the class name `"instructions-title"`. Write 'Instructions' inside this `<p>` element. When you run the program, the stars will have shifted to different lines. Navigate to the style.css folder and create two new selectors for `first-row` and `instructions-title`. For the `first-row` selector, assign the `margin-top` property a value `42px` and set the property to align the text to be center. 
 
     >Hint - A class attribute is constructed with:
 `.class { property: value;}`. `{text-align: center}`
@@ -38,13 +38,13 @@ Your mission is to construct a single-page website that plays a fully-functional
      color: #00ffff;
     ```
 
-6. [ ] Even though we assigned the `Work Sans` to `instructions-title`, the font didn't change on the page. This means that we have to import `Work Sans` into our webpage. Copy and paste the following code into the HTML `<head>` underneath the first `<link href>`: `<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type='text/css'>`
+6. [ ] Even though you assigned the `Work Sans` to `instructions-title`, the font didn't change on the page. This means that you have to import `Work Sans` into our webpage. Copy and paste the following code into the HTML `<head>` underneath the first `<link href>`: `<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type='text/css'>`
 
 
     >Hint - Paste the link directly underneath:
    `<link href='./style.css' rel='stylesheet' type='text/css'>`
 
-7. [ ] Looking good! Now let's explain the game to anyone who wants to play! Beneath the `<div class="first-row"></div>` create a new `<div>` with the class name `"second-row"`. Inside of that, create four identical `<div>` elements with the class name `"each-direction"`. Finally, for each `"each-direction"`, create a `<p>` element with the class name `"instructions"`. Copy and paste these directions or make up your own:
+7. [ ] Looking good! Now explain the game to anyone who wants to play! Beneath the `<div class="first-row"></div>` create a new `<div>` with the class name `"second-row"`. Inside of that, create four identical `<div>` elements with the class name `"each-direction"`. Finally, for each `"each-direction"`, create a `<p>` element with the class name `"instructions"`. Copy and paste these directions or make up your own:
 `1. Hiding behind one of these doors is the ChoreBot.`
 `2. Your mission is to open all of the doors without running into the ChoreBot.`
 `3. If you manage to avoid the ChoreBot until the very last door, you win!`
@@ -61,7 +61,7 @@ Your mission is to construct a single-page website that plays a fully-functional
     
     ```
 
-8. [ ] Almost there! In the **style.css** folder, create the `second-row`, `each-direction`, and `instruction` selectors. For the `second-row` selector, assign the following properties & values:
+8. [ ] Almost there! In the **style.css** file, create the `second-row`, `each-direction`, and `instruction` selectors. For the `second-row` selector, assign the following properties & values:
 
     ```
     position: absolute;
@@ -82,7 +82,7 @@ For the `instructions` selector, assign:
     color: #ffffff;
     ```
 
-9. [ ] At this point, the doors have shifted to the left of the directions. It looks pretty stylish but observe what happens if you make your browser smaller. The directions move on top of the doors! In the **style.css** folder, add the `door-row` selector and assign the following:
+9. [ ] At this point, the doors have shifted to the left of the directions. It looks pretty stylish but observe what happens if you make your browser window smaller - the directions move on top of the doors! In the **style.css** file, add the `door-row` selector and assign the following:
 
     ```
       margin-top: 305px;
@@ -91,7 +91,7 @@ For the `instructions` selector, assign:
  
  	**Note** - for the sake of CSS-best practices, move the `.door-frame` selector to the bottom of the file so that the CSS selectors now read in the order that you would see them in your HTML file.
 
-   Phew! That was a healthy amount of HTML and CSS additions but our game   is beginning to look pretty stylish with a logical display of different features. Way to put your HTML and CSS skills to work!
+   Phew! That was a healthy amount of HTML and CSS additions but your game is beginning to look pretty stylish with a logical display of different features. Way to put your HTML and CSS skills to work!
 
 ```
 Solution Code - HTML

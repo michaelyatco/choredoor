@@ -9,7 +9,7 @@ Your mission is to construct a single-page website that plays a fully-functional
 
 ### 2. What's in store? More doors!
 
-1. [ ] Great job! You've completed your first objective so now let's add two more closed doors in the same `div` as your first door and assign them the `id` values of `door2` and `door3` respectively.
+1. [ ] Great job! You've completed your first objective so now you're going add two more closed doors in the same `div` as your first door and assign them the `id` values of `door2` and `door3` respectively.
 
     >Hint - Make sure to wrap your link in quotation marks:    `<img src="image-location.jpg" />`. You can add the `id` attribute inside the `<img>` tag - just make sure your `id` is also wrapped in quotation marks.
 
@@ -18,11 +18,11 @@ Your mission is to construct a single-page website that plays a fully-functional
     >Hint - A class attribute is constructed with:
 `.class { property: value;}`
 
-3. [ ] Now we have three doors and a pointer that hovers them, but only our first door opens. Let's put JavaScript to work to open those other two doors! Create two new global variables called `doorImage2` and `doorImage3` that accept `door2` and `door3` as their respective values.
+3. [ ] Now you have three doors and a pointer that hovers them, but only your first door opens. Put JavaScript to work to open those other two doors! Create two new global variables called `doorImage2` and `doorImage3` that accept `door2` and `door3` as their respective values.
 
     >Hint - Use the DOM method: `document.getElementById('id')`
 
-4. [ ] Under our `doorImage1.onclick` event, give `doorImage2` and `doorImage3` their own `onclick` event using arrow function syntax. These functions will be empty for now.
+4. [ ] Under your `doorImage1.onclick` event, give `doorImage2` and `doorImage3` their own `.onclick` event using arrow function syntax. These functions will be empty for now.
 
     >Hint - `object.onclick = () => {myScript};`
     
