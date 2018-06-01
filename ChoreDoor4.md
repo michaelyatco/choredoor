@@ -5,11 +5,11 @@
 Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript concepts covered in the previous modules of your **Web Development Path**! 
 
 ###Project Overview
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how HTML, CSS, and JavaScript interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
+Your mission is to construct a single-page website that plays a fully-functional game. You will see how **HTML**, **CSS**, and **JavaScript** interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
 ### 4. Let's Make This ACT Like a Game! - Part I
 
-1. [ ] Your game looks like a game thanks to your HTML & CSS skills, but what good is a game if we always know where the ChoreBot is hiding? Time to put JavaScript to work again and randomly generate the door that hides the ChoreBot! Beneath your global variables, create a `randomChoreDoorGenerator()` function using arrow syntax. 
+1. [ ] Your game looks like a game thanks to your **HTML** & **CSS** skills, but what good is a game if we always know where the ChoreBot is hiding? Time to put **JavaScript** to work again and randomly generate the door that hides the ChoreBot! Beneath your global variables, create a `randomChoreDoorGenerator()` function using arrow syntax. 
 
     >Hint - the format for arrow function syntax is:
     
@@ -46,7 +46,7 @@ Your mission is to construct a single-page website that plays a fully-functional
     
 6. [ ] To see if the `randomChoreDoorGenerator()` is working, you should call it! Call the function at the very end of the `<script>` tag. 
 
-   Wonderful! Your work with JavaScript has not only made every door clickable but has hidden the ChoreBot behind a random door with every page reload! The gaming logic isn't there yet but you've made significant progress in creating a dynamic webpage that responds to user-interactions!
+   Wonderful! Your work with **JavaScript** has not only made every door clickable but has hidden the ChoreBot behind a random door with every page reload! The gaming logic isn't there yet but you've made significant progress in creating a dynamic webpage that responds to user-interactions!
 
 ```
 Solution Code - HTML

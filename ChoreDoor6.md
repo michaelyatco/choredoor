@@ -5,7 +5,7 @@
 Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript concepts covered in the previous modules of your **Web Development Path**! 
 
 ###Project Overview
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how HTML, CSS, and JavaScript interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
+Your mission is to construct a single-page website that plays a fully-functional game. You will see how **HTML**, **CSS**, and **JavaScript** interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
 ### 6. Let's Build a Winner
 
@@ -55,7 +55,7 @@ Your mission is to construct a single-page website that plays a fully-functional
 
     >Hint - `doorClicked = true;`
 
-Congratulations! You've successfully built your first Milestone Project and created a fun interactive game utilizing your HTML, CSS, and JavaScript knowledge. Be proud of how far you've come. If, however, you feel like taking this project to the next level (ie. adding more flourish to the HTML/CSS, score keeping, determining highest winning streak, etc.), we invite you to take on the challenges presented in the **Next Steps** section of this Milestone Project.
+Congratulations! You've successfully built your first Milestone Project and created a fun interactive game utilizing your **HTML**, **CSS**, and **JavaScript** knowledge. Be proud of how far you've come. If, however, you feel like taking this project to the next level (ie. adding more flourish to the **HTML**/**CSS**, score keeping, determining highest winning streak, etc.), we invite you to take on the challenges presented in the **Next Steps** section of this Milestone Project.
 
 ```
 Solution Code - HTML

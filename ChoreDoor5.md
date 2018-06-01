@@ -5,7 +5,7 @@
 Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript concepts covered in the previous modules of your **Web Development Path**! 
 
 ###Project Overview
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how HTML, CSS, and JavaScript interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
+Your mission is to construct a single-page website that plays a fully-functional game. You will see how **HTML**, **CSS**, and **JavaScript** interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
 ### 5. Let's Make This ACT Like a Game! - Part II
 
@@ -62,7 +62,7 @@ Your mission is to construct a single-page website that plays a fully-functional
 	   } 
      ```
 
-  Huzzah! You've made a game that can't be played once you've hit the losing **game over** condition. JavaScript has helped you establish the losing conditions. But games aren't much fun if they just point out when you lose; they're much more exciting when they point out that you've won, as well! Next, you'll be using JavaScript to give your game winning conditons.
+  Huzzah! You've made a game that can't be played once you've hit the losing **game over** condition. **JavaScript** has helped you establish the losing conditions. But games aren't much fun if they just point out when you lose; they're much more exciting when they point out that you've won, as well! Next, you'll be using **JavaScript** to give your game winning conditons.
 
 ```
 Solution Code - HTML

@@ -5,7 +5,7 @@
 Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript concepts covered in the previous modules of your **Web Development Path**! 
 
 ###Project Overview
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how HTML, CSS, and JavaScript interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
+Your mission is to construct a single-page website that plays a fully-functional game. You will see how **HTML**, **CSS**, and **JavaScript** interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
 ### Next Steps - HTML & CSS Styling
 
@@ -13,10 +13,10 @@ Your mission is to construct a single-page website that plays a fully-functional
 
     ![Instructions-list](images/instructions_list.png)
 
-    Inside each `each-direction` `<div>`, create a new `<p>` element with the class name `'instructions-list'` and number them accordingly.
+    Inside each `each-direction` `<div>` in your **index.html* page, create a new `<p>` element with the class name `'instructions-list'` and number them accordingly.
     
 2. [ ] In the **style.css** file, create an `instructions-list` selector and add the following properties and values:
-3. 
+ 
     ````
     display: inline;
     margin-top: 11px;
@@ -27,16 +27,21 @@ Your mission is to construct a single-page website that plays a fully-functional
     color: #00ffff;
     ````
 
+### Next Steps - Creating Winning Streaks & High Scores
 
-3. [ ] Now we have the logic and failsafe in place for an honest game. Modify your `if` statement in the three `.onclick` events so that `if` `(doors===0)`, the code will execute a new function called `winnerGameOver()`. Otherwise, the logic should check if the `doorDoom` game over boolean is `true`.
- 
-    >Hint - the current `if` logic should be moved to the `else if` section of the statement.
+1. [ ] Wouldn't it be great to play this game with the opportunity to record consecutive victories and establish a high score for all challengers to beat? You can build that feature using **HTML**, **CSS**, and **JavaScript**! First in the **index.html** page beneath the `<div class="start-two">`, add a `<div>` element with the class name `"score-row"` and nested inside this new `<div>`, add two `<p>` elements with the class name `"score-text"`. Type `Current streak` in the first `<p>` element and `Best streak` in the second `<p>` element. 
 
-4. [ ] What does the `winnerGameOver()` function do? It should let us know that we won the game! Write the logic to change the `startButton` innerHTML to `'You win!`
-
-    >Hint - obj.innerHTML = 'New text'
+    >Hint - Make sure that your HTML elements are properly nested to make your 	code more readable.
+    
+    ```
+    <div class="parent">
+    	<div class="child>
+    		<p></p>
+    	</div>
+    </div>
+    ```
 		
-5. [ ] Wow - the game works! It lets you know when you opened all the doors to victory and when the ChoreBot found you and served you defeat. But refreshing the page to reset the values is annoying and games that annoy players will lose them quickly. So let's turn our `startButton` into exactly that - a start button for a new round! Directly underneath the global variables, write the logic to turn the `startButton` into an `.onclick` event that will trigger a new `startRound()` function.
+2. [ ] Wow - the game works! It lets you know when you opened all the doors to victory and when the ChoreBot found you and served you defeat. But refreshing the page to reset the values is annoying and games that annoy players will lose them quickly. So let's turn our `startButton` into exactly that - a start button for a new round! Directly underneath the global variables, write the logic to turn the `startButton` into an `.onclick` event that will trigger a new `startRound()` function.
 
     >Hint - obj.onclick = () => {}
     

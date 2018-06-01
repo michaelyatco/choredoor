@@ -5,11 +5,11 @@
 Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript concepts covered in the previous modules of your **Web Development Path**! 
 
 ###Project Overview
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how HTML, CSS, and JavaScript interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
+Your mission is to construct a single-page website that plays a fully-functional game. You will see how **HTML**, **CSS**, and **JavaScript** interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
 ### 3. Let's Make This LOOK Like a Game!
 
-1. [ ] Nice! You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding our **HTML** and **CSS** pages. Right after the opening `<body>` tag, create a new `<div>` with the class name `"header"`. Inside this new `<div>`, create an `<img>` tag for the `logo.svg` image.  Be aware that the logo is the same color as that current background so don't fret if you can't see the image. This is where the **CSS** gets its chance to contribute! 
+1. [ ] Nice! You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding our **index.HTML** and **style.css** pages. Right after the opening `<body>` tag, create a new `<div>` with the class name `"header"`. Inside this new `<div>`, create an `<img>` tag for the `logo.svg` image.  Be aware that the logo is the same color as that current background so don't fret if you can't see the image. This is where the **CSS** gets its chance to contribute! 
 
     >Hint - Make sure to wrap your link in quotation marks:    `<img src="image-location.jpg" />`. Make sure your `<div>` also has a closing `</div>`.
 
@@ -91,7 +91,7 @@ For the `instructions` selector, assign:
  
  	**Note** - for the sake of CSS-best practices, move the `.door-frame` selector to the bottom of the file so that the CSS selectors now read in the order that you would see them in your HTML file.
 
-   Phew! That was a healthy amount of HTML and CSS additions but your game is beginning to look pretty stylish with a logical display of different features. Way to put your HTML and CSS skills to work!
+   Phew! That was a healthy amount of **HTML** and **CSS** additions but your game is beginning to look pretty stylish with a logical display of different features. Way to put your **HTML** and **CSS** skills to work!
 
 ```
 Solution Code - HTML

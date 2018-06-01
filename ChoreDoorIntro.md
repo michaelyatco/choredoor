@@ -5,7 +5,7 @@
 Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript concepts covered in the previous modules of your **Web Development Path**! 
 
 ###Project Overview
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how HTML, CSS, and JavaScript interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
+Your mission is to construct a single-page website that plays a fully-functional game. You will see how **HTML**, **CSS**, and **JavaScript** interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
 ###1. Getting Started - Get a door, open a door!
 
@@ -18,7 +18,7 @@ Your mission is to construct a single-page website that plays a fully-functional
     >Hint - An ID attribute is constructed with:
 `#id { property: value;}`
 
-3. [ ] Now you have a pointer that hovers over our closed door image, but it's the JavaScript that brings your image to life! Between the `<script>``</script>` tags create a global variable called `doorImage1` that accepts `door1` as its value.
+3. [ ] Now you have a pointer that hovers over our closed door image, but it's the **JavaScript** that brings your image to life! Between the `<script>``</script>` tags create a global variable called `doorImage1` that accepts `door1` as its value.
 
     >Hint - Use the DOM method: `document.getElementById('id')`
 
