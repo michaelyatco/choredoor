@@ -58,6 +58,9 @@
     let door1Doom;
     let door2Doom;
     let door3Doom;
+    let door1Clicked = false;
+    let door2Clicked = false;
+    let door3Clicked = false;
 
     const randomChoreDoorGenerator = () => {
       choreDoor = Math.floor(Math.random() * doors);
@@ -80,23 +83,35 @@
     }
 
     doorImage1.onclick = () => {
-      doorImage1.src = openDoor1;
-      if (door1Doom) {
-        startButton.innerHTML = 'Game Over!';
+      if (!door1Clicked) {
+        doorImage1.src = openDoor1;
+        if (door1Doom) {
+          startButton.innerHTML = 'Game Over!';
+          door2Clicked = true;
+          door3Clicked = true;
+        }
       }
     }
 
     doorImage2.onclick = () => {
-      doorImage2.src = openDoor2;
-      if (door2Doom) {
-        startButton.innerHTML = 'Game Over!';
+      if (!door2Clicked) {
+        doorImage2.src = openDoor2;
+        if (door2Doom) {
+          startButton.innerHTML = 'Game Over!';
+          door1Clicked = true;
+          door3Clicked = true;
+        }
       }
     }
 
     doorImage3.onclick = () => {
+      if (!door3Clicked) {
       doorImage3.src = openDoor3;
-      if (door3Doom) {
-        startButton.innerHTML = 'Game Over!';
+        if (door3Doom) {
+          startButton.innerHTML = 'Game Over!';
+          door1Clicked = true;
+          door2Clicked = true;
+        }
       }
     }
 

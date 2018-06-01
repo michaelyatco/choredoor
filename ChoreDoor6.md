@@ -7,9 +7,9 @@ Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript conc
 ###Project Overview
 Your mission is to construct a single-page website that plays a fully-functional game. You will see how HTML, CSS, and JavaScript interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
-### 5. Let's Make This ACT Like a Game! - Part II
+### 6. Let's Build a Winner
 
-1. [ ] Our game is randomly hiding the ChoreBot behind one of the doors but it currently doesn't care whether you find the ChoreBot in the first door you open or the last. Let's work towards incorporating **game over** logic - win or lose! First, let's build a button that will respond to the status of the game. Beneath the `<door-row>` `<div>` create a new `<div>` element with the class name `"start-row"` and an `id` of `"start"`. Type `Good luck!` in between the `<div></div>`. Finally, create a `startButton` global variable that accepts `start` as its value.  
+1. [ ] But what about winning? How do we determine the winner in this game? Think about the winning condition - find the ChoreBot in the *last* door. If there are no more `doors` left, that means you opened them all and won the game! So our winning condition must be `if(doors===0)`. If that condition is fulfilled, a `winnerGameOver()` function is carried out. Let's focus for now on writing the logic to bring `doors` to `0`.  
 
     >Hint - Make sure to wrap your `class` and `id` values are wrapped in quotation marks.
     >Hint - Use the DOM method: `document.getElementById('id')`
@@ -197,9 +197,6 @@ Solution Code - JavaScript
   let door1Doom;
   let door2Doom;
   let door3Doom;
-  let door1Clicked = false;
-  let door2Clicked = false;
-  let door3Clicked = false;
 
   const randomChoreDoorGenerator = () => {
     choreDoor = Math.floor(Math.random() * doors);
@@ -222,35 +219,23 @@ Solution Code - JavaScript
   }
 
   doorImage1.onclick = () => {
-    if (!door1Clicked) {
-      doorImage1.src = openDoor1;
-      if (door1Doom) {
-        startButton.innerHTML = 'Game Over!';
-        door2Clicked = true;
-        door3Clicked = true;
-      }
+    doorImage1.src = openDoor1;
+    if (door1Doom) {
+      startButton.innerHTML = 'Game Over!';
     }
   }
 
   doorImage2.onclick = () => {
-    if (!door2Clicked) {
-      doorImage2.src = openDoor2;
-      if (door2Doom) {
-        startButton.innerHTML = 'Game Over!';
-        door1Clicked = true;
-        door3Clicked = true;
-      }
+    doorImage2.src = openDoor2;
+    if (door2Doom) {
+      startButton.innerHTML = 'Game Over!';
     }
   }
 
   doorImage3.onclick = () => {
-    if (!door3Clicked) {
     doorImage3.src = openDoor3;
-      if (door3Doom) {
-        startButton.innerHTML = 'Game Over!';
-        door1Clicked = true;
-        door2Clicked = true;
-      }
+    if (door3Doom) {
+      startButton.innerHTML = 'Game Over!';
     }
   }
 
