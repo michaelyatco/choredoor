@@ -114,11 +114,11 @@ doorImage3.onclick = () => {
 //gameOver function for losers
 const gameOver = () => {
   score = 0;
-  door1Clicked = true; //Prevents opening the other doors and overriding the loss
+  scoreDisplay.innerHTML = score;
+  startButton.innerHTML = 'Game Over! Play again?';
+  door1Clicked = true; //Prevents user from clicking unopened doors and overriding the loss
   door2Clicked = true;
   door3Clicked = true;
-  scoreDisplay.innerHTML = score;
-  startButton.innerHTML = 'Game over! Play again?';
   currentlyPlaying = false;
 }
 
