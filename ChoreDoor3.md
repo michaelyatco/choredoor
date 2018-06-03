@@ -13,7 +13,7 @@ Hint: Make sure to wrap your link in quotation marks:
 
 ```html
 <div>
-	<img src="image-location.jpg" />
+  <img src="image-location.jpg" />
 </div>
 ```
 

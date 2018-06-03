@@ -55,7 +55,7 @@ Hint:
 
 ```
 object.onclick = () => {
-	function();
+  function();
 }
 ```
 

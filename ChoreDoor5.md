@@ -51,7 +51,7 @@ if (choreDoor === #) {
   openDoor = botDoor;
   openDoor = beachDoor;
   openDoor = spaceDoor;
-}...
+} ...
 ```
 
 Task: Now you have the __game over__ boolean value attached to one random door. The next step is having this value act as a condition in an `if-else` statement within the `doorImage.onclick` event. Beneath the current logic, write an `if` statement that will change the text in the `startButton` variable to `'Game over!'`.

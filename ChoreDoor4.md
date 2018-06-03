@@ -28,16 +28,17 @@ Task: Inside the `randomChoreDoorGenerator()` and directly beneath the `Math` fu
 Hint: The syntax for this "if-else" statement follows:
 
 ```JavaScript
-  if(choreDoor === x) {
-    openDoor1 = valueA;
-    openDoor2 = valueB;
-    openDoor3 = valueC;
-  } else if (choreDoor === y) {
-	 openDoor2 = valueA;
-	 openDoor1 = valueB;
-	 openDoor3 = valueC;
-	 ...
-  } 
+...
+if(choreDoor === x) {
+  openDoor1 = valueA;
+  openDoor2 = valueB;
+  openDoor3 = valueC;
+} else if (choreDoor === y) {
+  openDoor2 = valueA;
+  openDoor1 = valueB;
+  openDoor3 = valueC;
+  ...
+} 
 ```
 
 Task: Now look at our three `doorImage.onclick` events. Right now the logic states what image will replace the original `src`. Replace a variable in each `doorImage.onclick` event with one that we recently created so that each `doorImage` `src` will be assigned to a variable that holds three possible values.
