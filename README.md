@@ -1,7 +1,7 @@
 # choredoor
 A guessing game that incorporates HTML, CSS, &amp; VanillaJS
 
-## ChoreBot MVP-version Soultion Code:
+## ChoreBot MVP-Version Solution Code:
 1. chore_door6.html
 2. chore_door6_style.css
 

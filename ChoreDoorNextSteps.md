@@ -1,70 +1,96 @@
-##Milestone Project: Avoid the ChoreBot!
+### Milestone Project: Avoid the ChoreBot! | Bringing It All Together
 
-###Bringing It All Together
+Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript concepts covered in the previous modules of your __Web Development Path__!
 
-Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript concepts covered in the previous modules of your **Web Development Path**!
+### Project Overview
+Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
-###Project Overview
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how **HTML**, **CSS**, and **JavaScript** interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
+Assessment: __Next Steps__ - HTML & CSS Styling
 
-### Next Steps - HTML & CSS Styling
-
-Welcome to the the **Next Steps** section of the Milestone Project! This is an extra opportunity to improve the view and functionality of your ChoreBot game! First, focus on making the numbers larger and brighter, like this picture illustrates:
+Welcome to the the __Next Steps__ section of the Milestone Project! This is an extra opportunity to improve the view and functionality of your ChoreBot game! First, focus on making the numbers larger and brighter, like this picture illustrates:
 
 
 ![Instructions-list](images/instructions_list.png)
 
 
-1. [ ] Inside each `each-direction` `<div>` in your **index.html** page, create a new `<p>` element with the class name `'instructions-list'` and number them accordingly.
+Task: Inside each `each-direction` `<div>` in your __index.html__ page, create a new `<p>` element with the class name `'instructions-list'` and number them accordingly.
 
-2. [ ] In the **style.css** file, create an `instructions-list` selector and add the following properties and values:
+Hint:
 
-    ````
-    display: inline;
-    margin-top: 11px;
-    margin-right: 23px;
-    font-family: 'Work Sans';
-    font-size: 36px;
-    font-weight: 600;
-    color: #00ffff;
-    ````
+```html
+<div class="each-direction">
+  <p class="instructions-list>1</p>
+  ...
+</div>
+<div class="each-direction">
+  <p class="instructions-list>2</p>
+  ...
+</div>
+...
+```
 
-### Next Steps - Creating Winning Streaks & High Scores
+Task: In the __style.css__ file, create an `instructions-list` CSS selector and add the following properties and values:
 
-Wouldn't it be great to play this game with the opportunity to record consecutive victories and establish a high score for all challengers to beat? You can build that feature using **HTML**, **CSS**, and **JavaScript**! It should look similar to this image:
+```css
+.instructions-list {
+  display: inline;
+  margin-top: 11px;
+  margin-right: 23px;
+  font-family: 'Work Sans';
+  font-size: 36px;
+  font-weight: 600;
+  color: #00ffff;
+}
+```
+
+Assessment: __Next Steps__ - Creating Winning Streaks & High Scores
+
+Wouldn't it be great to play this game with the opportunity to record consecutive victories and establish a high score for all challengers to beat? You can build that feature using __HTML__, __CSS__, and __JavaScript__! It should look similar to this image:
 
 ![High-Score](images/high_score.png)
 
-1. [ ] First in the **index.html** page beneath the `<div class="start-two">`, add a `<div>` element with the class name `"score-row"` and nested inside this new `<div>`, add two `<p>` elements with the class name `"score-text"`. Type `Current streak` in the first `<p>` element and `Best streak` in the second `<p>` element.
+Task: First in the __index.html__ page beneath the `<div class="start-two">`, add a `<div>` element with the class name `"score-row"` and nested inside this new `<div>`, add two `<p>` elements with the class name `"score-text"`. Type `Current streak` in the first `<p>` element and `Best streak` in the second `<p>` element.
 
-    >Hint - Make sure that your HTML elements are properly nested to make your code more readable.
+Hint: Make sure that your HTML elements are properly nested to make your code more readable:
 
-    ```
-    <div class="parent">
-    	<div class="child>
-    		<p></p>
-    	</div>
-    </div>
-    ```
+```
+<div class="parent">
+  <div class="child>
+    <p></p>
+    <p></p>
+  </div>
+</div>
+```
 
-2. [ ] The `<p>` elements in their current state are very hard to see in the corner.  Navigate to the **style.css** file and add two selectors - `score-row` and `score-text`.  The `score-row` selector is responsible for `text-align` and the `score-text` is responsible for `margin-right: 28px`, `letter-spacing: 1.1px`, `display`, `font-family`, `font-size`, and `color`. See if you can determine the values for the last four properties!
+Task: The `<p>` elements in their current state are very hard to see in the corner.  Navigate to the __style.css__ file and add two selectors - `score-row` and `score-text`.  The `score-row` selector is responsible for `text-align` and the `score-text` is responsible for `margin-right: 28px`, `letter-spacing: 1.1px`, `display`, `font-family`, `font-size`, and `color`. See if you can determine the values for the last four properties!
 
-    >Hint - experiment, look at other selectors for clues, and have fun!
+Hint: experiment, look at other selectors for clues, and have fun!
 
-3. [ ] The next task is to build the boxes that will hold the `score` and `highScore` values.  Beneath the `score-row` `<div>`, add another `<div>` and set its class name to `score-row`. Inside this second `score-row` `<div>`, nest two more `<div>` elements with the class name `score-box`. Give this first nested `<div>` an `id` of `score-number` and give the second nested `<div>` an `id` of `high-score-number`.
+Task: The next task is to build the boxes that will hold the `score` and `highScore` values.  Beneath the `score-row` `<div>`, add another `<div>` and set its class name to `score-row`. Inside this second `score-row` `<div>`, nest two more `<div>` elements with the class name `score-box`. Give this first nested `<div>` an `id` of `score-number` and give the second nested `<div>` an `id` of `high-score-number`.
 
-	>Hint - You can add the `id` attribute inside the `<img>` tag.
+Hint: You can add the `id` attribute inside the `<img>` tag:
 
-4. [ ] These boxes cannot be seen yet because the **style.css** needs the selector `score-box`. This selector is responsible for `margin-top: 9px`, `margin-right: 24px`, `display`, `width`, `height`, `background-color`, `font-family`, and `font-size`. See if you can determine the last six properties!
+```html
+<div>
+  <img src="images/image_name.svg" id="id-name"/> 
+</div>
+```
 
-    Hint - experiment, look at other selectors for clues, and have fun!
+Task: These boxes cannot be seen yet because the **style.css** needs the selector `score-box`. This selector is responsible for `margin-top: 9px`, `margin-right: 24px`, `display`, `width`, `height`, `background-color`, `font-family`, and `font-size`. See if you can determine the last six properties!
 
-5. [ ] This takes care of the **HTML** and **CSS** components of the scores. Now it's time to tackle the **JavaScript** logic! In the `<script></script>` tags, add two global variables - `score` and `highScore` and set their values to `0`. Then add two more global variables - `scoreDisplay` and `highScoreDisplay`. The `scoreDisplay` variable should accept the `id` value of `"score-number"` and the `highScoreDisplay` variable should accept the `id` value of `"high-score-number"`. Finally, at the bottom of your global variable list, set `scoreDisplay.innerHTML` to `score` and set `highScoreDisplay.innerHTML` to `highScore`.
+Hint: experiment, look at other selectors for clues, and have fun!
 
-    >Hint - Use the DOM method: `document.getElementById('id')`
-     and `obj.innerHTML = 'New text'`
+Task: This takes care of the __HTML__ and __CSS__ components of the scores. Now it's time to tackle the __JavaScript__ logic! In the `<script></script>` tags, add two global variables - `score` and `highScore` and set their values to `0`. Then add two more global variables - `scoreDisplay` and `highScoreDisplay`. The `scoreDisplay` variable should accept the `id` value of `"score-number"` and the `highScoreDisplay` variable should accept the `id` value of `"high-score-number"`. Finally, at the bottom of your global variable list, set `scoreDisplay.innerHTML` to `score` and set `highScoreDisplay.innerHTML` to `highScore`.
 
-6. [ ] Now add the logic `winnerGameOver()` function to increase the `score` each time the function is called. Then set the `scoreDisplay.innerHTML` to reflect the updated score.
+Hint: Use the DOM methods: 
+
+```JavaScript
+let obj = document.getElementById('id');
+...
+obj.innerHTML = 'New text'
+```
+
+Task: Now add the logic `winnerGameOver()` function to increase the `score` each time the function is called. Then set the `scoreDisplay.innerHTML` to reflect the updated score.
 
     > Hint - `score++;`
 
