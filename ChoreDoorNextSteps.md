@@ -76,42 +76,88 @@ Hint: You can add the `id` attribute inside the `<img>` tag:
 </div>
 ```
 
-Task: These boxes cannot be seen yet because the **style.css** needs the selector `score-box`. This selector is responsible for `margin-top: 9px`, `margin-right: 24px`, `display`, `width`, `height`, `background-color`, `font-family`, and `font-size`. See if you can determine the last six properties!
+Task: These boxes cannot be seen yet because the **style.css** needs the CSS selector `score-box`. This selector should have the following:
 
-Hint: experiment, look at other selectors for clues, and have fun!
+```css
+.score-box {
+  margin-top: 9px; 
+  margin-right: 24px;
+}
+```
 
-Task: This takes care of the __HTML__ and __CSS__ components of the scores. Now it's time to tackle the __JavaScript__ logic! In the `<script></script>` tags, add two global variables - `score` and `highScore` and set their values to `0`. Then add two more global variables - `scoreDisplay` and `highScoreDisplay`. The `scoreDisplay` variable should accept the `id` value of `"score-number"` and the `highScoreDisplay` variable should accept the `id` value of `"high-score-number"`. Finally, at the bottom of your global variable list, set `scoreDisplay.innerHTML` to `score` and set `highScoreDisplay.innerHTML` to `highScore`.
+See if you can determine the last six properties: `display`, `width`, `height`, `background-color`, `font-family`, and `font-size`!
 
-Hint: Use the DOM methods: 
+Hint: Experiment, look at other selectors for clues, and have fun!
+
+Task: This takes care of the __HTML__ and __CSS__ components of the scores. Now it's time to tackle the __JavaScript__ logic! In the `<script></script>` tags, add two global variables - `score` and `highScore` and set their values to `0`. Then add two more global variables - `scoreDisplay` and `highScoreDisplay`. The `scoreDisplay` variable should accept the `id` value of `"score-number"` and the `highScoreDisplay` variable should accept the `id` value of `"high-score-number"`. 
+
+Hint:
+
+Hint: Use the DOM method: 
 
 ```JavaScript
-let obj = document.getElementById('id');
-...
-obj.innerHTML = 'New text'
+let object = document.getElementById('id');
+```
+
+Task: Finally, at the bottom of your global variable list, set `scoreDisplay.innerHTML` to `score` and set `highScoreDisplay.innerHTML` to `highScore`.
+
+Hint: Use the DOM method: 
+
+```JavaScript
+object.innerHTML = 'New text'
 ```
 
 Task: Now add the logic `winnerGameOver()` function to increase the `score` each time the function is called. Then set the `scoreDisplay.innerHTML` to reflect the updated score.
 
-    > Hint - `score++;`
+Hint: 
 
-7. [ ] Alright! The `score` is displayed but we need the `highScore` to reflect the best winning streak. Create a new function called `determineHighScore()` and write an `if-else` statement that will update the `highScore` if the current `score` is greater than the current `highScore` (which has the default value of `0`).
+```JavaScript
+score++;
+```
 
-    >Hint - the `if-else` statement should follow this logic:
+Task: Alright! The `score` is displayed but we need the `highScore` to reflect the best winning streak. Create a new function called `determineHighScore()` and write an `if-else` statement that will update the `highScore` if the current `score` is greater than the current `highScore` (which has the default value of `0`).
 
-    ```
-    if (valueA > valueB) {
-    	valueB = valueA;
-    	valueBDisplay.innerHTML = valueB;
-    	}
-       ```
+Hint: The `if-else` statement should follow this logic:
 
-8. [ ] Now you need to call the `determineHighScore()` every time the `winnerGameOver()` function is called. Place the `determineHighScore()` function at the bottom of the `winnerGameOver()` function.
+```
+if (valueA > valueB) {
+  valueB = valueA;
+  valueBDisplay.innerHTML = valueB;
+}
+```
 
-9. [ ] Notice how the current `score` doesn't reset back to `0` even if you lose. Add logic to the `gameOver()` function to set the `score` back to `0` when the function is called and then adjust the `scoreDisplay.innerHTML` reflect the score's reset back to `0`.
+Task: Now you need to call the `determineHighScore()` every time the `winnerGameOver()` function is called. Place the `determineHighScore()` function at the bottom of the `winnerGameOver()` function.
 
-	>Hint - `obj.innerHTML = 'New text'`
+Hint:
 
-10. [ ] Excellent work! Now the only task left is to separate the **JavaScrip** from the **index.html** file. Transfer (via copy & paste) all the **JavaScript** logic between the `<script></script>` tags to a new file called `script.js`. Make sure not to include the actual `<script></script>` tags in this new file. Finally, to load this `script.js` file onto the **index.html** file, you need to add this line at the *bottom* of the `<body>` tag: `<script type="text/javascript" src="script.js"></script>`.
+```JavaScript
+const winnerGameOver = () => {
+  ...
+  determineHighScore();
+}
+```
+
+Task: Notice how the current `score` doesn't reset back to `0` even if you lose. Add logic to the `gameOver()` function to set the `score` back to `0` when the function is called and then adjust the `scoreDisplay.innerHTML` reflect the score's reset back to `0`.
+
+Hint:
+
+```JavaScript
+const gameOver = () => {
+  obj.innerHTML = 'New text';
+}
+```
+
+Task: Excellent work! Now the only task left is to separate the __JavaScript__ from the __index.html__ file. Transfer (via copy & paste) all the __JavaScript__ logic between the `<script></script>` tags to a new file called `script.js`. Make sure not to include the actual `<script></script>` tags in this new file. Finally, to load this `script.js` file onto the __index.html__ file, you need to add this line at the *bottom* of the `<body>` tag.
+
+
+Hint: 
+
+```html
+<body>
+  ...
+  <script type="text/javascript" src="script.js"></script>`
+</body>
+```
 
 Wow! Now you have a legitmate scoreboard that reflects your current winning streak and records your highest streak. See if you can think of any other features from your favorite games that would integrate well with ChoreBot!
 

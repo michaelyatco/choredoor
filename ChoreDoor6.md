@@ -45,7 +45,7 @@ Hint:
 
 ```JavaScript
 const functionName = () => {
-  obj.innerHTML = 'New text'
+  object.innerHTML = 'New text'
 }
 ```
 
@@ -54,7 +54,7 @@ Task: Wow - the game works! It lets you know if you've opened all the doors to v
 Hint:
 
 ```
-obj.onclick = () => {
+object.onclick = () => {
 	function();
 }
 ```

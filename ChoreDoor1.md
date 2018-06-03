@@ -32,7 +32,7 @@ Task: Now you have a pointer that hovers over our closed door image, but it's th
 Hint: Use the DOM method: 
 
 ```JavaScript
-let variable = document.getElementById('id');
+let object = document.getElementById('id');
 ```
 
 Task: Give `doorImage1` an `.onclick` event using arrow function syntax. The function will be empty for now.
@@ -50,7 +50,7 @@ Task: Finally, make the `closed_door.svg` image change when you click it so that
 Hint: An object's `src` value can be assigned a new 	value with:
 
 ```JavaScript
-obj.src = "images/new_image_name.svg";
+object.src = "images/new_image_name.svg";
 ```
 
 Task: Click on the door and watch as the closed door image changes to the ChoreBot ready to greet you with housework!

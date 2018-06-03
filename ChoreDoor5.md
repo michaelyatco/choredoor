@@ -20,7 +20,7 @@ Task: Next, create a `startButton` global variable that accepts `start` as its v
 Hint: Use the DOM method: 
 
 ```JavaScript
-let variable = document.getElementById('id');
+let object = document.getElementById('id');
 ```
 
 Task: In the __style.css__ file, create a `start-row` CSS selector and paste in the following:
@@ -47,10 +47,10 @@ Hint: The three boolean variables should follow this pattern:
 
 ```JavaScript
 if (choreDoor === #) {
-  door#Doom = true;
-  openDoor# = botDoor;
-  openDoor# = beachDoor;
-  openDoor# = spaceDoor;
+  doorDoom = true;
+  openDoor = botDoor;
+  openDoor = beachDoor;
+  openDoor = spaceDoor;
 }...
 ```
 

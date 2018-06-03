@@ -55,7 +55,7 @@ Task: Now within the arrow functions of `doorImage2` and `doorImage3`, write the
 Hint: An object's `src` value can be assigned a new value with:
 
 ```JavaScript
-obj.src = 'new image path';
+object.src = 'new image path';
 ```
 
 Task: Click on each door and watch how each closed door opens to something different and exciting: a ChoreBot, a beach, and outer space!
