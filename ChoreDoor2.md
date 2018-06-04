@@ -23,7 +23,7 @@ Hint: A class's property and value are constructed with:
 
 ```
 .class { 
-property: value;
+  property: value;
 }
 ```
 

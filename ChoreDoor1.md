@@ -23,7 +23,7 @@ Hint: An `id` selector's property and value are assigned with:
 
 ```css
 #id { 
-property: value;
+  property: value;
 }
 ```
 
@@ -41,7 +41,7 @@ Hint:
 
 ```JavaScript
 object.onclick = () => {
-	myScript;
+  myScript;
 };
 ```
 

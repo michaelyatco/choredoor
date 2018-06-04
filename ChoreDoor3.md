@@ -62,9 +62,9 @@ Task: Afterwards, copy and paste the following code into the `instructions-title
 
  ```css
  .instructions-title {
- font-family: 'Work Sans';
- font-size: 18px;
- color: #00ffff;
+   font-family: 'Work Sans';
+   font-size: 18px;
+   color: #00ffff;
  }
  ```
 
