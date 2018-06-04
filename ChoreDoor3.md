@@ -23,7 +23,7 @@ Hint: A class attribute is constructed with:
 
 ```css
 .class { 
-property: value;
+  property: value;
 }
 ```
 
@@ -33,7 +33,7 @@ Hint: Make sure to wrap your link in quotation marks:
 
 ```html
 <div>
-	<img src="image-location.jpg" />
+  <img src="image-location.jpg" />
 </div>
 ```
 
@@ -43,7 +43,7 @@ Hint: A class selector's property and value are constructed with:
 
 ```css
 .class { 
-property: value;
+  property: value;
 }
 ```
 
@@ -54,7 +54,7 @@ Hint:
 
 ```css
 .class { 
-property: value;
+  property: value;
 }
 ```
 
