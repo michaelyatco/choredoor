@@ -23,7 +23,7 @@ const isBot = (door) => {
 }
 
 const isClicked = (door) => {
-  if (door.src == closedDoor) {
+  if (door.src == closedDoorPath) {
     return false;
   } else {
     return true;
@@ -84,17 +84,17 @@ const randomChoreDoorGenerator = () => {
   // This only has 3 scenarios it should be 6...
   choreDoor = Math.floor(Math.random() * numClosedDoors);
   if (choreDoor === 0) {
-    openDoor1 = botDoor;
-    openDoor2 = beachDoor;
-    openDoor3 = spaceDoor;
+    openDoor1 = botDoorPath;
+    openDoor2 = beachDoorPath;
+    openDoor3 = spaceDoorPath;
   } else if (choreDoor === 1) {
-    openDoor1 = beachDoor;
-    openDoor2 = botDoor;
-    openDoor3 = spaceDoor;
+    openDoor1 = beachDoorPath;
+    openDoor2 = botDoorPath;
+    openDoor3 = spaceDoorPath;
   } else {
-    openDoor1 = beachDoor;
-    openDoor2 = spaceDoor;
-    openDoor3 = botDoor;
+    openDoor1 = beachDoorPath;
+    openDoor2 = spaceDoorPath;
+    openDoor3 = botDoorPath;
   }
 }
 

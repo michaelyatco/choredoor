@@ -18,10 +18,10 @@ let highScoreDisplay = document.getElementById('high-score-number');
 let openDoor1;
 let openDoor2;
 let openDoor3;
-let closedDoor = "images/closed_door.svg";
-let botDoor = "images/Robot_open_door.svg";
-let beachDoor = "images/beach_open_door.svg";
-let spaceDoor = "images/space_open_door.svg";
+let closedDoor = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg";
+let botDoor = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
+let beachDoor = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg";
+let spaceDoor = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg";
 scoreDisplay.innerHTML = score;
 highScoreDisplay.innerHTML = highScore;
 
