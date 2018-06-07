@@ -40,13 +40,13 @@
 
   </body>
   <script>
-    let doorImage1 = document.getElementById('door1');
-    let doorImage2 = document.getElementById('door2');
-    let doorImage3 = document.getElementById('door3');
-    let botDoor = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
-    let beachDoor = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg";
-    let spaceDoor = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg";
-    let doors = 3;
+    let door1 = document.getElementById('door1');
+    let door2 = document.getElementById('door2');
+    let door3 = document.getElementById('door3');
+    let botDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
+    let beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg";
+    let spaceDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg";
+    let numCloseddoors = 3;
     let openDoor1;
     let openDoor2;
     let openDoor3;
@@ -54,17 +54,17 @@
     const randomChoreDoorGenerator = () => {
       choreDoor = Math.floor(Math.random() * doors);
       if (choreDoor === 0) {
-        openDoor1 = botDoor;
-        openDoor2 = beachDoor;
-        openDoor3 = spaceDoor;
+        openDoor1 = botDoorPath;
+        openDoor2 = beachDoorPath;
+        openDoor3 = spaceDoorPath;
       } else if (choreDoor === 1) {
-        openDoor2 = botDoor;
-        openDoor1 = beachDoor;
-        openDoor3 = spaceDoor;
+        openDoor2 = botDoorPath;
+        openDoor1 = beachDoorPath;
+        openDoor3 = spaceDoorPath;
       } else {
-        openDoor3 = botDoor;
-        openDoor1 = beachDoor;
-        openDoor2 = spaceDoor;
+        openDoor3 = botDoorPath;
+        openDoor1 = beachDoorPath;
+        openDoor2 = spaceDoorPath;
       }
     }
 
