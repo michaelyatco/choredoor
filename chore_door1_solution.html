@@ -7,16 +7,16 @@
 
   <body>
     <div class="door-row">
-      <img src="images/closed_door.svg" id="door1">
+      <img src="https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg" id="door1">
     </div>
   </body>
 
   <script>
-    let doorImage1 = document.getElementById('door1');
-    let botDoor = "images/Robot_open_door.svg";
+    let door1 = document.getElementById('door1');
+    let botDoor = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
 
-    doorImage1.onclick = () => {
-     doorImage1.src = botDoor;
+    door1.onclick = () => {
+     door1.src = botDoor;
     }
   </script>
 </html>

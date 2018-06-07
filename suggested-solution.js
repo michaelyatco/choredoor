@@ -2,10 +2,10 @@ let door1 = document.getElementById('door1');
 let door2 = document.getElementById('door2');
 let door3 = document.getElementById('door3');
 let startButton = document.getElementById('start');
-let botDoor = 'images/Robot_open_door.svg';
-let beachDoor = 'images/beach_open_door.svg';
-let spaceDoor = 'images/space_open_door.svg';
-let closedDoor = 'file:///Users/srgallag/Desktop/choredoor-master/images/closed_door.svg';
+let botDoor = 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg';
+let beachDoor = 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg';
+let spaceDoor = 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg';
+let closedDoor = 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg';
 let numClosedDoors = 3;
 let openDoor1;
 let openDoor2;
@@ -15,7 +15,7 @@ let currentlyPlaying = true;
 // Some helper functions:
 const isBot = (door) => {
   // console.log(door.src);
-  if (door.src === 'file:///Users/srgallag/Desktop/choredoor-master/images/Robot_open_door.svg') {
+  if (door.src === 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg') {
     return true;
   } else {
     return false;

@@ -13,7 +13,7 @@ Hint: Make sure to wrap your link in quotation marks: You can add the `id` attri
 
 ```html
 <div>
-  <img src="images/image_name.svg" id="id-name"/> 
+  <img src="https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg" id="id-name"/> 
 </div>
 ```
 
@@ -45,7 +45,18 @@ object.onclick = () => {
 }
 ```
 
-Task: Be mindful to change the logic if you copy and paste the logic from `doorImage1.onclick`, or else you'll have three ChoreBots! Instead, look inside the __images__ folder, find the path for the beach image and assign that path to a global variable called `beachDoor`. Then do the same for the space image and assing that path to another global variable called `spaceDoor`.
+Task: Be mindful to change the logic if you copy and paste the logic from `doorImage1.onclick`, or else you'll have three ChoreBots! Instead, copy this url for a beach image:
+
+```html
+https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg
+```
+Assign this url to a global variable called `beachDoor`. Then copy this url for a space image:
+
+```html
+https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg
+```
+
+Assign this particular url to another global variable called `spaceDoor`.
 
 Hint: Global variables are declared outside of     	functions.
 
@@ -55,7 +66,7 @@ Task: Now within the arrow functions of `doorImage2` and `doorImage3`, write the
 Hint: An object's `src` value can be assigned a new value with:
 
 ```JavaScript
-object.src = 'new image path';
+object.src = 'new image url';
 ```
 
 Task: Click on each door and watch how each closed door opens to something different and exciting: a ChoreBot, a beach, and outer space!

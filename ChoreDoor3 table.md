@@ -7,19 +7,13 @@ Your mission is to construct a single-page website that plays a fully-functional
 
 Assessment: Let's Make This __LOOK__ Like a Game!
 
-Task: Nice! You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding our __index.html__ and __style.css__ pages. Right after the opening `<body>` tag, create a new `<div>` with the class name `"header"`. Inside this new `<div>`, create an `<img>` tag for the logo image.  Copy this url and paste into the `src`:
-
-```html
-https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/logo.svg
-```
-
-Be aware that the logo is the same color as that current background so don't fret if you can't see the image. This is where the __CSS__ gets its chance to contribute!
+Task: Nice! You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding our __index.html__ and __style.css__ pages. Right after the opening `<body>` tag, create a new `<div>` with the class name `"header"`. Inside this new `<div>`, create an `<img>` tag for the `logo.svg` image.  Be aware that the logo is the same color as that current background so don't fret if you can't see the image. This is where the __CSS__ gets its chance to contribute!
 
 Hint: Make sure to wrap your link in quotation marks:    
 
 ```html
 <div>
-  <img src="URL" />
+  <img src="image-location.jpg" />
 </div>
 ```
 
@@ -33,17 +27,13 @@ Hint: A class attribute is constructed with:
 }
 ```
 
-Task: You have a game title, now write the directions to the game. First, create a title for the instructions surrounded by pretty stars. Beneath the `<div class="header"></div>` but above the `<div class="door-row"></div>`, create a new `<div>` with the class name `"first-row"`. Inside this new `<div>` create two new `<img>` tags that take this url as its `src`:
-
-```html
-https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/star.svg
-```
+Task: You have a game title, now write the directions to the game. First, create a title for the instructions surrounded by pretty stars. Beneath the `<div class="header"></div>` but above the `<div class="door-row"></div>`, create a new `<div>` with the class name `"first-row"`. Inside this new `<div>` create two new `<img>` tags that take the `star.svg` image.
 
 Hint: Make sure to wrap your link in quotation marks:    
 
 ```html
 <div>
-  <img src="URL" />
+  <img src="image-location.jpg" />
 </div>
 ```
 
@@ -145,7 +135,7 @@ For the `instructions-text` selector, assign:
 }
 ```
 
-Task: At this point, the doors have shifted to the left of the directions. It looks pretty stylish but observe what happens if you make your browser window smaller - the directions move on top of the doors! In the __style.css__ file, add the `door-row` CSS selector and assign the following:
+Task: At this point, the doors have shifted to the left of the directions. It looks pretty stylish but observe what happens if you make your browser window smaller - the directions move on top of the doors! In the __style.css_ file, add the `door-row` CSS selector and assign the following:
 
 ```css
 .door-row {
@@ -153,7 +143,7 @@ Task: At this point, the doors have shifted to the left of the directions. It lo
 }
 ```
 
-Task: For the sake of CSS-best practices, move the `.door-frame` selector in the __style.css__ fileto the bottom of the file so that the CSS selectors now read in the order that you would see them in your __index.html__ file.
+Task: For the sake of CSS-best practices, move the `.door-frame` selector in the __style.css__ file to the bottom of the file so that the CSS selectors now read in the order that you would see them in your __index.html__ file.
 
 Phew! That was a healthy amount of __HTML__ and __CSS__ additions but your game is beginning to look pretty stylish with a logical display of different features. Way to put your __HTML__ and __CSS__ skills to work!
 
