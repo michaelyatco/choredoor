@@ -1,29 +1,20 @@
-### Milestone Project: Avoid the ChoreBot! | Bringing It All Together
+### Milestone Project: Avoid the ChoreBot! 
 
-Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript concepts covered in the previous modules of your __Web Development Path__!
-
-### Project Overview
 Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
 Assessment: Let's Make This __LOOK__ Like a Game!
 
-Task: Nice! You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding our __index.html__ and __style.css__ pages. Right after the opening `<body>` tag, create a new `<div>` with the class name `"header"`. Inside this new `<div>`, create an `<img>` tag for the logo image.  Copy this url and paste into the `src`:
+Task: Nice! You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding our __index.html__ and __style.css__ pages. 
+
+Right after the opening `<body>` tag, create a new `<div>` with the class name `"header"`. Inside this new `<div>`, create an `<img>` element for the logo image.  Copy this url and paste into the `src`:
 
 ```html
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/logo.svg
 ```
 
-Be aware that the logo is the same color as that current background so don't fret if you can't see the image. This is where the __CSS__ gets its chance to contribute!
+Be aware that the logo is the same color as your current background so __don't panic if you can't see the image__! This is where the __CSS__ gets its chance to contribute!
 
-Hint: Make sure to wrap your link in quotation marks:    
-
-```html
-<div>
-  <img src="URL" />
-</div>
-```
-
-Task: In the __style.css__ file, create a `header` selector and assign the `background-color` the value `#00ffff`. The logo is now visible in the corner so assign the `text-align` a value of `center` in order to center the logo.
+Task: In the __style.css__ file, create a `header` CSS selector and assign the `background-color` the value `#00ffff`. The logo is now visible; but it's still in the left corner. Assign the `text-align` a value in order to `center` the logo image.
 
 Hint: A class attribute is constructed with:
 
@@ -33,23 +24,24 @@ Hint: A class attribute is constructed with:
 }
 ```
 
-Task: You have a game title, now write the directions to the game. First, create a title for the instructions surrounded by pretty stars. Beneath the `<div class="header"></div>` but above the `<div class="door-row"></div>`, create a new `<div>` with the class name `"first-row"`. Inside this new `<div>` create two new `<img>` tags that take this url as its `src`:
+Task: Good work - you have your game title. Now it's time to write the instructions to your game. First, let's create a title for these instructions and flank this title with a pretty star on each side. 
+
+Beneath the `<div class="header">` tag but above the `<div class="door-row">` tag, create a new `<div>` element with the class name `"first-row"`. Inside this new `<div>` create two new `<img>` elements that take this url as their `src`:
 
 ```html
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/star.svg
 ```
+Refresh your page and you should see two small stars huddled in the top-left corner of their `<div>` (noticing a trend?) underneath the logo image!
 
-Hint: Make sure to wrap your link in quotation marks:    
+Task: So you have two stars resting in the top-left corner of their `<div>` for title. Now write the instructions title.
 
-```html
-<div>
-  <img src="URL" />
-</div>
-```
+In between these two `<img>` elements, place a `<p>` element with the class name `"instructions-title"`. Write 'Instructions' inside this `<p>` element. 
 
-Task: So you have two stars resting in the top left corner of their `<div>`. In between these two `<img>` tags, place a `<p>` tag with the class name `"instructions-title"`. Write 'Instructions' inside this `<p>` element. When you run the program, the stars will have shifted to different lines. Navigate to the __style.css__ folder and create two new CSS selectors for `first-row` and `instructions-title`. For the `first-row` selector, assign the `margin-top` property a value `42px` and set the property `text-align` the text to be `center`.
+When you run the program, the stars will have shifted to different lines. The text is also black and barely visible against the dark background. Time to work your __CSS__ skills again!
 
-Hint: A class selector's property and value are constructed with:
+Task: Navigate to the __style.css__ file and create a new CSS selectors for `first-row`. For this selector, assign the `margin-top` property a value of `42px` and set the property `text-align` to be `center`.
+
+Hint:
 
 ```css
 .class { 
@@ -57,103 +49,113 @@ Hint: A class selector's property and value are constructed with:
 }
 ```
 
-Task: The text is centered but the stars still appear to be on different lines. In the `instructions-title` selector, assign the `display` property a value that will place the title `inline` with the stars.
+Refresh the page to make sure the text and the stars are centered.
+
+Task: The text and the stars are centered but the stars still appear to be on different lines. Put them all on the same line.
+
+Create an `instructions-title` CSS selector and assign the `display` property a value that will place the title `inline` with the stars.
 
 Hint: 
 
-
 ```css
 .class { 
   property: value;
 }
 ```
 
-Task: Afterwards, copy and paste the following code into the `instructions-title` selector, as well:
+Refresh the page and see all the elements now on the same line.
 
- ```css
- .instructions-title {
-   font-family: 'Work Sans';
-   font-size: 18px;
-   color: #00ffff;
- }
- ```
+Task: 'Instructions' is still hard to see. Expand on your knowledge of __CSS__ to improve your title! 
 
-Task: Even though you assigned the `'Work Sans'` to `instructions-title`, the font didn't change on the page. This means that you have to import `Work Sans` into our webpage. Copy and paste the following code into the HTML `<head>` underneath the first `<link href>`: 
+Look to your `instructions-title` selector and pair these properties with their respective values:
+
+* font-size - 18px
+* color - #00ffff 
+* font-family - 'Work Sans'
+
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences your title! But do you notice something not working with `font-family`?
+
+Task: Even though you assigned the `'Work Sans'` value to `font-family` within your `instructions-title` selector, the font didn't change on the page. This means that you have to import `'Work Sans'` into our webpage. 
+
+Copy and paste the following code into the HTML `<head>` tag underneath the first `<link href>`: 
 
 ```html
 <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type='text/css'>
 ```
 
-Task: Looking good! Now explain the game to anyone who wants to play! Beneath the `<div class="first-row"></div>` create a new `<table>` with the class name `"second-row"`. Inside of that, create four identical `<tr>` elements. Nested inside each `<tr>` element should be two `<td>` elements: the first `<td>` has the class name `"instructions-number"` while the second `<td>` has the class name `"instructions-text"`. Finally, for each `<td>` element with `"instructions-text"`, copy and paste the following directions or make up your own:
+Give your page a refresh to change your title into a brand-new imported font!
+
+Task: Looking good! Now explain the game to anyone who wants to play! 
+
+Beneath the `<div class="first-row">` element, create a new `<table>` with the class name `"second-row"`. Inside of that, create four identical `<tr>` elements. Nested inside each `<tr>` element should be two `<td>` elements: the first `<td>` has the class name `"instructions-number"` while the second `<td>` has the class name `"instructions-text"`.
+
+Hint:
 
 ```html
-<tr>
-  ...
-  <td class="instructions-text">Hiding behind one of these doors is the ChoreBot.</td>
-</tr>
-<tr>
-  ...
-  <td class="instructions-text">Your mission is to open all of the doors without running into the ChoreBot.</td>
-</tr>
-<tr>
-  ...  
-  <td class="instructions-text">If you manage to avoid the ChoreBot until the very last door, you win!</td>
-</tr>
-<tr>
-  ...
-  <td class="instructions-text">See if you can score a winning streak!</td>
-</tr>
+<table>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+``` 
+
+
+Task: For each `<td>` element with `"instructions-text"` class, copy and paste the following directions or make up your own:
+
+```html
+<td>Hiding behind one of these doors is the ChoreBot.</td>
+<td>Your mission is to open all of the doors without running into the ChoreBot.</td>
+<td>If you manage to avoid the ChoreBot until the very last door, you win!</td>
+<td>See if you can score a winning streak!</td>
 ```
 
-Hint: Make sure that your HTML elements are properly nested to make your 	code more readable.
+Refresh your page to ensure that your game has four directions listed.
 
- ```html
- <table class="parent">
-   <tr>
-     <td="child"></td>
-     <td="child"></td>
-   </tr>
- </table>
- ```
+Task: Almost there! In the __style.css__ file, create the `second-row` CSS selector and assign the following properties and values:
 
-Task: Almost there! In the __style.css__ file, create the `second-row`, `each-direction`, and `instruction` CSS selectors. For the `second-row` selector, assign the following properties & values:
+* text-align - center
+* margin - 0 auto 
+* width - 300px
 
-```css
-.second-row {
-  text-align: center;
-  margin: 0 auto;
-  width: 300px;
-}
-```
-For the `instructions-number` selector, assign:
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `second-row`!
 
-```css
-.instructions-number {    
-  margin-right: 23px;
-  font-family: 'Work Sans';
-  font-size: 36px;
-  color: #00ffff;
-}
-```
-For the `instructions-text` selector, assign:
+Task: Next, create the `instructions-number` selector and assign the following properties and values:
+   
+* margin-right - 23px;
+* font-family - 'Work Sans'
+* font-size - 36px
+* color - #00ffff
 
-```css
-.instructions-text {
-  font-family: 'Work Sans';
-  font-size: 14px;
-  color: #ffffff;
-}
-```
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `instructions-number`!
 
-Task: At this point, the doors have shifted to the left of the directions. It looks pretty stylish but observe what happens if you make your browser window smaller - the directions move on top of the doors! In the __style.css__ file, add the `door-row` CSS selector and assign the following:
+Task: Underneath that, create the `instructions-text` selector, and assign the following properties and values:
 
-```css
-.door-row {
-  text-align: center;
-}
-```
+* font-family - 'Work Sans'
+* font-size - 14px;
+* color - #ffffff;
 
-Task: For the sake of CSS-best practices, move the `.door-frame` selector in the __style.css__ fileto the bottom of the file so that the CSS selectors now read in the order that you would see them in your __index.html__ file.
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `instructions-text`!
 
-Phew! That was a healthy amount of __HTML__ and __CSS__ additions but your game is beginning to look pretty stylish with a logical display of different features. Way to put your __HTML__ and __CSS__ skills to work!
+Task: At this point, the instructions are bright and centered but the three doors are stubbornly positioned to the left of the directions. Time to center them, as well!
+
+In the __style.css__ file, add a `door-row` CSS selector and assign the `text-align` property a value that will `center` those three doors.
+
+Refresh the page and enjoy the results!
+
+Task: Finally, for the sake of CSS-best practices, move the `.door-frame` selector in the __style.css__ file to the bottom of the file so that the CSS selectors now read in the order that you would see them in your __index.html__ file - top to bottom. 
+
+Phew! That was a healthy amount of __HTML__ and __CSS__ additions but your game is beginning to look pretty stylish with a logical display of different features. Way to utilize your __HTML__ and __CSS__ skills!
 
