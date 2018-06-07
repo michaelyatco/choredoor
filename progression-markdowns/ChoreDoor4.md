@@ -1,6 +1,5 @@
 ### Milestone Project: Avoid the ChoreBot!
 
-### Project Overview
 Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
 Assessment: Let's Make This __ACT__ Like a Game! - Part I
