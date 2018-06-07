@@ -6,7 +6,7 @@ Assessment: Getting Started - Get a Door, Open a Door!
 
 Task: Your first objective is to build one door which will hide our dreaded ChoreBot!
 
-Look at the __index.html__ starting code. Inside the `<body>`, create a `<div>` element with the class name `"doorRow"`. Next, create an `<img>` tag inside this `<div>`. 
+Look at the __index.html__ starting code. Inside the `<body>`, create a `<div>` element with the class name `"door-row"`. Next, create an `<img>` tag inside this `<div>`. 
 
 Hint: Make sure your HTML elements are properly nested.
 
@@ -50,13 +50,13 @@ Refresh the page and notice that the cursor changes to a pointer as soon as you 
 
 Task: The pointer's purpose is to indicate to the user that the closed door image can be clicked. __CSS__ made this possible; but it's the __JavaScript__ that injects life into that user's click!
 
-All __JavaScript__ logic will be written within the `script.js` file but in order to have that logic interact with the __HTML__, you first need to establish a connection between the `script.js` page and the `index.html`. In the `index.html` page, create a `<script>` element directly above the closing `</body>`. Within the opening `<script>` tag, set the `type` as `"text/javascript"` and the `src` as `"script.js"`.
+All __JavaScript__ logic will be written within the `script.js` file but in order to have that logic interact with the __HTML__, you first need to establish a connection between the `script.js` page and the `index.html`. In the `index.html` page, create a `<script>` element directly above the closing `</body>` tag. Within the opening `<script>` tag, set the `type` as `"text/javascript"` and the `src` as `"script.js"`.
 
 ```html
 <script type="text/javascript" src="script.js"></script>
 ``` 
 
-Task: Navigate to the `script.js` file and create a global variable called `door1` that accepts `door1` as its value.
+Task: Navigate to the `script.js` file and create a global variable called `door1` that accepts the `id` value of `door1` from your __index.html__ file.
 
 Hint: Use the DOM method: 
 
@@ -64,7 +64,7 @@ Hint: Use the DOM method:
 let object = document.getElementById('id');
 ```
 
-Task: Give `door1` an `.onclick` event using arrow function syntax. The function will be empty for now.
+Task: Inside the `script.js` file, give `door1` an `.onclick` event using arrow function syntax. The function will be empty for now.
 
 Hint: 
 
@@ -80,7 +80,7 @@ Task: Finally, make the closed door image change when you click it so that you s
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg
 ``` 
 
-Next, paste this url path as the value to a new global variable called `botDoor`. Now, within your `door1` arrow function, change the `src` of `door1` to the value of `botDoor`.
+Next, paste this url path as the value to a new global variable called `botDoorPath`. Now, within your `door1` arrow function, change the `src` of `door1` to the value of `botDoorPath`.
 
 Hint: An object's `src` value can be assigned a new 	value with:
 
@@ -88,4 +88,4 @@ Hint: An object's `src` value can be assigned a new 	value with:
 object.src = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
 ```
 
-Task: Click on the door and watch as the closed door image changes to the ChoreBot ready to greet you with housework!
+Refresh the page. Now when you click on the door, watch as the closed door image changes to the ChoreBot ready to greet you with housework!
