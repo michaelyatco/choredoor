@@ -15,7 +15,7 @@ let currentlyPlaying = true;
 // Some helper functions:
 const isBot = (door) => {
   // console.log(door.src);
-  if (door.src === 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg') {
+  if (door.src === botDoorPath) {
     return true;
   } else {
     return false;
@@ -23,7 +23,7 @@ const isBot = (door) => {
 }
 
 const isClicked = (door) => {
-  if (door.src == closedDoorPath) {
+  if (door.src === closedDoorPath) {
     return false;
   } else {
     return true;
@@ -70,9 +70,9 @@ startButton.onclick = () => {
 // Game functionality:
 const startRound = () => {
   // Reset all the doors to be closed
-  door1.src = closedDoor;
-  door2.src = closedDoor;
-  door3.src = closedDoor;
+  door1.src = closedDoorPath;
+  door2.src = closedDoorPath;
+  door3.src = closedDoorPath;
   numClosedDoors = 3;
   currentlyPlaying = true;
   startButton.innerHTML = 'Good luck!';

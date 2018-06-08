@@ -75,7 +75,7 @@ Task: The `isClicked()` function will return a boolean value. Since you're passi
 Hint:
 
 ```js
-if(door.src == closedDoorPath) {
+if(door.src === closedDoorPath) {
   return true;
 } else {
   return false;
