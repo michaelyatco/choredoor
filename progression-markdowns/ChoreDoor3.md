@@ -153,9 +153,37 @@ Task: At this point, the instructions are bright and centered but the three door
 
 In the __style.css__ file, add a `door-row` CSS selector and assign the `text-align` property a value that will `center` those three doors.
 
-Refresh the page and enjoy the results!
+Refresh the page to see the three doors centered!
 
-Task: Finally, for the sake of CSS-best practices, move the `.door-frame` selector in the __style.css__ file to the bottom of the file so that the CSS selectors now read in the order that you would see them in your __index.html__ file - top to bottom. 
+Task: For the sake of CSS-best practices, move the `.door-frame` selector in the __style.css__ file to the bottom of the file so that the CSS selectors now read in the order that you would see them in your __index.html__ file - top to bottom. 
+
+Task: Now, the last HTML feature to build is a button that will respond to the status of the game. 
+
+Beneath the `<door-row>` element create a new `<div>` element with the class name `"start-row"` and an `id` of `"start"`. Type `Good luck!` in between the `<div></div>`.
+
+Hint: Make sure to wrap your `class` and `id` values are wrapped in quotation marks:
+
+```html
+<div class = "class-name" id = "id-name"></div>
+```
+
+Refresh the page to see your positive text appear below the doors!
+
+Task: In the __style.css__ file, create a `start-row` CSS selector assign the following properties and values:
+
+* margin - auto
+* width - 120px
+* height - 43px
+* background-color - #eb6536
+* padding-top - 18px
+* font-family - 'Work Sans'
+* font-size - 18px
+* text-align - center
+* color - #010165
+* margin-bottom - 21px
+* cursor - pointer
+
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `start-row`!
 
 Phew! That was a healthy amount of __HTML__ and __CSS__ additions but your game is beginning to look pretty stylish with a logical display of different features. Way to utilize your __HTML__ and __CSS__ skills!
 

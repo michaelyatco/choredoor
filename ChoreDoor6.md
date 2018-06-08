@@ -7,6 +7,54 @@ Your mission is to construct a single-page website that plays a fully-functional
 
 Assessment - Let's Build a Winner
 
+Your game is randomly hiding the ChoreBot behind one of the doors but the current logic doesn't care whether you find the ChoreBot in the first door you open or the last. Now you're going to work towards incorporating __game over__ logic - win or lose! 
+
+
+Task: 
+
+
+Task: With each new round, the `botDoor` (which holds the URL path for the robot image) is assigned to one of the `openDoor` variables. This is the __game over__ boolean value.
+
+Hint: The three boolean variables should follow this pattern:
+
+```JavaScript
+if (choreDoor === #) {
+  doorDoom = true;
+  openDoor = botDoor;
+  openDoor = beachDoor;
+  openDoor = spaceDoor;
+} ...
+```
+
+Task: Now you have the __game over__ boolean value attached to one random door. The next step is having this value act as a condition in an `if-else` statement within the `doorImage.onclick` event. Beneath the current logic, write an `if` statement that will change the text in the `startButton` variable to `'Game over!'`.
+
+Hint: The syntax for this `if-else` statement follows:
+
+```JavaScript
+if(doorDoom) {
+  startButton.innerHTML = 'New text';
+} ...
+```
+
+Task: Great! The text changes to 'Game Over!' but notice that you can still open the other doors and play the game. Add three new global variables: `door1Clicked`, `door2Clicked`, and `door3Clicked` and set their value to `false`. Now add an `if` statement to the beginning of each `doorImage.onclick` event so that the function within is only executed if the door was never clicked. Then determine how to use these boolean values to prevent clicking the other doors once the game is over.
+
+Hint: The syntax for this `if-else` statement follows:
+
+```JavaScript
+if(!door1Clicked) {
+  (execute function();)
+if(gameOver) {
+  startButton.innerHTML = 'Game over';
+  door2Clicked = true;
+  ...
+  }
+}
+```
+
+Huzzah! You've made a game that can't be played once you've hit the losing __game over__ condition. __JavaScript__ has helped you establish the losing conditions. But games aren't much fun if they just point out when you lose; they're much more exciting when they point out that you've won, as well! Next, you'll be using __JavaScript__ to give your game winning conditons.
+
+
+
 Task: So far, the game tells you when you lost - but what about when you win? How *do* you determine the winner in your game? Think about the winning condition (ie. finding the ChoreBot in the *last* door). If there are no more `doors` left, that means you've opened them all and won the game! So your winning condition must be `if(doors===0)`. If that condition is fulfilled, a `winnerGameOver()` function is carried out. Focus for now on writing the logic to bring `doors` to `0`. If a door is clicked, that door is open so add logic to the `doorImage.onclick` event to decrease the `doors` value.
 
 Hint:
