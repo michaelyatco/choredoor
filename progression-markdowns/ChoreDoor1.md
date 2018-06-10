@@ -48,9 +48,11 @@ Hint: An `id` selector's property and value are assigned with:
 
 Refresh the page and notice that the cursor changes to a pointer as soon as you hover over the door!
 
-Task: The pointer's purpose is to indicate to the user that the closed door image can be clicked. __CSS__ made this possible; but it's the __JavaScript__ that injects life into that user's click!
+Task: The pointer's purpose is to indicate to the user that the closed door image can be clicked. __CSS__ made this possible; but it's the __JavaScript__ that makes that click do something!
 
-All __JavaScript__ logic will be written within the `script.js` file but in order to have that logic interact with the __HTML__, you first need to establish a connection between the `script.js` page and the `index.html`. In the `index.html` page, create a `<script>` element directly above the closing `</body>` tag. Within the opening `<script>` tag, set the `type` as `"text/javascript"` and the `src` as `"script.js"`.
+All __JavaScript__ logic will be written within the `script.js` file but in order to have that logic interact with the __HTML__, you first need to establish a connection between the `script.js` page and the `index.html`. In the `index.html` page, create a `<script>` element directly above the closing `</body>` tag. Inside the opening `<script>` tag, set the `type` as `"text/javascript"` and the `src` as `"script.js"`. Then immediately close the element with a `</script>` tag.
+
+Hint:
 
 ```html
 <script type="text/javascript" src="script.js"></script>
@@ -74,18 +76,20 @@ object.onclick = () => {
 };
 ```
 
-Task: Finally, make the closed door image change when you click it so that you see an open door with the ChoreBot ready to greet you!  Copy this link for the ChoreBot image:
+Task: Now make the closed door image change when you click it so that you see an open door with the ChoreBot!  
+
+First, create a new global variable called `botDoorPath`. Set its value to this link which has the ChoreBot image:
 
 ```html
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg
 ``` 
 
-Next, paste this url path as the value to a new global variable called `botDoorPath`. Now, within your `door1` arrow function, change the `src` of `door1` to the value of `botDoorPath`.
+Now, within your `door1` arrow function, change the `src` of `door1` to the value of `botDoorPath`.
 
-Hint: An object's `src` value can be assigned a new 	value with:
+Hint: An object's `src` value can be assigned a new 	value held by a global variable:
 
 ```js
-object.src = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
+object.src = globalVariable;
 ```
 
 Refresh the page. Now when you click on the door, watch as the closed door image changes to the ChoreBot ready to greet you with housework!

@@ -29,7 +29,7 @@ Hint:
 numClosedDoors--;
 ``` 
 
-Task: Now that the `numClosedDoors` variable decreases by 1 with each call to `playOver()`, write an `if-else` statement that determines if the game-winning condition has been reached. If so, call a `gameOver()` function (again - a function that hasn't been created yet).
+Task: Now that the `numClosedDoors` variable decreases by 1 with each call to `playOver()`, write an `if-else` statement that determines if the game-winning condition has been reached. If so, call a `gameOver()` function (again - this `gameOver()` function hasn't been created yet).
 
 Hint:
 
@@ -48,7 +48,7 @@ door1.src = openDoor1;
 playDoor();
 ```
 
-Task: One common complaint about poorly-built games is when there's a flaw in the game's logic which a player can exploit to win easily. If `(numClosedDoors===0)` is the winning condition, a player can click the same door (even if it's opened) multiple times to decrease the `numClosedDoors` value down to `0` and "cheat" his/her way to victory. Don't let your players exploit your game! 
+Task: One common complaint about poorly-built games is when there's a flaw in the game's logic which a player can exploit to win easily. If `(numClosedDoors===0)` is the winning condition, a player can click the same door (even if it's opened) multiple times to decrease the `numClosedDoors` value down to `0` and "cheat" his/her way to victory. You worked hard to build your game - don't let your players exploit the current logic! 
 
 You need logic to make each door clickable only once. Create a new function called `isClicked()` that takes `door` as its argument.
 
@@ -70,19 +70,19 @@ https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_do
 
 Hint: Global variables are declared outside of     	functions.
 
-Task: The `isClicked()` function will return a boolean value. Since you're passing a `door` as an argument, write an `if-else` statement to check if the door's `src` shares the same value as the `closedDoorPath`. If they share the same value, then the `door` hasn't been opened yet (meaning it has not been clicked) and should return `false`. Otherwise, the door must be open already (meaning it has been clicked) so the function should instead return `true`.
+Task: The `isClicked()` function will return a __boolean__ value. Since you're passing a `door` as an argument, write an `if-else` statement where the condition checks if the door's `src` is equivalent to the `closedDoorPath`. If they share the same value, then the `door` hasn't been opened yet (meaning it has not been clicked) and should return `false`. Otherwise, the door must be open already (meaning it has been clicked) so the function should instead return `true`.
 
 Hint:
 
 ```js
 if(door.src === closedDoorPath) {
-  return true;
-} else {
   return false;
+} else {
+  return true;
 }
 ```
 
-Task: Good work! You've written a function to determine if a closed door image has been clicked. Now examining the three `door.onclick` events, encapsulate the logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular door. 
+Task: Good work! You've written a function to determine if a closed door image has been clicked. Now examining the three `door.onclick` events, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular door. 
 
 Hint:
 
@@ -102,7 +102,7 @@ let object = document.getElementById('id');
 
 Task: Now that we have the `startButton` variable and your game is protected from 'cheap' wins, let's expand the `gameOver()` function! 
 
-Add `str` as its argument and write an `if` statement where the condition checks if `str` is equivalent to `'win'`.  If this condition equates to true, then the `innerHTML` of the `startButton` will change to `'You win! Play again?'`. 
+Add `str` as its argument and write an `if` statement where the condition checks if `str` is equivalent to `'win'`.  If this condition equates to true, then the `innerHTML` of the `startButton` will change to 'You win! Play again?'. 
 
 Hint:
 
@@ -112,6 +112,6 @@ if (str === 'win') {
 }
 ```
 
-Task: Remember to also add `win` as the argument when you call the `gameOver()` function within your `playDoor()` function.
+Task: Remember to also add `'win'` as the argument when you call the `gameOver()` function within your `playDoor()` function.
 
 Refresh the page and open all three doors and look what happens to your 'Good luck' string in the `startButton`! Your winning condition has been reached. The only problem is that the current logic will always have you "win" as long as all the doors are open - regardless of when you find the ChoreBot!

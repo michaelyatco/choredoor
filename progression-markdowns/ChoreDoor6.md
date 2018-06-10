@@ -6,10 +6,9 @@ Assessment: Let's Make This __ACT__ Like a Game! - Part III (Building a Loser)
 
 Your game is randomly hiding the ChoreBot behind one of the doors but the current logic doesn't care whether you find the ChoreBot in the first door you open or the last. Now you're going to work towards incorporating __game over__ logic - for losing! 
 
-
 Task: You need to check if a door has the game-ending ChoreBot.
 
-Create a new function called `isBot()` that takes `door` as its argument. Just like the `isClicked()` function, `isBot()` will return a boolean value. Within this new function, write an `if-else` statement to check if the `door.src` value is equivalent to the `botDoorPath`. If they share the same value, that means that particular door has the ChoreBot and should return `true`. Otherwise, the `isBot()` function should return `false`.
+Create a new function called `isBot()` that takes `door` as its argument. Just like the `isClicked()` function, `isBot()` will return a __boolean__ value. Within this new function, write an `if-else` statement to check if the `door.src` value is equivalent to the `botDoorPath`. If they share the same value, that means that particular door has the ChoreBot and should return `true`. Otherwise, the `isBot()` function should return `false`.
 
 Hint:
 
@@ -40,7 +39,7 @@ Hint:
 playDoor(door1);
 ```
 
-Task: Now reexamine the `gameOver()` function. Beneath the current logic, write an `else` statement that will change the `innerHTML` of the `startButton` variable to `'Game over! Play again?'`.
+Task: Now reexamine the `gameOver()` function. Beneath the current logic, write an `else` statement that will change the `innerHTML` of the `startButton` variable to 'Game over! Play again?'.
 
 Hint: 
 
@@ -50,7 +49,7 @@ else {
 }
 ```
 
-Task: Great! The text changes to `'Game Over! Play again?'` if you find the ChoreBot but notice that you can still open the other doors (and override a loss to victory!). Add a new global variable named `currentlyPlaying` and set its value to `true`. 
+Task: Great! The text changes to 'Game Over! Play again?' if you find the ChoreBot but notice that you can still open the other doors (and override a loss to victory!). Add a new global variable named `currentlyPlaying` and set its value to `true`. 
 
 Hint: Global variables are set outside of a function
 

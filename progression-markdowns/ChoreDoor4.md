@@ -18,16 +18,26 @@ Task: This function will require many new global variables in order for the game
 
 Create the global variable `numClosedDoors` and set its value to the amount of doors in the game. Create the global variables `openDoor1`, `openDoor2`, and `openDoor3` but do not assign any value to them at this point (You'll see why soon).
 
+Hint: 
+
+```js
+numClosedDoors = 3;
+```
+
+
 Task: Instead of having the ChoreBot always hide behind the first door, let's begin crafting the logic to randomly generate the ChoreBot's appearance behind any door!
 
 In the `randomChoreDoorGenerator()` function, create a local variable called `choreDoor` and set its value to a `Math` function that will randomly a whole number between `0` and `2`.
 
-Hint: The `Math.floor()` and `Math.random()` functions will be used as well as the global variable `doors`.
+Hint: The `Math.floor()` and `Math.random()` functions will be used as well as the global variable `numClosedDoors`.
 
+```js
+choreDoor = Math.floor(Math.random() * numClosedDoors);
+```
 
 Task: Now that your `randomChoreDoorGenerator()` randomly returns one of three possible values (`0`, `1`, or `2`), you should write logic that assigns each of these possible values to a different door where the ChoreBot could hide!
 
-Inside the `randomChoreDoorGenerator()` and directly beneath the `Math` function, write an `if-else` statement where each possible `choreDoor` value is a different condition for the `if-else` statement. Use the `openDoor1`, `openDoor2`, and `openDoor3` variables after each `choreDoor` condition to assign the `doorBotPath` variable to a different door. If an `openDoor` variable is not assigned the `botDoorPath` variable, it should be assigned either the `beachDoorPath` or `spaceDoorPath` variable instead.
+Inside the `randomChoreDoorGenerator()` and directly beneath the `Math` function, write an `if-else` statement where each possible `choreDoor` value is a different condition for the `if-else` statement. Use the `openDoor1`, `openDoor2`, and `openDoor3` variables after each `choreDoor` condition to assign the `doorBotPath` variable to a different door in each `if-else` statement. If an `openDoor` variable is not assigned the `botDoorPath` variable, it should be assigned either the `beachDoorPath` or `spaceDoorPath` variable instead.
 
 Hint: The syntax for this "if-else" statement follows:
 
@@ -55,5 +65,4 @@ door1.src = openDoor1;
 
 Task: To see if the `randomChoreDoorGenerator()` is working, you should call it! Write the function at the very end of the `script.js` file.
 
-With each refresh of the page, check to see if the ChoreBot appears in a different door! Great job pushing your __JavaScript__ even further! The gaming logic isn't fully there yet but you've made significant progress in creating a dynamic webpage that responds to user-interactions!
-
+With each refresh of the page, check to see if the ChoreBot appears in a different door! Great job pushing your __JavaScript__ even further! The gaming logic isn't fully there yet, but you've made significant progress in creating a dynamic webpage that responds to user-interactions!

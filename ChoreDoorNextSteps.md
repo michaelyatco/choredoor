@@ -1,47 +1,6 @@
-### Milestone Project: Avoid the ChoreBot! | Bringing It All Together
+### Milestone Project: Avoid the ChoreBot! | Next Steps
 
-Let's build a Milestone Project utilizing all the HTML, CSS, and JavaScript concepts covered in the previous modules of your __Web Development Path__!
-
-### Project Overview
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
-
-Assessment: __Next Steps__ - HTML & CSS Styling
-
-Welcome to the the __Next Steps__ section of the Milestone Project! This is an extra opportunity to improve the view and functionality of your ChoreBot game! First, focus on making the numbers larger and brighter, like this picture illustrates:
-
-
-![Instructions-list](images/instructions_list.png)
-
-
-Task: Inside each `each-direction` `<div>` in your __index.html__ page, create a new `<p>` element with the class name `'instructions-list'` and number them accordingly.
-
-Hint:
-
-```html
-<div class="each-direction">
-  <p class="instructions-list>1</p>
-  ...
-</div>
-<div class="each-direction">
-  <p class="instructions-list>2</p>
-  ...
-</div>
-...
-```
-
-Task: In the __style.css__ file, create an `instructions-list` CSS selector and add the following properties and values:
-
-```css
-.instructions-list {
-  display: inline;
-  margin-top: 11px;
-  margin-right: 23px;
-  font-family: 'Work Sans';
-  font-size: 36px;
-  font-weight: 600;
-  color: #00ffff;
-}
-```
+Welcome to the the __Next Steps__ section of the Milestone Project! This is an extra opportunity to improve the view and functionality of your ChoreBot game!
 
 Assessment: __Next Steps__ - Creating Winning Streaks & High Scores
 
@@ -49,7 +8,7 @@ Wouldn't it be great to play this game with the opportunity to record consecutiv
 
 ![High-Score](images/high_score.png)
 
-Task: First in the __index.html__ page beneath the `<div class="start-two">`, add a `<div>` element with the class name `"score-row"` and nested inside this new `<div>`, add two `<p>` elements with the class name `"score-text"`. Type `Current streak` in the first `<p>` element and `Best streak` in the second `<p>` element.
+Task: First in the __index.html__ page beneath the `<div class="start-two">`, add a `<div>` element with the class name `"score-row"` and nested inside this parent `<div>`, add two `<p>` elements with the class name `"score-text"`. Type `Current streak` in the first `<p>` child element and `Best streak` in the second `<p>` child element.
 
 Hint: Make sure that your HTML elements are properly nested to make your code more readable:
 
@@ -64,7 +23,7 @@ Hint: Make sure that your HTML elements are properly nested to make your code mo
 
 Task: The `<p>` elements in their current state are very hard to see in the corner.  Navigate to the __style.css__ file and add two selectors - `score-row` and `score-text`.  The `score-row` selector is responsible for `text-align` and the `score-text` is responsible for `margin-right: 28px`, `letter-spacing: 1.1px`, `display`, `font-family`, `font-size`, and `color`. See if you can determine the values for the last four properties!
 
-Hint: experiment, look at other selectors for clues, and have fun!
+Hint: Experiment, look at other selectors for clues, and have fun!
 
 Task: The next task is to build the boxes that will hold the `score` and `highScore` values.  Beneath the `score-row` `<div>`, add another `<div>` and set its class name to `score-row`. Inside this second `score-row` `<div>`, nest two more `<div>` elements with the class name `score-box`. Give this first nested `<div>` an `id` of `score-number` and give the second nested `<div>` an `id` of `high-score-number`.
 
