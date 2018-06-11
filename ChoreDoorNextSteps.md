@@ -160,5 +160,26 @@ else {
 }
 ```
 
-Wow! Now you have a legitmate scoreboard that reflects your current winning streak and records your highest streak. See if you can think of any other features from your favorite games that would integrate well with ChoreBot!
+Assessment: Convert the randomChoreDoorGenerator to a Switch Statement
+
+Task: The current logic within the `randomChoreDoorGenerator()` gets away with an `if-else` statement that has only 3 possible door combinations where the ChoreBot is hiding.  As a result, the variety suffers (ie. If the ChoreBot is assigned to `openDoor1`, then `openDoor2` is ALWAYS the beach and `openDoor3` is ALWAYS outer space).
+
+Use a `switch` statement, instead, to generate all 6 possible door combinations. This will require tweaking the current `Math` function to produce `6` possible values for `choreDoor`.
+
+Hint:
+
+```js
+switch(expression) {
+  case 0:
+    code block;
+    break;
+  case 1:
+    code block;
+    break;
+  ...
+```
+
+Refresh the page and play through multiple rounds. Enjoy the sheer randomness through which the images appear!
+
+Wow! Now you have a legitmate scoreboard that reflects your current winning streak and records your highest streak. You also have every possible combination of doors and the images that hide behind them. See if you can think of any other features from your favorite games that would integrate well with ChoreBot!
 

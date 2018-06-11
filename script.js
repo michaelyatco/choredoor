@@ -43,20 +43,56 @@ const playDoor = (door) => {
   }
 }
 
+// MVP - If/Else Generator (3 possible combinations)
+// const randomChoreDoorGenerator = () => {
+//   choreDoor = Math.floor(Math.random() * numClosedDoors);
+//   if (choreDoor === 0) {
+//     openDoor1 = botDoorPath;
+//     openDoor2 = beachDoorPath;
+//     openDoor3 = spaceDoorPath;
+//   } else if (choreDoor === 1) {
+//     openDoor2 = botDoorPath;
+//     openDoor1 = beachDoorPath;
+//     openDoor3 = spaceDoorPath;
+//   } else {
+//     openDoor3 = botDoorPath;
+//     openDoor1 = beachDoorPath;
+//     openDoor2 = spaceDoorPath;
+//   }
+// }
+
+//Next Steps - Switch Statement Version (6 possible combinations)
 const randomChoreDoorGenerator = () => {
-  choreDoor = Math.floor(Math.random() * numClosedDoors);
-  if (choreDoor === 0) {
-    openDoor1 = botDoorPath;
-    openDoor2 = beachDoorPath;
-    openDoor3 = spaceDoorPath;
-  } else if (choreDoor === 1) {
-    openDoor2 = botDoorPath;
-    openDoor1 = beachDoorPath;
-    openDoor3 = spaceDoorPath;
-  } else {
-    openDoor3 = botDoorPath;
-    openDoor1 = beachDoorPath;
-    openDoor2 = spaceDoorPath;
+  choreDoor = Math.floor(Math.random() * 6);
+  switch (choreDoor) {
+    case 0:
+      openDoor1 = botDoorPath;
+      openDoor2 = beachDoorPath;
+      openDoor3 = spaceDoorPath;
+      break;
+    case 1:
+      openDoor1 = botDoorPath;
+      openDoor2 = spaceDoorPath;
+      openDoor3 = beachDoorPath;
+      break;
+    case 2:
+      openDoor2 = botDoorPath;
+      openDoor1 = beachDoorPath;
+      openDoor3 = spaceDoorPath;
+      break;
+    case 3:
+      openDoor2 = botDoorPath;
+      openDoor1 = spaceDoorPath;
+      openDoor3 = beachDoorPath;
+    case 4:
+      openDoor3 = botDoorPath;
+      openDoor1 = beachDoorPath;
+      openDoor2 = spaceDoorPath;
+      break;
+    case 5:
+      openDoor3 = botDoorPath;
+      openDoor1 = spaceDoorPath;
+      openDoor2 = beachDoorPath;
   }
 }
 
