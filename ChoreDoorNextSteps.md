@@ -1,6 +1,6 @@
 ### Milestone Project: Avoid the ChoreBot! | Next Steps
 
-Welcome to the the __Next Steps__ section of the Milestone Project! This is an extra opportunity to improve the view and functionality of your ChoreBot game!
+Welcome to the __Next Steps__ section of the Milestone Project! This is an extra opportunity to improve the view and functionality of your ChoreBot game!
 
 Assessment: Creating Winning Streaks & High Scores
 
