@@ -43,7 +43,7 @@ Task: Navigate to the __style.css__ file and create a new CSS selectors for `fir
 
   * margin-top - 42px 
   * text-align - center
-  * margin-botoom - 21px
+  * margin-bottom - 21px
 
 Hint:
 
@@ -132,14 +132,13 @@ Refresh your page to ensure that your game has four directions listed.
 Task: Almost there! In the __style.css__ file, create the `second-row` CSS selector and assign the following properties and values:
 
 * margin - 0 auto 
-* width - 300px
-* margin-bottom - 21px
+* width - 400px
 
 Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `second-row`!
 
 Task: Next, create the `instructions-number` selector and assign the following properties and values:
    
-* padding-right - 21px
+* padding-right - 25px
 * font-family - 'Work Sans'
 * font-size - 36px
 * color - #00ffff
@@ -150,17 +149,14 @@ Task: Underneath that, create the `instructions-text` selector, and assign the f
 
 * padding - 10px
 * font-family - 'Work Sans'
-* font-size - 14px;
-* color - #ffffff;
+* font-size - 14px
+* color - #ffffff
 
 Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `instructions-text`!
 
 Task: At this point, the instructions are bright and centered but the three doors are stubbornly positioned to the left of the directions. Time to center them, as well!
 
-In the __style.css__ file, add a `door-row` CSS selector and assign the the following properties and values:
-
-  * text-align - center
-  * margin-bottom - 9px
+In the __style.css__ file, add a `door-row` CSS selector and assign the `text-align` property a value of `center`.
 
 Refresh the page to see the three doors centered!
 

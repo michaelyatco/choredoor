@@ -24,7 +24,7 @@ Hint: An `<img>` class is defined before the `src`:
 <img class="class-name" src="URL">
 ```
 
-Task: Then, in the __style.css__ transfer the `cursor` property from `#door1` to this new `doorFrame` CSS selector. Delete the now-empty `#door1` selector afterwards.
+Task: Then, in the __style.css__ transfer the `cursor` property from `#door1` to this new `door-frame` CSS selector. In this new `door-frame` selector, add the property `padding` and assign it a value of `10px` to put some space in-between the doors. Delete the now-empty `#door1` selector afterwards.
 
 Hint: A class's property and value are constructed with:
 
