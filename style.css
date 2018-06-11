@@ -21,40 +21,29 @@ body {
 }
 
 .second-row {
-  position: absolute;
-  margin-top: 17px;
-  right: 25%;
+  text-align: center;
+  margin: 0 auto;
+  width: 300px;
 }
 
-.each-direction {
-  margin-top: 15px;
-}
-
-.instructions-list {
-  display: inline;
-  margin-top: 11px;
+.instructions-number {
   margin-right: 23px;
   font-family: 'Work Sans';
   font-size: 36px;
-  font-weight: 600;
   color: #00ffff;
 }
 
-.instructions {
-  display: inline;
+.instructions-text {
   font-family: 'Work Sans';
   font-size: 14px;
   color: #ffffff;
 }
 
 .door-row {
-  margin-top: 305px;
   text-align: center;
 }
 
 .door-frame {
-  margin-right: 19px;
-  margin-bottom: 20px;
   cursor: pointer;
 }
 
