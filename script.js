@@ -84,6 +84,7 @@ const randomChoreDoorGenerator = () => {
       openDoor2 = botDoorPath;
       openDoor1 = spaceDoorPath;
       openDoor3 = beachDoorPath;
+      break;
     case 4:
       openDoor3 = botDoorPath;
       openDoor1 = beachDoorPath;
@@ -93,6 +94,7 @@ const randomChoreDoorGenerator = () => {
       openDoor3 = botDoorPath;
       openDoor1 = spaceDoorPath;
       openDoor2 = beachDoorPath;
+      break;
   }
 }
 
