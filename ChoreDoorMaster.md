@@ -211,7 +211,11 @@ In between these two `<img>` elements, place a `<p>` sibling element with the cl
 
 When you run the program, the stars will have shifted to different lines. The text is also black and barely visible against the dark background. Time to work your __CSS__ skills again!
 
-Task: Navigate to the __style.css__ file and create a new CSS selectors for `first-row`. For this selector, assign the `margin-top` property a value of `42px` and set the property `text-align` to be `center`.
+Task: Navigate to the __style.css__ file and create a new CSS selectors for `first-row`. For this selector, assign the following properties with these values:
+
+  * margin-top - 42px 
+  * text-align - center
+  * margin-botoom - 21px
 
 Hint:
 
@@ -241,6 +245,7 @@ Task: 'Instructions' is still hard to see. Utilize your knowledge of __CSS__ to 
 
 Look to your `instructions-title` CSS selector and pair these properties with their respective values:
 
+* display - inline
 * font-size - 18px
 * color - #00ffff 
 * font-family - 'Work Sans'
@@ -298,15 +303,15 @@ Refresh your page to ensure that your game has four directions listed.
 
 Task: Almost there! In the __style.css__ file, create the `second-row` CSS selector and assign the following properties and values:
 
-* text-align - center
 * margin - 0 auto 
 * width - 300px
+* margin-bottom - 21px
 
 Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `second-row`!
 
 Task: Next, create the `instructions-number` selector and assign the following properties and values:
    
-* margin-right - 23px;
+* padding-right - 21px
 * font-family - 'Work Sans'
 * font-size - 36px
 * color - #00ffff
@@ -315,6 +320,7 @@ Refresh the page after each new CSS property is assigned so you can see how each
 
 Task: Underneath that, create the `instructions-text` selector, and assign the following properties and values:
 
+* padding - 10px
 * font-family - 'Work Sans'
 * font-size - 14px;
 * color - #ffffff;
@@ -323,7 +329,10 @@ Refresh the page after each new CSS property is assigned so you can see how each
 
 Task: At this point, the instructions are bright and centered but the three doors are stubbornly positioned to the left of the directions. Time to center them, as well!
 
-In the __style.css__ file, add a `door-row` CSS selector and assign the `text-align` property a value that will `center` those three doors.
+In the __style.css__ file, add a `door-row` CSS selector and assign the the following properties and values:
+
+  * text-align - center
+  * margin-bottom - 9px
 
 Refresh the page to see the three doors centered!
 

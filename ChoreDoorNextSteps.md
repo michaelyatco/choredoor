@@ -8,29 +8,32 @@ Wouldn't it be great to play this game with the opportunity to record consecutiv
 
 ![High-Score](next-step-local-images/high_score.png)
 
-Task: First in the __index.html__ page beneath the `<div class="start-row">`, add a `<div>` element with the class name `"score-row"` and nested inside this parent `<div>`, add two `<p>` child elements with the class name `"score-text"`. Type `Current streak` in the first `<p>` child element and `Best streak` in the second `<p>` child element.
+Task: First in the __index.html__ page beneath the `<div class="start-row">`, add a `<table>` element with the class name `"score-row"` and nested inside this `<table>`, add a `<tr>` element. Inside this `<tr>` parent, add two `<th>` child elements. Both will have the class name `"score-text"`. Type 'Current streak:' in between the first `<th></th>` tags and 'Best streak:' in between the second `<th></th>` tags.
 
 Hint: Make sure that your HTML elements are properly nested to make your code more readable:
 
 ```html
-<div class="parent">
-  <p class="child"></p>
-  <p class="child"></p>
-</div>
+<table class="table-class">
+  <tr>
+    <th class="table-header-class">Visible Text</th>
+    <th class="table-header-class">Visible Text</th>
+  <tr>
+</table>
 ```
 
-Task: The `<p>` elements in their current state are very hard to see in the corner.  
+Task: The `<th>` elements in their current state are very hard to see in the corner.  
 
 Navigate to the __style.css__ file and add two CSS selectors - `score-row` and `score-text`.  The `score-row` selector is responsible for `text-align` and the `score-text` is responsible for the following:
 
-  * margin-right - 28px 
-  * letter-spacing - 1.1px 
-  * display 
+  * margin-right - 17px
+  * padding - 5px 
+  * display - inline
+  * letter-spacing - 1.1px
   * font-family 
   * font-size 
   * color 
 
-See if you can determine the values for the last four properties!
+See if you can determine the values for the last three properties!
 
 Hint: Experiment, look at other selectors for clues, and have fun!
 
@@ -40,33 +43,33 @@ Hint: Experiment, look at other selectors for clues, and have fun!
 }
 ```
 
-Task: The next task is to build the boxes that will hold the `score` and `highScore` values.  
+Task: The next task is to build the boxes that will hold the `score` and `highScore` values within the same `<table>`.  
 
-Beneath your original `<div class="score-row">`, create another `<div>` that will also have the class name of `"score-row"`. 
+In your new `<table>` beneath your original `<tr>` element, create another `<tr>` element. Inside this new `<tr>` parent element, add two `<th>` child elements. Both will have the class name `"score-box"`.
 
+Task: Give this first `<th>` child element an `id` of `score-number` and give the second nested `<th>` child element an `id` of `high-score-number`.
 
-Task: Inside this second `score-row` `<div>`, nest two more child `<div>` elements with the class name `score-box`. Give this first nested `<div>` child element an `id` of `score-number` and give the second nested `<div>` child element an `id` of `high-score-number`.
-
-Hint: You can add the `id` attribute inside the `<div>` tag:
+Hint: You can add the `id` attribute inside the `<th>` tag:
 
 ```html
-<div>
-  <div class="class-name" id="id-name"/> 
-</div>
+<tr>
+  <th class="class-name" id="id-name"/> 
+</tr>
 ```
 
 Task: These boxes cannot be seen yet because have to create the CSS selector `score-box` within the __style.css__ file. This selector should have the following properties and values:
 
   * margin-top - 9px 
-  * margin-right - 24px
+  * display - inline-block
+  * padding - 8px
+  * margin - 18px
+  * margin-right - 29px
   * width - 59px
-  * height - 55px
-  * display
   * background-color
   * font-family
   * font-size
 
-See if you can determine the last four properties.
+See if you can determine the last three properties.
 
 Hint: A class selector's property and value are assigned with:
 

@@ -11,6 +11,7 @@ body {
 .first-row {
   margin-top: 42px;
   text-align: center;
+  margin-bottom: 21px;
 }
 
 .instructions-title {
@@ -21,19 +22,20 @@ body {
 }
 
 .second-row {
-  text-align: center;
   margin: 0 auto;
   width: 300px;
+  margin-bottom: 21px;
 }
 
 .instructions-number {
-  margin-right: 23px;
+  padding-right: 21px;
   font-family: 'Work Sans';
   font-size: 36px;
   color: #00ffff;
 }
 
 .instructions-text {
+  padding: 10px;
   font-family: 'Work Sans';
   font-size: 14px;
   color: #ffffff;
@@ -41,6 +43,7 @@ body {
 
 .door-row {
   text-align: center;
+  margin-bottom: 9px;
 }
 
 .door-frame {
@@ -57,16 +60,18 @@ body {
   font-size: 18px;
   text-align: center;
   color: #010165;
-  margin-bottom: 21px;
+  margin-bottom: 9px;
   cursor: pointer;
 }
 
 .score-row {
   text-align: center;
+  width: 100%;
 }
 
 .score-text {
-  margin-right: 28px;
+  margin-right: 17px;
+  padding: 5px;
   display: inline;
   font-family: 'Work Sans';
   font-size: 12px;
@@ -77,9 +82,10 @@ body {
 .score-box {
   margin-top: 9px;
   display: inline-block;
-  margin-right: 24px;
+  padding: 8px;
+  margin: 18px;
+  margin-right: 29px;
   width: 59px;
-  height: 55px;
   background-color: #00ffff;
   font-family: 'Work Sans';
   font-size: 45px;
