@@ -11,6 +11,7 @@ body {
 .title-row {
   margin-top: 42px;
   text-align: center;
+  margin-bottom: 21px;
 }
 
 .instructions-title {
@@ -21,19 +22,19 @@ body {
 }
 
 .instructions-row {
-  text-align: center;
   margin: 0 auto;
-  width: 300px;
+  width: 400px;
 }
 
 .instructions-number {
-  margin-right: 23px;
+  padding-right: 25px;
   font-family: 'Work Sans';
   font-size: 36px;
   color: #00ffff;
 }
 
 .instructions-text {
+  padding: 10px;
   font-family: 'Work Sans';
   font-size: 14px;
   color: #ffffff;
@@ -45,6 +46,7 @@ body {
 
 .door-frame {
   cursor: pointer;
+  padding: 10px;
 }
 
 .start-row {
@@ -60,3 +62,4 @@ body {
   margin-bottom: 21px;
   cursor: pointer;
 }
+
