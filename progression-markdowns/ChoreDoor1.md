@@ -46,21 +46,21 @@ Hint: An `id` selector's property and value are assigned with the following synt
 
 Task: The pointer's purpose is to indicate to the user that the closed door image can be clicked. __CSS__ made this possible; but it's the __JavaScript__ that makes that click do something!
 
-All __JavaScript__ logic will be written within the `script.js` file but in order to have that logic interact with the __HTML__, you first need to establish a connection between the `script.js` page and the `index.html`. In the `index.html` page, create a `<script>` element directly above the closing `</body>` tag. Inside the opening `<script>` tag, set the `type` as `"text/javascript"` and the `src` as `"script.js"`. Then immediately close the element with a `</script>` tag.
+All __JavaScript__ logic will be written within the `script.js` file but in order to have that logic interact with the __HTML__, you first need to establish a connection between the __script.js__ page and the __index.html__. In the __index.html__ page, create a `<script>` element directly above the closing `</body>` tag. Inside the opening `<script>` tag, set the `type` as `"text/javascript"` and the `src` as `"script.js"`. Then immediately close the element with a `</script>` tag.
 
 Hint:
 ```html
 <script type="text/javascript" src="script.js"></script>
 ``` 
 
-Task: Navigate to the `script.js` file. Create a global variable called `doorImage1`. Use a __JavaScript__ DOM method to assign this global variable to the __HTML__ element with the `id` `door1`.
+Task: Navigate to the __script.js__ file. Create a global variable called `doorImage1`. Use a __JavaScript__ DOM method to assign this global variable to the __HTML__ element with the `id` `door1`.
 
 Hint: Use the DOM method: 
 ```js
 let globalVariable = document.getElementById('id');
 ```
 
-Task: Inside the `script.js` file, underneath your global variable, type `door1.onclick`. Assign `door1.onlick` to an arrow function. 
+Task: Inside the __script.js__ file, underneath your global variable, type `door1.onclick`. Assign `door1.onlick` to an arrow function. 
 
 This function will run whenever the door image element is clicked. For now, though, the function is empty.
 

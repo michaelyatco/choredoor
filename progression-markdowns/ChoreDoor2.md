@@ -44,7 +44,7 @@ Task: Delete the `#door1` ID selector since the `.door-frame` class selector mak
 
 Task: Now you have three doors and the cursor changes on hover for all three; but only your first door opens. Put __JavaScript__ to work to open those other two doors!
 
-Create two new global variables called `doorImage2` and `doorImage3`. Use a __JavaScript__ DOM method to assign these global variables to the __HTML__ elements with the `id` of `door2` and `door3` respectively.
+Go to your __script.js__ file and create two new global variables called `doorImage2` and `doorImage3`. Use a __JavaScript__ DOM method to assign these global variables to the __HTML__ elements with the `id` of `door2` and `door3` respectively.
 
 Hint: Use the DOM method: 
 ```js

@@ -6,7 +6,7 @@ Assessment: Let's Make This __ACT__ Like a Game! - Part I
 
 Task: Your game is beginning to look like a game thanks to your __HTML__ architecture & __CSS__ manipulations; but what good is a game if you know where the ChoreBot is always hiding? __JavaScript__ solves this problem by helping you randomly generate the door that hides the ChoreBot! 
 
-In your `script.js` file, beneath your global variables, create a `randomChoreDoorGenerator()` function using the arrow syntax.
+In your __script.js__ file, beneath your global variables, create a `randomChoreDoorGenerator()` function using the arrow syntax.
 
 ```js
 const newFunction = () => {
@@ -55,7 +55,7 @@ if(choreDoor === 0) {
 
 Task: Each condition should have a different door holding the ChoreBot image.
 
-Since there are 3 conditions in this `if-else` statement, assign the `doorBotPath` variable to a different `openDoor` global variable so that `openDoor1` is assigned the `doorBotPath` variable under one condition, `openDoor2` is assigned the `doorBotPath` variable under another condition, and `openDoor3` is assigned the `doorBotPath` variable in the final condition.
+Since there are 3 conditions in this `if/else` statement, assign the `doorBotPath` variable to a different `openDoor` global variable so that `openDoor1` is assigned the `doorBotPath` variable under one condition, `openDoor2` is assigned the `doorBotPath` variable under another condition, and `openDoor3` is assigned the `doorBotPath` variable in the final condition.
 
 Hint:
 ```js 
@@ -83,14 +83,14 @@ if(choreDoor === x) {
 } 
 ```
 
-Task: Now look at our three `door.onclick` arrow function. In its current state, the logic inside explictly states which image path will replace the original `src`. Replace these explicit variables from each `door.onclick` function with an `openDoor` variable so that `door1.onclick` will change the `doorImage1.src` to `openDoor1`, and so on. 
+Task: Now look at our three `door.onclick` arrow function. In its current state, the logic inside explictly states which image path will replace the original `src`. Replace these explicit variables from each `door.onclick` function with an `openDoor` variable so that the value of `doorImage1.src` will change to `openDoor1`, and so on. 
 
 Hint: 
 
 ```js
-door1.src = openDoor1;
+doorImage1.src = openDoor1;
 ```
 
-Task: To see if the `randomChoreDoorGenerator()` is working, you should call it! Write the function at the very end of the `script.js` file.
+Task: To see if the `randomChoreDoorGenerator()` is working, you should call it! Write the function at the very end of the __script.js__ file.
 
 With each refresh of the page, check to see if the ChoreBot appears in a different door! Great job pushing your __JavaScript__ even further! The gaming logic isn't fully there yet, but you've made significant progress in creating a dynamic webpage that responds to user-interactions!

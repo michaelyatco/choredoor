@@ -11,40 +11,36 @@ Task: You'll need to create a function called `playDoor()` that serves two impor
 1. It decreases the `numClosedDoors` variable.
 2. It checks if the game-winning condition has been met and if so, calls a `gameOver()` function (which hasn't been written yet).
 
-In the `script.js` file, create a new function called `playDoor()`.
+In the __script.js__ file, create a new function called `playDoor()`.
 
 Hint:
-
 ```js
 const functionName = () => {
-  function();
+  // Function code...;
 }
 ```
 
 Task: Within this `playDoor()` function, write the logic to decrease the `numClosedDoors` variable every time its called.
 
 Hint:
-
 ```js
 numClosedDoors--;
 ``` 
 
-Task: Now that the `numClosedDoors` variable decreases by 1 with each call to `playOver()`, write an `if-else` statement that determines if the game-winning condition has been reached. If so, call a `gameOver()` function (again - this `gameOver()` function hasn't been created yet).
+Task: Now that the `numClosedDoors` variable decreases by 1 with each call to `playOver()`, write an `if/else` statement that determines if the game-winning condition has been reached. If so, call a `gameOver()` function (again - this `gameOver()` function hasn't been created yet).
 
 Hint:
-
 ```js
 if(numClosedDoors === 0) {
   gameOver();
 }
 ```
 
-Task: The all-important `playDoor()` function has been written but the question now is where in our `script.js` file should this function be called? If the `numClosedDoors` variable decreases, that means that a door has been opened. The three `door.onclick` events is where a door is opened. At the bottom of each event, call the `playDoor()` function.
+Task: The all-important `playDoor()` function has been written but the question now is where in our __script.js__ file should this function be called? If the `numClosedDoors` variable decreases, that means that a door has been opened. The three `door.onclick` functions are where a door is opened. At the bottom of each event, call the `playDoor()` function.
 
 Hint:
-
 ```js
-door1.src = openDoor1;
+doorImage1.src = openDoor1;
 playDoor();
 ```
 
@@ -53,7 +49,6 @@ Task: One common complaint about poorly-built games is when there's a flaw in th
 You need logic to make each door clickable only once. Create a new function called `isClicked()` that takes `door` as its argument.
 
 Hint:
-
 ```js
 const functionName = (argument) => {
   function();
@@ -63,17 +58,15 @@ const functionName = (argument) => {
 Task: An important global variable must be created at this point since it will be very useful for your `isClicked()` function and as well as other __JavaScript__ functions in this game.
 
 Create another global variable called `closedDoorPath` and assign this url as its value:
-
 ```html
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg
 ```
 
-Hint: Global variables are declared outside of     	functions.
+Hint: Global variables are declared outside of     	functions and are listed before all functions.
 
 Task: The `isClicked()` function will return a __boolean__ value. Since you're passing a `door` as an argument, write an `if-else` statement where the condition checks if the door's `src` is equivalent to the `closedDoorPath`. If they share the same value, then the `door` hasn't been opened yet (meaning it has not been clicked) and should return `false`. Otherwise, the door must be open already (meaning it has been clicked) so the function should instead return `true`.
 
 Hint:
-
 ```js
 if(door.src === closedDoorPath) {
   return false;
@@ -82,22 +75,22 @@ if(door.src === closedDoorPath) {
 }
 ```
 
-Task: Good work! You've written a function to determine if a closed door image has been clicked. Now examining the three `door.onclick` events, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular door. 
+Task: Good work! You've written a function to determine if a closed door image has been clicked. Navigate to the three `door.onclick` function and within each function, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular door. 
 
 Hint:
-
 ```js
 if(!isClicked(door1))
 ```
 
 Your logic now protects your game from shortcut victories by making each closed door clickable only once! 
 
-Task: There's one global variable that still needs to be created before we can expand our `gameOver()` function. Create a `startButton` global variable that accepts the `id` value of `start` from your __index.html__ file.
+Task: There's one global variable that still needs to be created before we can expand our `gameOver()` function. 
+
+Create a `startButton` global variable and use a __JavaScript__ DOM method to assign its value to the __HTML__ element with the `id` of `start`.
     
 Hint: Use the DOM method: 
-
 ```js
-let object = document.getElementById('id');
+let variable = document.getElementById('id');
 ```
 
 Task: Now that we have the `startButton` variable and your game is protected from 'cheap' wins, let's expand the `gameOver()` function! 
@@ -105,7 +98,6 @@ Task: Now that we have the `startButton` variable and your game is protected fro
 Add `str` as its argument and write an `if` statement where the condition checks if `str` is equivalent to `'win'`.  If this condition equates to true, then the `innerHTML` of the `startButton` will change to 'You win! Play again?'. 
 
 Hint:
-
 ```js
 if (str === 'win') {
   startButton.innerHTML = 'You win! Play again?';

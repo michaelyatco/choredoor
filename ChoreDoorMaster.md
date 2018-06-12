@@ -46,21 +46,21 @@ Hint: An `id` selector's property and value are assigned with the following synt
 
 Task: The pointer's purpose is to indicate to the user that the closed door image can be clicked. __CSS__ made this possible; but it's the __JavaScript__ that makes that click do something!
 
-All __JavaScript__ logic will be written within the `script.js` file but in order to have that logic interact with the __HTML__, you first need to establish a connection between the `script.js` page and the `index.html`. In the `index.html` page, create a `<script>` element directly above the closing `</body>` tag. Inside the opening `<script>` tag, set the `type` as `"text/javascript"` and the `src` as `"script.js"`. Then immediately close the element with a `</script>` tag.
+All __JavaScript__ logic will be written within the `script.js` file but in order to have that logic interact with the __HTML__, you first need to establish a connection between the __script.js__ page and the __index.html__. In the __index.html__ page, create a `<script>` element directly above the closing `</body>` tag. Inside the opening `<script>` tag, set the `type` as `"text/javascript"` and the `src` as `"script.js"`. Then immediately close the element with a `</script>` tag.
 
 Hint:
 ```html
 <script type="text/javascript" src="script.js"></script>
 ``` 
 
-Task: Navigate to the `script.js` file. Create a global variable called `doorImage1`. Use a __JavaScript__ DOM method to assign this global variable to the __HTML__ element with the `id` `door1`.
+Task: Navigate to the __script.js__ file. Create a global variable called `doorImage1`. Use a __JavaScript__ DOM method to assign this global variable to the __HTML__ element with the `id` `door1`.
 
 Hint: Use the DOM method: 
 ```js
 let globalVariable = document.getElementById('id');
 ```
 
-Task: Inside the `script.js` file, underneath your global variable, type `door1.onclick`. Assign `door1.onlick` to an arrow function. 
+Task: Inside the __script.js__ file, underneath your global variable, type `door1.onclick`. Assign `door1.onlick` to an arrow function. 
 
 This function will run whenever the door image element is clicked. For now, though, the function is empty.
 
@@ -129,7 +129,7 @@ Task: Delete the `#door1` ID selector since the `.door-frame` class selector mak
 
 Task: Now you have three doors and the cursor changes on hover for all three; but only your first door opens. Put __JavaScript__ to work to open those other two doors!
 
-Create two new global variables called `doorImage2` and `doorImage3`. Use a __JavaScript__ DOM method to assign these global variables to the __HTML__ elements with the `id` of `door2` and `door3` respectively.
+Go to your __script.js__ file and create two new global variables called `doorImage2` and `doorImage3`. Use a __JavaScript__ DOM method to assign these global variables to the __HTML__ elements with the `id` of `door2` and `door3` respectively.
 
 Hint: Use the DOM method: 
 ```js
@@ -342,7 +342,7 @@ Refresh the page to see the three doors centered!
 
 Task: For the sake of CSS-best practices, move the `.door-frame` selector in the __style.css__ file to the bottom of the file so that the CSS selectors now read in the order that you would see them in your __index.html__ file - from the top of the page to bottom. 
 
-Task: The last HTML feature to build is a button that will respond to the status of the game. 
+Task: The last __HTML__ feature to build is a button that will respond to the status of the game. 
 
 Beneath the `<door-row>` element create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type `Good luck!` in between the `<div></div>`.
 
@@ -375,7 +375,7 @@ Assessment: Let's Make This __ACT__ Like a Game! - Part I
 
 Task: Your game is beginning to look like a game thanks to your __HTML__ architecture & __CSS__ manipulations; but what good is a game if you know where the ChoreBot is always hiding? __JavaScript__ solves this problem by helping you randomly generate the door that hides the ChoreBot! 
 
-In your `script.js` file, beneath your global variables, create a `randomChoreDoorGenerator()` function using the arrow syntax.
+In your __script.js__ file, beneath your global variables, create a `randomChoreDoorGenerator()` function using the arrow syntax.
 
 ```js
 const newFunction = () => {
@@ -424,7 +424,7 @@ if(choreDoor === 0) {
 
 Task: Each condition should have a different door holding the ChoreBot image.
 
-Since there are 3 conditions in this `if-else` statement, assign the `doorBotPath` variable to a different `openDoor` global variable so that `openDoor1` is assigned the `doorBotPath` variable under one condition, `openDoor2` is assigned the `doorBotPath` variable under another condition, and `openDoor3` is assigned the `doorBotPath` variable in the final condition.
+Since there are 3 conditions in this `if/else` statement, assign the `doorBotPath` variable to a different `openDoor` global variable so that `openDoor1` is assigned the `doorBotPath` variable under one condition, `openDoor2` is assigned the `doorBotPath` variable under another condition, and `openDoor3` is assigned the `doorBotPath` variable in the final condition.
 
 Hint:
 ```js 
@@ -452,15 +452,15 @@ if(choreDoor === x) {
 } 
 ```
 
-Task: Now look at our three `door.onclick` arrow function. In its current state, the logic inside explictly states which image path will replace the original `src`. Replace these explicit variables from each `door.onclick` function with an `openDoor` variable so that `door1.onclick` will change the `doorImage1.src` to `openDoor1`, and so on. 
+Task: Now look at our three `door.onclick` arrow function. In its current state, the logic inside explictly states which image path will replace the original `src`. Replace these explicit variables from each `door.onclick` function with an `openDoor` variable so that the value of `doorImage1.src` will change to `openDoor1`, and so on. 
 
 Hint: 
 
 ```js
-door1.src = openDoor1;
+doorImage1.src = openDoor1;
 ```
 
-Task: To see if the `randomChoreDoorGenerator()` is working, you should call it! Write the function at the very end of the `script.js` file.
+Task: To see if the `randomChoreDoorGenerator()` is working, you should call it! Write the function at the very end of the __script.js__ file.
 
 With each refresh of the page, check to see if the ChoreBot appears in a different door! Great job pushing your __JavaScript__ even further! The gaming logic isn't fully there yet, but you've made significant progress in creating a dynamic webpage that responds to user-interactions!
 
@@ -473,12 +473,12 @@ Task: You'll need to create a function called `playDoor()` that serves two impor
 1. It decreases the `numClosedDoors` variable.
 2. It checks if the game-winning condition has been met and if so, calls a `gameOver()` function (which hasn't been written yet).
 
-In the `script.js` file, create a new function called `playDoor()`.
+In the __script.js__ file, create a new function called `playDoor()`.
 
 Hint:
 ```js
 const functionName = () => {
-  function();
+  // Function code...;
 }
 ```
 
@@ -487,9 +487,9 @@ Task: Within this `playDoor()` function, write the logic to decrease the `numClo
 Hint:
 ```js
 numClosedDoors--;
-```
+``` 
 
-Task: Now that the `numClosedDoors` variable decreases by 1 with each call to `playOver()`, write an `if-else` statement that determines if the game-winning condition has been reached. If so, call a `gameOver()` function (again - this `gameOver()` function hasn't been created yet).
+Task: Now that the `numClosedDoors` variable decreases by 1 with each call to `playOver()`, write an `if/else` statement that determines if the game-winning condition has been reached. If so, call a `gameOver()` function (again - this `gameOver()` function hasn't been created yet).
 
 Hint:
 ```js
@@ -498,15 +498,15 @@ if(numClosedDoors === 0) {
 }
 ```
 
-Task: The all-important `playDoor()` function has been written but the question now is where in our `script.js` file should this function be called? If the `numClosedDoors` variable decreases, that means that a door has been opened. The three `door.onclick` events is where a door is opened. At the bottom of each event, call the `playDoor()` function.
+Task: The all-important `playDoor()` function has been written but the question now is where in our __script.js__ file should this function be called? If the `numClosedDoors` variable decreases, that means that a door has been opened. The three `door.onclick` functions are where a door is opened. At the bottom of each event, call the `playDoor()` function.
 
 Hint:
 ```js
-door1.src = openDoor1;
+doorImage1.src = openDoor1;
 playDoor();
 ```
 
-Task: One common complaint about poorly-built games is when there's a flaw in the game's logic which a player can exploit to win easily. If `(numClosedDoors===0)` is the winning condition, a player can click the same door (even if it's opened) multiple times to decrease the `numClosedDoors` value down to `0` and "cheat" his/her way to victory. You worked hard to build your game - don't let your players exploit the current logic!
+Task: One common complaint about poorly-built games is when there's a flaw in the game's logic which a player can exploit to win easily. If `(numClosedDoors===0)` is the winning condition, a player can click the same door (even if it's opened) multiple times to decrease the `numClosedDoors` value down to `0` and "cheat" his/her way to victory. You worked hard to build your game - don't let your players exploit the current logic! 
 
 You need logic to make each door clickable only once. Create a new function called `isClicked()` that takes `door` as its argument.
 
@@ -524,7 +524,7 @@ Create another global variable called `closedDoorPath` and assign this url as it
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg
 ```
 
-Hint: Global variables are declared outside of     	functions.
+Hint: Global variables are declared outside of     	functions and are listed before all functions.
 
 Task: The `isClicked()` function will return a __boolean__ value. Since you're passing a `door` as an argument, write an `if-else` statement where the condition checks if the door's `src` is equivalent to the `closedDoorPath`. If they share the same value, then the `door` hasn't been opened yet (meaning it has not been clicked) and should return `false`. Otherwise, the door must be open already (meaning it has been clicked) so the function should instead return `true`.
 
@@ -537,25 +537,27 @@ if(door.src === closedDoorPath) {
 }
 ```
 
-Task: Good work! You've written a function to determine if a closed door image has been clicked. Now examining the three `door.onclick` events, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular door.
+Task: Good work! You've written a function to determine if a closed door image has been clicked. Navigate to the three `door.onclick` function and within each function, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular door. 
 
 Hint:
 ```js
 if(!isClicked(door1))
 ```
 
-Your logic now protects your game from shortcut victories by making each closed door clickable only once!
+Your logic now protects your game from shortcut victories by making each closed door clickable only once! 
 
-Task: There's one global variable that still needs to be created before we can expand our `gameOver()` function. Create a `startButton` global variable that accepts the `id` value of `start` from your __index.html__ file.
+Task: There's one global variable that still needs to be created before we can expand our `gameOver()` function. 
 
-Hint: Use the DOM method:
+Create a `startButton` global variable and use a __JavaScript__ DOM method to assign its value to the __HTML__ element with the `id` of `start`.
+    
+Hint: Use the DOM method: 
 ```js
-let object = document.getElementById('id');
+let variable = document.getElementById('id');
 ```
 
-Task: Now that we have the `startButton` variable and your game is protected from 'cheap' wins, let's expand the `gameOver()` function!
+Task: Now that we have the `startButton` variable and your game is protected from 'cheap' wins, let's expand the `gameOver()` function! 
 
-Add `str` as its argument and write an `if` statement where the condition checks if `str` is equivalent to `'win'`.  If this condition equates to true, then the `innerHTML` of the `startButton` will change to 'You win! Play again?'.
+Add `str` as its argument and write an `if` statement where the condition checks if `str` is equivalent to `'win'`.  If this condition equates to true, then the `innerHTML` of the `startButton` will change to 'You win! Play again?'. 
 
 Hint:
 ```js
