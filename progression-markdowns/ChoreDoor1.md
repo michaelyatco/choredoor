@@ -57,7 +57,7 @@ Task: Navigate to the `script.js` file. Create a global variable called `doorIma
 
 Hint: Use the DOM method: 
 ```js
-let object = document.getElementById('id');
+let globalVariable = document.getElementById('id');
 ```
 
 Task: Inside the `script.js` file, underneath your global variable, type `door1.onclick`. Assign `door1.onlick` to an arrow function. 
@@ -66,7 +66,7 @@ This function will run whenever the door image element is clicked. For now, thou
 
 Hint: 
 ```js
-object.onclick = () => {
+image-element-id.onclick = () => {
   myScript;
 };
 ```
@@ -82,7 +82,7 @@ Task: Next, within your `door1` arrow function, change the `src` of `doorImage1`
 
 Refresh the page. Now when you click on the door, watch as the closed door image changes to the ChoreBot ready to greet you with housework!
 
-Hint: An object's `src` value can be assigned a new 	value held by a global variable:
+Hint: A variable's `src` value can be assigned a new 	value held by another variable:
 ```js
-object.src = globalVariable;
+variableA.src = variableB;
 ```
