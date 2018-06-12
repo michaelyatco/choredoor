@@ -636,7 +636,7 @@ Directly underneath the `door.onclick` functions, write the logic to turn the `s
 
 Hint:
 ```js
-object.onclick = () => {
+startButton.onclick = () => {
   // Function code...;
 }
 ```

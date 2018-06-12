@@ -1,6 +1,6 @@
-let door1 = document.getElementById('door1');
-let door2 = document.getElementById('door2');
-let door3 = document.getElementById('door3');
+let doorImage1 = document.getElementById('door1');
+let doorImage2 = document.getElementById('door2');
+let doorImage3 = document.getElementById('door3');
 let startButton = document.getElementById('start');
 let botDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
 let beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg";
@@ -39,7 +39,7 @@ const playDoor = (door) => {
   if (numClosedDoors === 0) {
     gameOver('win');
   } else if (isBot(door)) {
-    gameOver('lose');
+    gameOver();
   }
 }
 
@@ -99,22 +99,22 @@ const randomChoreDoorGenerator = () => {
 }
 
 door1.onclick = () => {
-  if(currentlyPlaying && !isClicked(door1)) {
-    door1.src = openDoor1;
+  if(currentlyPlaying && !isClicked(doorImage1)) {
+    doorImage1.src = openDoor1;
     playDoor(door1);
   }
 }
 
 door2.onclick = () => {
-  if(currentlyPlaying && !isClicked(door2)) {
-    door2.src = openDoor2;
+  if(currentlyPlaying && !isClicked(doorImage2)) {
+    doorImage2.src = openDoor2;
     playDoor(door2);
   }
 }
 
 door3.onclick = () => {
-  if(currentlyPlaying && !isClicked(door3)) {
-    door3.src = openDoor3;
+  if(currentlyPlaying && !isClicked(doorImage3)) {
+    doorImage3.src = openDoor3;
     playDoor(door3);
   }
 }
@@ -125,9 +125,9 @@ startButton.onclick = () => {
 
 const startRound = () => {
   // Reset all the doors to be closed
-  door1.src = closedDoorPath;
-  door2.src = closedDoorPath;
-  door3.src = closedDoorPath;
+  doorImage1.src = closedDoorPath;
+  doorImage2.src = closedDoorPath;
+  doorImage3.src = closedDoorPath;
   numClosedDoors = 3;
   currentlyPlaying = true;
   startButton.innerHTML = 'Good luck!';
