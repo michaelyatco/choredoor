@@ -8,7 +8,7 @@ body {
   text-align: center;
 }
 
-.first-row {
+.title-row {
   margin-top: 42px;
   text-align: center;
   margin-bottom: 21px;
@@ -21,7 +21,7 @@ body {
   color: #00ffff;
 }
 
-.second-row {
+.instructions-row {
   margin: 0 auto;
   width: 400px;
 }

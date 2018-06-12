@@ -33,11 +33,11 @@ Hint: You can add the `id` attribute inside the `<img>` tag - just make sure you
 
 Task: Connecting this `id` to the __CSS__ will allow you to adjust the closed door's properities - including changing the cursor when you hover over it!
 
-Navigate to the __style.css__ starting code and create an `id` CSS selector for the `door1`. Inside this selector, assign the `cursor` property a value of `pointer`.
+Navigate to the __style.css__ starting code and create an CSS ID selector for the `#door1`. Inside this selector, assign the `cursor` property a value of `pointer`.
 
 Refresh the page and notice that the cursor changes to a pointer as soon as you hover over the door!
 
-Hint: An `id` selector's property and value are assigned with:
+Hint: An `id` selector's property and value are assigned with the following syntax. Make sure to indent the property:
 ```css
 #id { 
   property: value;
@@ -67,7 +67,7 @@ This function will run whenever the door image element is clicked. For now, thou
 Hint: 
 ```js
 image-element-id.onclick = () => {
-  myScript;
+  // Function code...;
 };
 ```
 

@@ -15,7 +15,7 @@ Hint: Make sure to wrap your link in quotation marks: You can add the `id` attri
 </div>
 ```
 
-Task: Being a good programmer means doing your best to stay DRY("Don't repeat yourself"). Looking at the __style.css__ code, it would be repetitive to create `id` CSS selectors for `door2` and `door3` just to give them the same `cursor` property. 
+Task: Being a good programmer means doing your best to stay DRY("Don't repeat yourself"). Looking at the __style.css__ code, it would be repetitive to create CSS ID selectors for `#door2` and `#door3` just to give them the same `cursor` property. 
 
 Navigate back to the __index.html__ and assign each image a new class of `door-frame`. Make sure to place the `class` between the `id` and the `src`. 
 
@@ -26,7 +26,7 @@ Hint: An `<img>` element's `class` is defined after the `id` but before the `src
 <img id="id-name" class="class-name" src="URL">
 ```
 
-Task: Next, in the __style.css__ file, create the `door-frame` CSS class selector and assign the following properties and values:
+Task: Next, in the __style.css__ file, create the `.door-frame` CSS class selector and assign the following properties and values:
 
 * cursor - pointer 
 * padding - 10px
@@ -56,7 +56,7 @@ Task: Under your `door1.onclick` arrow function, give `door2` and `door3` each t
 Hint: 
 ```js
 image-element-id.onclick = () => {
-  myScript;
+  // Function code...;
 }
 ```
 
