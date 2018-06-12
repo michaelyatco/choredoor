@@ -2,7 +2,7 @@
 
 Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
-Assessment: Let's Make This __ACT__ Like a Game! - Part I
+Assessment: Let's Make This ACT Like a Game! - Part I
 
 Task: Your game is beginning to look like a game thanks to your __HTML__ architecture & __CSS__ manipulations; but what good is a game if you know where the ChoreBot is always hiding? __JavaScript__ solves this problem by helping you randomly generate the door that hides the ChoreBot! 
 

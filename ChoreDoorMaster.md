@@ -170,7 +170,7 @@ variableA.src = variableB;
 
 Now when you refresh the page, click on each door and witness how each closed door opens to something different and exciting: a ChoreBot, a beach, and outer space!
 
-Assessment: Let's Make This __LOOK__ Like a Game!
+Assessment: Let's Make This LOOK Like a Game!
 
 Task: Nice! You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding your __index.html__ and __style.css__ pages. 
 
@@ -371,7 +371,7 @@ Refresh the page after each new CSS property is assigned so you can see how each
 
 Phew! That was a healthy amount of __HTML__ and __CSS__ additions but your game is beginning to look pretty stylish with a logical display of different features. Way to utilize your __HTML__ and __CSS__ skills!
 
-Assessment: Let's Make This __ACT__ Like a Game! - Part I
+Assessment: Let's Make This ACT Like a Game! - Part I
 
 Task: Your game is beginning to look like a game thanks to your __HTML__ architecture & __CSS__ manipulations; but what good is a game if you know where the ChoreBot is always hiding? __JavaScript__ solves this problem by helping you randomly generate the door that hides the ChoreBot! 
 
@@ -464,7 +464,7 @@ Task: To see if the `randomChoreDoorGenerator()` is working, you should call it!
 
 With each refresh of the page, check to see if the ChoreBot appears in a different door! Great job pushing your __JavaScript__ even further! The gaming logic isn't fully there yet, but you've made significant progress in creating a dynamic webpage that responds to user-interactions!
 
-Assessment: Let's Make This __ACT__ Like a Game! - Part II (Building a Winner)
+Assessment: Let's Make This ACT Like a Game! - Part II (Building a Winner)
 
 How exactly do you determine the winner in your game? Think about the winning condition (ie. you find the ChoreBot when you open the *last* door). If there are no more closed doors left, that means you've opened them all and won the game! So your winning condition must be `if(numClosedDoors===0)`. The question now is where to implement this game-winning condition into your code.
 
@@ -526,7 +526,7 @@ https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_do
 
 Hint: Global variables are declared outside of     	functions and are listed before all functions.
 
-Task: The `isClicked()` function will return a __boolean__ value. Since you're passing a `door` as an argument, write an `if-else` statement where the condition checks if the door's `src` is equivalent to the `closedDoorPath`. If they share the same value, then the `door` hasn't been opened yet (meaning it has not been clicked) and should return `false`. Otherwise, the door must be open already (meaning it has been clicked) so the function should instead return `true`.
+Task: The `isClicked()` function will return a __boolean__ value. Since you're passing a `door` as an argument, write an `if/else` statement where the condition checks if the door's `src` is equivalent to the `closedDoorPath`. If they share the same value, then the `door` hasn't been opened yet (meaning it has not been clicked) and should return `false`. Otherwise, the door must be open already (meaning it has been clicked) so the function should instead return `true`.
 
 Hint:
 ```js
@@ -537,11 +537,11 @@ if(door.src === closedDoorPath) {
 }
 ```
 
-Task: Good work! You've written a function to determine if a closed door image has been clicked. Navigate to the three `door.onclick` function and within each function, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular door. 
+Task: Good work! You've written a function to determine if a closed door image has been clicked. Navigate to the three `door.onclick` function and within each function, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular `doorImage`. 
 
 Hint:
 ```js
-if(!isClicked(door1))
+if(!isClicked(doorImage1))
 ```
 
 Your logic now protects your game from shortcut victories by making each closed door clickable only once! 
@@ -570,13 +570,13 @@ Task: Remember to also add `'win'` as the argument when you call the `gameOver()
 
 Refresh the page and open all three doors and look what happens to your 'Good luck' string in the `startButton`! Your winning condition has been reached. The only problem is that the current logic will always have you "win" as long as all the doors are open - regardless of when you find the ChoreBot!
 
-Assessment: Let's Make This __ACT__ Like a Game! - Part III (Building a Loser)
+Assessment: Let's Make This ACT Like a Game! - Part III (Building a Loser)
 
-Your game is randomly hiding the ChoreBot behind one of the doors but the current logic doesn't care whether you find the ChoreBot in the first door you open or the last. Now you're going to work towards incorporating __game over__ logic - for losing!
+Your game is randomly hiding the ChoreBot behind one of the doors but the current logic doesn't care whether you find the ChoreBot in the first door you open or the last. Now you're going to work towards incorporating __game over__ logic - for losing! 
 
 Task: You need to check if a door has the game-ending ChoreBot.
 
-Create a new function called `isBot()` that takes `door` as its argument. Just like the `isClicked()` function, `isBot()` will return a __boolean__ value. Within this new function, write an `if-else` statement to check if the `door.src` value is equivalent to the `botDoorPath`. If they share the same value, that means that particular door has the ChoreBot and should return `true`. Otherwise, the `isBot()` function should return `false`.
+Create a new function called `isBot()` that takes `door` as its argument. Just like the `isClicked()` function, `isBot()` will return a __boolean__ value. Within this new function, write an `if/else` statement to check if the `door.src` value is equivalent to the `botDoorPath`. If they share the same value, that means that particular door has the ChoreBot and should return `true`. Otherwise, the `isBot()` function should return `false`.
 
 Hint:
 ```js
@@ -588,18 +588,16 @@ const functionName = (argument) => {
 }
 ```
 
-Task: Excellent! You've written a function to determine if a door's `src` contains the dreaded ChoreBot. Now you must apply this logic into currently existing __JavaScript__ functions.
+Task: Excellent! You've written a function to determine if a door's `src` contains the game-ending ChoreBot image. Now you must apply this logic into currently existing __JavaScript__ functions.
 
-The `playOver()` function now needs a `door` argument. After the `if` statement in this function, add an `else-if` condition that checks if the `isBot()` will equate to `true` if you pass the `door` as the `isBot()` argument.
-
-Hint:
+The `playOver()` function now needs a `door` argument. After the `if` statement in this function, add an `else/if` condition that checks if the `isBot()` will equate to `true` if you pass the `door` as the `isBot()` argument.
 ```js
-else if (isBot(door))
+else if (isBot(door)) 
 ```
 
-Task: If this `isBot()` function equates to true, call the `gameOver()` function, passing `'lose'` as its argument.
+Task: If this `isBot()` function equates to true, call the `gameOver()` function with no argument.
 
-Task: Since the `playDoor()` function now needs an argument, look at the `door.onclick` events. Pass each `door` respectively as the argument for the `playOver()` function.
+Task: Since the `playDoor()` function now needs an argument, look at the `door.onclick` functions. Pass each `door` respectively as the argument for the `playOver()` function.
 
 Hint:
 ```js
@@ -608,42 +606,42 @@ playDoor(door1);
 
 Task: Now reexamine the `gameOver()` function. Beneath the current logic, write an `else` statement that will change the `innerHTML` of the `startButton` variable to 'Game over! Play again?'.
 
-Hint:
+Hint: 
 ```js
 else {
   startButton.innerHTML = 'Game over! Play again?'
 }
 ```
 
-Task: Great! The text changes to 'Game Over! Play again?' if you find the ChoreBot but notice that you can still open the other doors (and override a loss to victory!). Add a new global variable named `currentlyPlaying` and set its value to `true`.
+Task: Great! The text changes to 'Game Over! Play again?' if you find the ChoreBot but notice that you can still open the other doors (and override a loss to victory!). Add a new global variable named `currentlyPlaying` and set its value to `true`. 
 
-Hint: Global variables are set outside of a function
+Hint: Global variables are declared outside of     	functions and are listed before all functions.
 
 Task: At the bottom of the `gameOver()` function, set `currentlyPlaying` to `false`.
 
-Hint: Set `currentlyPlaying` to `false` outside of the `if-else` statement
+Hint: Set `currentlyPlaying` to `false` outside of the `if/else` statement
 
-Task: Now looking at the `door.onlick` events, add to the current `if` statement that `currentlyPlaying` must be true AND the `isClicked(door)` function must return false.
+Task: Now looking at the `door.onlick` functions, add to the current `if` statement a condition checks whether `currentlyPlaying` returns true AND that the `isClicked(door)` function returns false.
 
 Hint:
 ```js
 if(currentlyPlaying && !isClicked(door))
 ```
 
-Huzzah! You've made a game that can't be played once you've hit the losing __game over__ condition of finding the ChoreBot before `(numClosedDoors === 0)`.
+Huzzah! You've made a game that can't be played once you've hit the losing __game over__ condition of finding the ChoreBot before `(numClosedDoors === 0)`. 
 
-Task: Wow - the game works! It lets you know if you've opened all the doors to victory and it tells you if you've lost because you found the ChoreBot before all the doors were opened. There's one problem though - the only way to reset the values for a new round is to refresh the page. Your next task is to turn your `startButton` into exactly that - a start button for a new round!
+Task: Wow - the game works! It lets you know if you've opened all the doors to victory and it tells you if you've lost because you found the ChoreBot before all the doors were opened. There's one problem though - the only way to reset the values for a new round is to refresh the page. Your next task is to turn your `startButton` into exactly that - a start button for a new round! 
 
-Directly underneath the `door.onclick` events, write the logic to turn the `startButton` into an `.onclick` event that will trigger a new function called `startRound()`.
+Directly underneath the `door.onclick` functions, write the logic to turn the `startButton` into an `.onclick` arrow function that will trigger a new function called `startRound()`.
 
 Hint:
 ```js
 object.onclick = () => {
-  function();
+  // Function code...;
 }
 ```
 
-Task: The `startRound()` function not only has to start a new game; it also has to reset the values from the previous rounds.
+Task: The `startRound()` function not only has to start a new game; it also has to reset the values from the previous rounds. 
 
 Write this `startRound()` function so that the following variables are reset to their original values:
 
@@ -655,7 +653,7 @@ After all these variables are reset, call the `randomChoreDoorGenerator()` funct
 
 Hint: The `numClosedDoors` variable is set to `3`, each `door.src` variable is set to the `closedDoorPath` variable, and the `startButton.innerHTML` is set to `'Good luck!'`
 
-Task: Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` tag needs to be replaced by the `startRound()` function so that the game resets correctly for each new round.
+Task: Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` element needs to be replaced by the `startRound()` function so that the game resets correctly for each new round.
 
 Hint:
 ```js
@@ -665,13 +663,13 @@ Hint:
 </script>
 ```
 
-Task: You're almost at the finish line! You just need to add some finishing touches. One minor bug is that the game can reset mid-round if the player clicks on the `startRound` button.
+Task: You're almost at the finish line! You just need to add some finishing touches. One minor bug is that the game can reset mid-round if the player clicks on the `startRound` button.  
 
-Use the `currentlyPlaying` variable as a condition where the `startButton.onclick` event can only be clicked if the `currentlyPlaying` variable is `false`.
+Wrap the `startButton.onclick` function in an `if` statement where the condition checks if the `currentlyPlaying` variable is `false` so that a player cannot reset the game mid-round. 
 
 Hint:
 ```js
-if (!currentlyPlaying)
+if(!currentlyPlaying) 
 ```
 
 Task: Finally, add the `currentlyPlaying` variable within the `startRound()` function and set it to `true`.

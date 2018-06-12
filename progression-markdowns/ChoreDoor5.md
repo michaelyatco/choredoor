@@ -2,7 +2,7 @@
 
 Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
-Assessment: Let's Make This __ACT__ Like a Game! - Part II (Building a Winner)
+Assessment: Let's Make This ACT Like a Game! - Part II (Building a Winner)
 
 How exactly do you determine the winner in your game? Think about the winning condition (ie. you find the ChoreBot when you open the *last* door). If there are no more closed doors left, that means you've opened them all and won the game! So your winning condition must be `if(numClosedDoors===0)`. The question now is where to implement this game-winning condition into your code.
 
@@ -64,7 +64,7 @@ https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_do
 
 Hint: Global variables are declared outside of     	functions and are listed before all functions.
 
-Task: The `isClicked()` function will return a __boolean__ value. Since you're passing a `door` as an argument, write an `if-else` statement where the condition checks if the door's `src` is equivalent to the `closedDoorPath`. If they share the same value, then the `door` hasn't been opened yet (meaning it has not been clicked) and should return `false`. Otherwise, the door must be open already (meaning it has been clicked) so the function should instead return `true`.
+Task: The `isClicked()` function will return a __boolean__ value. Since you're passing a `door` as an argument, write an `if/else` statement where the condition checks if the door's `src` is equivalent to the `closedDoorPath`. If they share the same value, then the `door` hasn't been opened yet (meaning it has not been clicked) and should return `false`. Otherwise, the door must be open already (meaning it has been clicked) so the function should instead return `true`.
 
 Hint:
 ```js
@@ -75,11 +75,11 @@ if(door.src === closedDoorPath) {
 }
 ```
 
-Task: Good work! You've written a function to determine if a closed door image has been clicked. Navigate to the three `door.onclick` function and within each function, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular door. 
+Task: Good work! You've written a function to determine if a closed door image has been clicked. Navigate to the three `door.onclick` function and within each function, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular `doorImage`. 
 
 Hint:
 ```js
-if(!isClicked(door1))
+if(!isClicked(doorImage1))
 ```
 
 Your logic now protects your game from shortcut victories by making each closed door clickable only once! 

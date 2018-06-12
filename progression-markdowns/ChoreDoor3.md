@@ -2,7 +2,7 @@
 
 Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
 
-Assessment: Let's Make This __LOOK__ Like a Game!
+Assessment: Let's Make This LOOK Like a Game!
 
 Task: Nice! You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding your __index.html__ and __style.css__ pages. 
 

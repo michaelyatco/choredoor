@@ -1,8 +1,8 @@
 <!DOCTYPE html>
   <head>
     <title>Chore Door!</title>
-    <link href='./chore_door5_style.css' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type='text/css'>
+    <link href="./chore_door5_style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type="text/css">
   </head>
 
   <body>
@@ -49,7 +49,7 @@
 
     let doorImage1 = document.getElementById('door1');
     let doorImage2 = document.getElementById('door2');
-    let dooImage3 = document.getElementById('door3');
+    let doorImage3 = document.getElementById('door3');
     let startButton = document.getElementById('start');
     let botDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
     let beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg";
@@ -93,21 +93,21 @@
     }
 
     door1.onclick = () => {
-      if(!isClicked(door1)) {
+      if(!isClicked(doorImage1)) {
         doorImage1.src = openDoor1;
         playDoor();
       }
     }
 
     door2.onclick = () => {
-      if(!isClicked(door2)) {
+      if(!isClicked(doorImage2)) {
         doorImage2.src = openDoor2;
         playDoor();
       }
     }
 
     door3.onclick = () => {
-      if(!isClicked(door3)) {
+      if(!isClicked(doorImage3)) {
         doorImage3.src = openDoor3;
         playDoor();
       }
