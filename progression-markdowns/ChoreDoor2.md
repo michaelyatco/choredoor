@@ -1,10 +1,8 @@
-### Milestone Project: Avoid the ChoreBot!
-
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
+### Project: Chore Door | chore-door
 
 Assessment: What's in store? More doors!
 
-Task: Great job! You've completed your first objective so now you're going add two more closed doors in the same parent `<div>` as your first door.
+Task: Nice! You've completed your first objective. Now you're going add two more closed doors in the same parent `<div>` as your first door.
 
 Under your original `<img>` element, create two new `<img>` elements and assign them the same `src` as your original `<img>` element. Their `id` values, however, will be assigned `door2` and `door3` respectively. Make sure to place the `id` before the `src`.
 
@@ -55,7 +53,7 @@ Task: Under your `door1.onclick` arrow function, give `door2` and `door3` each t
 
 Hint: 
 ```js
-image-element-id.onclick = () => {
+imageElement.onclick = () => {
   // Function code...;
 }
 ```

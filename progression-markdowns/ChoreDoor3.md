@@ -1,6 +1,4 @@
-### Milestone Project: Avoid the ChoreBot! 
-
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
+### Project: Chore Door | chore-door 
 
 Assessment: Let's Make This LOOK Like a Game!
 
@@ -11,7 +9,7 @@ Right after the opening `<body>` tag, create a new `<div>` with the class name `
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/logo.svg
 ```
 
-Be aware that the logo is the same color as your current background so __don't panic if you can't see the image__! This is where the __CSS__ gets its chance to contribute!
+Be aware that the logo is the same color as your current background so __don't panic if you can't see the image__ - this is where the __CSS__ gets its chance to contribute!
 
 Task: In the __style.css__ file, under the `body` selector but above the `door-frame` selector, create a `header` CSS selector and assign the `background-color` the value `#00ffff`. If you refresh the page, the logo is now visible; but it's still in the left corner. Assign the `text-align` property a value of `center`.
 
@@ -29,9 +27,9 @@ Beneath the `<div class="header">` element but above the `<div class="door-row">
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/star.svg
 ```
 
-Refresh your page and you should see two small stars huddled in the top-left corner of their `<div>` underneath the logo image!
+Refresh your page and you should see two small stars huddled in the top-left corner of their `<div>` underneath the logo image.
 
-Task: So you have two stars resting in the top-left corner of their `<div>`. Noticing a trend? Let's fix this default placement.
+Task: Your two stars, without any __CSS__, are resting in the top-left corner of their `<div>`. Noticing a trend? Let's fix this default placement.
 
 Navigate to the __style.css__ file and under the `.header` CSS selector, create a new selector for `.title-row`. For this selector, assign the following properties with these values:
 
@@ -67,7 +65,7 @@ Hint:
 }
 ```
 
-Task: Unfortunately, 'Instructions' is still hard to see. Utilize your knowledge of __CSS__ to improve your title's visibility! 
+Task: Unfortunately, 'Instructions' is still hard to see. Utilize your knowledge of __CSS__ to improve your title's visibility. 
 
 Look to your `.instructions-title` CSS selector again and pair these properties with their respective values under your already-assigned `display` property:
 
@@ -75,9 +73,9 @@ Look to your `.instructions-title` CSS selector again and pair these properties 
 * color - #00ffff 
 * font-family - 'Work Sans'
 
-Refresh the page after each new CSS property is assigned so you can see how each individual value influences your title!
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences your title.
 
-Task: Looking good! Now explain the game to anyone who wants to play! 
+Task: Looking good! Now explain the game to anyone who wants to play. 
 
 Beneath the `<div class="title-row">` element, create a new `<table>` with the class name `"instructions-row"`. Inside of that, create four identical `<tr>` elements. 
 
@@ -133,7 +131,7 @@ Task: For each `<td>` element with `"instructions-text"` class, copy and paste t
 ```html
 <td>Hiding behind one of these doors is the ChoreBot.</td>
 <td>Your mission is to open all of the doors without running into the ChoreBot.</td>
-<td>If you manage to avoid the ChoreBot until the very last door, you win!</td>
+<td>If you manage to avoid the ChoreBot until you open the very last door, you win!</td>
 <td>See if you can score a winning streak!</td>
 ```
 
@@ -146,7 +144,7 @@ In the __style.css__ file, create the `.instructions-row` CSS selector under you
 * margin - 0 auto 
 * width - 400px
 
-Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `.instructions-row`!
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `.instructions-row`.
 
 Task: Underneath that, create the `.instructions-number` selector and assign the following properties and values:
    
@@ -155,7 +153,7 @@ Task: Underneath that, create the `.instructions-number` selector and assign the
 * font-size - 36px
 * color - #00ffff
 
-Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `.instructions-number`!
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `.instructions-number`.
 
 Task: Finally, underneath that, create the `.instructions-text` selector, and assign the following properties and values:
 
@@ -164,25 +162,25 @@ Task: Finally, underneath that, create the `.instructions-text` selector, and as
 * font-size - 14px
 * color - #ffffff
 
-Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `.instructions-text`!
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `.instructions-text`.
 
-Task: Since you've centered the instructions, center your doors, as well!
+Task: Since you've centered the instructions, center your doors, as well.
 
 In the __style.css__ file, under the `.instructions-text` CSS selector, add a `.door-row` CSS selector and assign the `text-align` property a value of `center`.
 
-Refresh the page to see the three doors centered!
+Refresh the page to see the three doors centered.
 
 Task: For the sake of CSS-best practices, move the `.door-frame` selector in the __style.css__ file to the bottom of the file so that the CSS selectors now read in the order that you would see them in your __index.html__ file - from the top of the page to bottom. 
 
 Task: The last HTML feature to build is a button that will respond to the status of the game. 
 
-Beneath the `<door-row>` element create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type `Good luck!` in between the `<div></div>`.
+Beneath the `<door-row>` element create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type "Good luck!" in between the `<div></div>`.
 
-Refresh the page to see your positive text appear below the doors!
+Refresh the page to see "Good luck!" appear below the doors.
 
 Hint: Make sure to wrap your `id` and `class` values in quotation marks:
 ```html
-<div id = "id-name" class = "class-name"></div>
+<div id="id-name" class="class-name"></div>
 ```
 
 Task: In the __style.css__ file, create a `.start-row` CSS selector assign the following properties and values:
@@ -199,6 +197,6 @@ Task: In the __style.css__ file, create a `.start-row` CSS selector assign the f
 * margin-bottom - 21px
 * cursor - pointer
 
-Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `.start-row`!
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `.start-row`.
 
 Phew! That was a healthy amount of __HTML__ and __CSS__ additions but your game is beginning to look pretty stylish with a logical display of different features. Way to utilize your __HTML__ and __CSS__ skills!

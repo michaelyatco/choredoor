@@ -1,14 +1,15 @@
-### Milestone Project: Avoid the ChoreBot! | Next Steps
+### Project: Chore Door | chore-door
 
-Welcome to the __Next Steps__ section of the Milestone Project! This is an extra opportunity to improve the view and functionality of your ChoreBot game!
+Welcome to the __Next Steps__ section of the Milestone Project! This is an extra opportunity to improve the view and functionality of your ChoreBot game.
+At the end of your efforts, your game should look similar to this finished product:
+
+[Milestone Project - Chore Door - The Guessing Game](https://s3.amazonaws.com/codecademy-content/projects/chore-door/chore-door-final/index.html "Chore Door")
 
 Assessment: Creating Winning Streaks & High Scores
 
-Wouldn't it be great to play this game with the opportunity to record consecutive victories and establish a high score for all challengers to beat? You can build this feature using __HTML__, __CSS__, and __JavaScript__! At the end of your efforts, your scores should look similar to this image:
+Wouldn't it be great to play this game with the opportunity to record consecutive victories and establish a high score for all challengers to beat? You can build this feature using __HTML__, __CSS__, and __JavaScript__!
 
-![High-Score](next-step-local-images/high_score.png)
-
-Task: First in the __index.html__ page beneath the `<div class="start-row">`, add a `<table>` element with the class name `"score-row"` and nested inside this `<table>`, add a `<tr>` element. Inside this `<tr>` parent, add two `<th>` child elements. Both will have the class name `"score-text"`. Type 'Current streak:' in between the first `<th></th>` tags and 'Best streak:' in between the second `<th></th>` tags.
+Task: First in the __index.html__ page beneath the `<div class="start-row">`, add a `<table>` element with the class name `"score-row"` and nested inside this `<table>`, add a `<tr>` element. Inside this `<tr>` parent, add two `<th>` child elements. Both will have the class name `"score-text"`. Type "Current streak:" in between the first `<th></th>` tags and "Best streak:" in between the second `<th></th>` tags.
 
 Hint: Make sure that your HTML elements are properly nested to make your code more readable:
 ```html
@@ -32,9 +33,9 @@ Navigate to the __style.css__ file and add two CSS selectors - `.score-row` and 
   * font-size 
   * color 
 
-See if you can determine the values for the last three properties!
+See if you can determine the values for the last three properties.
 
-Hint: Experiment, look at other selectors for clues, and have fun!
+Hint: Experiment and look at other selectors for clues:
 ```css
 .class { 
   property: value;
@@ -68,7 +69,7 @@ Task: These boxes cannot be seen yet because have to create the CSS selector `.s
 
 See if you can determine the last three properties.
 
-Hint: A class selector's property and value are assigned with:
+Hint: Experiment and look at other selectors for clues:
 ```css
 .class { 
   property: value;
@@ -110,7 +111,7 @@ Hint:
 score++;
 ```
 
-Task: Great - now all you need is to have this `score` displayed and updated as you play the game! 
+Task: Now all you need is to have this `score` displayed and updated as you play the game. 
 
 Under your `score` increase logic, change the `innerHTML` of the `currentStreak` variable to `score`.
 
@@ -121,7 +122,7 @@ variable.innerHTML = otherVariable;
 
 Play a round and watch your current streak increase with each victory!
 
-Task: With your first victory, you should also see your best streak increase with your current streak. Let's work on establishing your `highScore`!
+Task: With your first victory, you should also see your best streak increase with your current streak. Let's work on establishing your `highScore`.
 
 Write an `if` statement that checks if your `score` is greater than your `highScore`. If it does, the `highScore` should be assigned to the value of `score`.
 
@@ -153,9 +154,16 @@ else {
 
 Assessment: Convert the randomChoreDoorGenerator to a Switch Statement
 
-Task: The current logic within the `randomChoreDoorGenerator()` gets away with an `if/else` statement that has only 3 possible door combinations where the ChoreBot is hiding.  As a result, the variety suffers (ie. If the ChoreBot is assigned to `openDoor1`, then `openDoor2` is ALWAYS the beach and `openDoor3` is ALWAYS outer space).
+The current logic within the `randomChoreDoorGenerator()` gets away with an `if/else` statement that has only 3 possible door combinations where the ChoreBot is hiding.  As a result, the variety suffers (ie. If the ChoreBot is assigned to `openDoor1`, then `openDoor2` is ALWAYS the beach and `openDoor3` is ALWAYS outer space). Use a `switch` statement, instead, to generate all 6 possible door combinations. 
 
-Use a `switch` statement, instead, to generate all 6 possible door combinations. This will require tweaking the current `Math` function to produce `6` possible values for `choreDoor`.
+Task: First, tweak the current `Math` function so that the function generates a value between `0` and `5` for the `choreDoor` variable.
+
+Hint:
+```js
+Math.floor(Math.random() * 6);
+```
+
+Task: Next, eliminate the current `if/else` statement and implement a `switch` statement instead. There should be six different outcomes depending on the value of `choreDoor`. 
 
 Hint:
 ```js
@@ -169,7 +177,7 @@ switch(expression) {
   ...
 ```
 
-Refresh the page and play through multiple rounds. Enjoy the sheer randomness through which the images appear!
+Refresh the page, play through multiple rounds, and enjoy the sheer randomness through which the images appear.
 
-Wow! Now you have a legitmate scoreboard that reflects your current winning streak and records your highest streak. You also have every possible combination of doors and the images that hide behind them. See if you can think of any other features from your favorite games that would integrate well with ChoreBot!
+Amazing! Not only do you have a legitmate scoreboard that reflects your current winning streak and records your highest streak; but you also have every possible combination of doors and the images that hide behind them. See if you can think of any other features from your favorite games that would integrate well with ChoreBot.
 

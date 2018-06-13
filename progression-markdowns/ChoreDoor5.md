@@ -1,6 +1,4 @@
-### Milestone Project: Avoid the ChoreBot! 
-
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
+### Project: Chore Door | chore-door 
 
 Assessment: Let's Make This ACT Like a Game! - Part II (Building a Winner)
 
@@ -75,14 +73,16 @@ if(door.src === closedDoorPath) {
 }
 ```
 
-Task: Good work! You've written a function to determine if a closed door image has been clicked. Navigate to the three `door.onclick` function and within each function, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular `doorImage`. 
+Task: Now that you've written the `isClicked()` function, put it to use.
+
+Navigate to the three `door.onclick` function and within each function, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular `doorImage`. 
 
 Hint:
 ```js
 if(!isClicked(doorImage1))
 ```
 
-Your logic now protects your game from shortcut victories by making each closed door clickable only once! 
+Your logic now protects your game from shortcut victories by making each closed door clickable only once. 
 
 Task: There's one global variable that still needs to be created before we can expand our `gameOver()` function. 
 
@@ -93,7 +93,7 @@ Hint: Use the DOM method:
 let variable = document.getElementById('id');
 ```
 
-Task: Now that we have the `startButton` variable and your game is protected from 'cheap' wins, let's expand the `gameOver()` function! 
+Task: Now that we have the `startButton` variable and your game is protected from 'cheap' wins, let's expand the `gameOver()` function. 
 
 Add `str` as its argument and write an `if` statement where the condition checks if `str` is equivalent to `'win'`.  If this condition equates to true, then the `innerHTML` of the `startButton` will change to 'You win! Play again?'. 
 
@@ -106,4 +106,4 @@ if (str === 'win') {
 
 Task: Remember to also add `'win'` as the argument when you call the `gameOver()` function within your `playDoor()` function.
 
-Refresh the page and open all three doors and look what happens to your 'Good luck' string in the `startButton`! Your winning condition has been reached. The only problem is that the current logic will always have you "win" as long as all the doors are open - regardless of when you find the ChoreBot!
+Refresh the page and open all three doors and look what happens to your 'Good luck' string in the `startButton`! Your winning condition has been reached. The only problem is that the current logic will always have you "win" as long as all the doors are open - regardless of when you find the ChoreBot.

@@ -1,6 +1,12 @@
-### Milestone Project: Avoid the ChoreBot! 
+### Project: Chore Door | chore-door
 
-Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website and hopefully, you'll have fun along the way!
+Your mission is to construct a single-page website that plays a fully-functional game. You will see how __HTML__, __CSS__, and __JavaScript__ interact harmoniously to produce a dynamic website.
+
+Take a look at what your game will look like by the end of this project. Play a few rounds and see how you fare against the ChoreBot:
+
+[Milestone Project - Chore Door - The Guessing Game](https://s3.amazonaws.com/codecademy-content/projects/chore-door/chore-door-final/index.html "Chore Door")
+
+Believe it or not, you have the capabilities of building every feature in this game - from the layout to the logic. Be patient, take creative risks, and most importantly, have fun!
 
 Assessment: Getting Started - Get a Door, Open a Door!
 
@@ -31,7 +37,7 @@ Hint: You can add the `id` attribute inside the `<img>` tag - just make sure you
 <img id="id-name" src="URL"> 
 ```
 
-Task: Connecting this `id` to the __CSS__ will allow you to adjust the closed door's properities - including changing the cursor when you hover over it!
+Task: Connecting this `id` to the __CSS__ will allow you to adjust the closed door's properities - including changing the cursor when you hover over it.
 
 Navigate to the __style.css__ starting code and create an CSS ID selector for the `#door1`. Inside this selector, assign the `cursor` property a value of `pointer`.
 
@@ -66,12 +72,12 @@ This function will run whenever the door image element is clicked. For now, thou
 
 Hint: 
 ```js
-image-element-id.onclick = () => {
+imageElement.onclick = () => {
   // Function code...;
 };
 ```
 
-Task: Now make the closed door image change when you click it so that you see an open door with the ChoreBot!  
+Task: Now make the closed door image change when you click it so that you see an open door with the ChoreBot.  
 
 First, directly underneath your `doorImage1` global variable, create a new global variable called `botDoorPath`. Set its value to this link which has the ChoreBot image:
 ```html
