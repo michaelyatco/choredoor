@@ -179,5 +179,5 @@ switch(expression) {
 
 Refresh the page, play through multiple rounds, and enjoy the sheer randomness through which the images appear.
 
-Amazing! Not only do you have a legitmate scoreboard that reflects your current winning streak and records your highest streak; but you also have every possible combination of doors and the images that hide behind them. See if you can think of any other features from your favorite games that would integrate well with ChoreBot.
+Congratulations - not only do you have a legitmate scoreboard that reflects your current winning streak and records your highest streak; but you also have every possible combination of doors and the images that hide behind them! See if you can think of any other features from your favorite games that would integrate well with ChoreBot.
 
