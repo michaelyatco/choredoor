@@ -12,7 +12,7 @@ Assessment: Getting Started - Get a Door, Open a Door!
 
 Task: Your first objective is to build one door which will hide our dreaded ChoreBot.
 
-Look at the __index.html__ starting code. Inside the `<body>`, create a `<div>` element with the class name `"door-row"`. Next, create an `<img>` tag inside this `<div>`. 
+Look at the __index.html__ starting code. Inside the `<body>`, create a `<div>` parent element with the class name `"door-row"`. Next, create an `<img>` child element inside this `<div>`. 
 
 Hint: Make sure your HTML elements are properly nested:
 ```html
@@ -39,7 +39,7 @@ Hint: You can add the `id` attribute inside the `<img>` tag - just make sure you
 
 Task: Connecting this `id` to the __CSS__ will allow you to adjust the closed door's properities - including changing the cursor when you hover over it.
 
-Navigate to the __style.css__ starting code and create an CSS ID selector for the `#door1`. Inside this selector, assign the `cursor` property a value of `pointer`.
+Navigate to the __style.css__ starting code and create an CSS ID selector for the `#door1` underneath the `body` selector. Inside this selector, assign the `cursor` property a value of `pointer`.
 
 Refresh the page and notice that the cursor changes to a pointer as soon as you hover over the door!
 
@@ -74,7 +74,7 @@ Hint:
 ```js
 imageElement.onclick = () => {
   // Function code...;
-};
+}
 ```
 
 Task: Now make the closed door image change when you click it so that you see an open door with the ChoreBot.  
@@ -83,6 +83,11 @@ First, directly underneath your `doorImage1` global variable, create a new globa
 ```html
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg
 ``` 
+
+Hint: Make sure to wrap the URL path in quotes
+```js
+let variable = "URL"
+```
 
 Task: Next, within your `door1` arrow function, change the `src` of `doorImage1` to the value of `botDoorPath`.
 
@@ -303,13 +308,12 @@ Hint:
 <td>4</td>
 ``` 
 
-Task: For each `<td>` element with `"instructions-text"` class, copy and paste the following directions to the game:
-```html
-<td>Hiding behind one of these doors is the ChoreBot.</td>
-<td>Your mission is to open all of the doors without running into the ChoreBot.</td>
-<td>If you manage to avoid the ChoreBot until you open the very last door, you win!</td>
-<td>See if you can score a winning streak!</td>
-```
+Task: Going down each `<td>` element with `"instructions-text"` class sequentially, copy and paste the four directions to the game in order:
+
+* Hiding behind one of these doors is the ChoreBot.</td>
+* Your mission is to open all of the doors without running into the ChoreBot.</td>
+* If you manage to avoid the ChoreBot until you open the very last door, you win!</td>
+* See if you can score a winning streak!</td>
 
 Refresh your page to ensure that your game has four directions listed.
 
@@ -346,24 +350,23 @@ In the __style.css__ file, under the `.instructions-text` CSS selector, add a `.
 
 Refresh the page to see the three doors centered.
 
-Task: For the sake of CSS-best practices, move the `.door-frame` selector in the __style.css__ file to the bottom of the file so that the CSS selectors now read in the order that you would see them in your __index.html__ file - from the top of the page to bottom. 
-
 Task: The last __HTML__ feature to build is a button that will respond to the status of the game. 
 
-Beneath the `<door-row>` element create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type "Good luck!" in between the `<div></div>`.
+Beneath the `<door-row>` element create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type `Good luck!` in between the `<div></div>`.
 
-Refresh the page to see "Good luck!" appear below the doors.
+Refresh the page to see `Good luck!` appear below the doors.
 
 Hint: Make sure to wrap your `id` and `class` values in quotation marks:
 ```html
 <div id="id-name" class="class-name"></div>
 ```
 
-Task: In the __style.css__ file, create a `.start-row` CSS selector assign the following properties and values:
+Task: In the __style.css__ file, beneath every other CSS selector, create a `.start-row` CSS selector assign the following properties and values:
 
 * margin - auto
 * width - 120px
 * height - 43px
+* font-family - 'Work Sans'
 * background-color - #eb6536
 * padding-top - 18px
 * font-family - 'Work Sans'
@@ -383,6 +386,7 @@ Task: Your game is beginning to look like a game thanks to your __HTML__ archite
 
 In your __script.js__ file, beneath your global variables, create a `randomChoreDoorGenerator()` function using the arrow syntax.
 
+Hint:
 ```js
 const newFunction = () => {
   // Function code...;
@@ -415,7 +419,7 @@ choreDoor = Math.floor(Math.random() * numClosedDoors);
 
 Task: Now that your `randomChoreDoorGenerator()` randomly returns one of three possible values (`0`, `1`, or `2`), you should write logic that assigns each of these possible values to a different door where the ChoreBot could hide.
 
-Task: Create the global variables `openDoor1`, `openDoor2`, and `openDoor3` but do not assign any value to them globally. They'll be assigned values within your `randomChoreDoorGenerator()` function.
+First, create the global variables `openDoor1`, `openDoor2`, and `openDoor3` but do not assign any value to them globally. They'll be assigned values within your `randomChoreDoorGenerator()` function.
 
 Task: Inside the `randomChoreDoorGenerator()` and directly beneath the `Math` function, write an `if/else` statement where each condition (ie. what needs to be checked inside the `if` or `else if` parentheses) is a possible `choreDoor` value. 
 
@@ -479,7 +483,7 @@ Task: You'll need to create a function called `playDoor()` that serves two impor
 1. It decreases the `numClosedDoors` variable.
 2. It checks if the game-winning condition has been met and if so, calls a `gameOver()` function (which hasn't been written yet).
 
-In the __script.js__ file, create a new function called `playDoor()`.
+In the __script.js__ file, above the `randomChoreDoorGenerator()` function, create a new empty function called `playDoor()`.
 
 Hint:
 ```js
@@ -495,7 +499,7 @@ Hint:
 numClosedDoors--;
 ``` 
 
-Task: Now that the `numClosedDoors` variable decreases by 1 with each call to `playOver()`, write an `if/else` statement that determines if the game-winning condition has been reached. If so, call a `gameOver()` function (again - this `gameOver()` function hasn't been created yet).
+Task: Under the logic that decreases the `numClosedDoors` variable by 1, write an `if/else` statement that determines if the game-winning condition has been reached. If so, call a `gameOver()` function (again - this `gameOver()` function hasn't been created yet).
 
 Hint:
 ```js
@@ -514,7 +518,7 @@ playDoor();
 
 Task: One common complaint about poorly-built games is when there's a flaw in the game's logic which a player can exploit to win easily. If `(numClosedDoors===0)` is the winning condition, a player can click the same door (even if it's opened) multiple times to decrease the `numClosedDoors` value down to `0` and "cheat" his/her way to victory. You worked hard to build your game - don't let your players exploit the current logic! 
 
-You need logic to make each door clickable only once. Create a new function called `isClicked()` that takes `door` as its argument.
+You need logic to make each door clickable only once. Above your `playDoor()` function, create a new empty function called `isClicked()` that takes `door` as its argument.
 
 Hint:
 ```js
@@ -547,14 +551,20 @@ Task: Now that you've written the `isClicked()` function, put it to use.
 
 Navigate to the three `door.onclick` functions and within each function, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular `doorImage`. 
 
+Adding this logic now protects your game from shortcut victories by making each closed door clickable only once. 
+
 Hint:
 ```js
-if(!isClicked(doorImage1))
+if(!isClicked(doorImage1)) {
+  // Function code...;
+}
 ```
 
-Your logic now protects your game from shortcut victories by making each closed door clickable only once. 
+Task: The time has come to create your `gameOver()` function so that the `playDoor()` can actually call it when `numClosedDoors` is equivalent to `0`.
 
-Task: There's one global variable that still needs to be created before we can expand our `gameOver()` function. 
+Under your `door.onclick` functions, write an empty function called `gameOver()`.
+
+Task: now there's one global variable that still needs to be created before we can expand our `gameOver()` function. 
 
 Create a `startButton` global variable and use a __JavaScript__ DOM method to assign its value to the __HTML__ element with the `id` of `start`.
     
@@ -574,7 +584,14 @@ if (str === 'win') {
 }
 ```
 
-Task: Remember to also add `'win'` as the argument when you call the `gameOver()` function within your `playDoor()` function.
+Task: Within your `playDoor()` function, the `gameOver()` function is called but without passing in an argument. Without an argument, the `startButton` text will not change when you open all three doors.
+
+Add `'win'` as the argument for the `gameOver()` function within your `playDoor()` function.
+
+Hint:
+```js
+gameOver('win');
+```
 
 Refresh the page and open all three doors and look what happens to your 'Good luck' string in the `startButton`! Your winning condition has been reached. The only problem is that the current logic will always have you "win" as long as all the doors are open - regardless of when you find the ChoreBot.
 
@@ -584,7 +601,7 @@ Your game is randomly hiding the ChoreBot behind one of the doors but the curren
 
 Task: You need to check if a door has the game-ending ChoreBot.
 
-Create a new function called `isBot()` that takes `door` as its argument. Just like the `isClicked()` function, `isBot()` will return a __boolean__ value. Within this new function, write an `if/else` statement to check if the `door.src` value is equivalent to the `botDoorPath`. If they share the same value, that means that particular door has the ChoreBot and should return `true`. Otherwise, the `isBot()` function should return `false`.
+Above the `isClicked()` function, create a new function called `isBot()` that takes `door` as its argument. Just like the `isClicked()` function, `isBot()` will return a __boolean__ value. Within this new function, write an `if/else` statement to check if the `door.src` value is equivalent to the `botDoorPath`. If they share the same value, that means that particular door has the ChoreBot and should return `true`. Otherwise, the `isBot()` function should return `false`.
 
 Hint:
 ```js

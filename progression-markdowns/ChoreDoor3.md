@@ -127,13 +127,12 @@ Hint:
 <td>4</td>
 ``` 
 
-Task: For each `<td>` element with `"instructions-text"` class, copy and paste the following directions to the game:
-```html
-<td>Hiding behind one of these doors is the ChoreBot.</td>
-<td>Your mission is to open all of the doors without running into the ChoreBot.</td>
-<td>If you manage to avoid the ChoreBot until you open the very last door, you win!</td>
-<td>See if you can score a winning streak!</td>
-```
+Task: Going down each `<td>` element with `"instructions-text"` class sequentially, copy and paste the four directions to the game in order:
+
+* Hiding behind one of these doors is the ChoreBot.</td>
+* Your mission is to open all of the doors without running into the ChoreBot.</td>
+* If you manage to avoid the ChoreBot until you open the very last door, you win!</td>
+* See if you can score a winning streak!</td>
 
 Refresh your page to ensure that your game has four directions listed.
 
@@ -170,8 +169,6 @@ In the __style.css__ file, under the `.instructions-text` CSS selector, add a `.
 
 Refresh the page to see the three doors centered.
 
-Task: For the sake of CSS-best practices, move the `.door-frame` selector in the __style.css__ file to the bottom of the file so that the CSS selectors now read in the order that you would see them in your __index.html__ file - from the top of the page to bottom. 
-
 Task: The last HTML feature to build is a button that will respond to the status of the game. 
 
 Beneath the `<door-row>` element create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type "Good luck!" in between the `<div></div>`.
@@ -183,11 +180,12 @@ Hint: Make sure to wrap your `id` and `class` values in quotation marks:
 <div id="id-name" class="class-name"></div>
 ```
 
-Task: In the __style.css__ file, create a `.start-row` CSS selector assign the following properties and values:
+Task: In the __style.css__ file, beneath every other CSS selector, create a `.start-row` CSS selector assign the following properties and values:
 
 * margin - auto
 * width - 120px
 * height - 43px
+* font-family - 'Work Sans'
 * background-color - #eb6536
 * padding-top - 18px
 * font-family - 'Work Sans'
