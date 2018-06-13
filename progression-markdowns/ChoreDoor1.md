@@ -12,7 +12,7 @@ Assessment: Getting Started - Get a Door, Open a Door!
 
 Task: Your first objective is to build one door which will hide our dreaded ChoreBot!
 
-Look at the __index.html__ starting code. Inside the `<body>`, create a `<div>` element with the class name `"door-row"`. Next, create an `<img>` tag inside this `<div>`. 
+Look at the __index.html__ starting code. Inside the `<body>`, create a `<div>` parent element with the class name `"door-row"`. Next, create an `<img>` child element inside this `<div>`. 
 
 Hint: Make sure your HTML elements are properly nested:
 ```html
@@ -39,7 +39,7 @@ Hint: You can add the `id` attribute inside the `<img>` tag - just make sure you
 
 Task: Connecting this `id` to the __CSS__ will allow you to adjust the closed door's properities - including changing the cursor when you hover over it.
 
-Navigate to the __style.css__ starting code and create an CSS ID selector for the `#door1`. Inside this selector, assign the `cursor` property a value of `pointer`.
+Navigate to the __style.css__ starting code and create an CSS ID selector for the `#door1`. Inside this selector underneath the `body` selector, assign the `cursor` property a value of `pointer`.
 
 Refresh the page and notice that the cursor changes to a pointer as soon as you hover over the door!
 
@@ -74,7 +74,7 @@ Hint:
 ```js
 imageElement.onclick = () => {
   // Function code...;
-};
+}
 ```
 
 Task: Now make the closed door image change when you click it so that you see an open door with the ChoreBot.  
@@ -83,6 +83,11 @@ First, directly underneath your `doorImage1` global variable, create a new globa
 ```html
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg
 ``` 
+
+Hint: Make sure to wrap the URL path in quotes
+```js
+let variable = "URL"
+```
 
 Task: Next, within your `door1` arrow function, change the `src` of `doorImage1` to the value of `botDoorPath`.
 

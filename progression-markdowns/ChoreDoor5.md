@@ -9,7 +9,7 @@ Task: You'll need to create a function called `playDoor()` that serves two impor
 1. It decreases the `numClosedDoors` variable.
 2. It checks if the game-winning condition has been met and if so, calls a `gameOver()` function (which hasn't been written yet).
 
-In the __script.js__ file, create a new function called `playDoor()`.
+In the __script.js__ file, above the `randomChoreDoorGenerator()` function, create a new empty function called `playDoor()`.
 
 Hint:
 ```js
@@ -25,7 +25,7 @@ Hint:
 numClosedDoors--;
 ``` 
 
-Task: Now that the `numClosedDoors` variable decreases by 1 with each call to `playOver()`, write an `if/else` statement that determines if the game-winning condition has been reached. If so, call a `gameOver()` function (again - this `gameOver()` function hasn't been created yet).
+Task: Under the logic that decreases the `numClosedDoors` variable by 1, write an `if/else` statement that determines if the game-winning condition has been reached. If so, call a `gameOver()` function (again - this `gameOver()` function hasn't been created yet).
 
 Hint:
 ```js
@@ -44,7 +44,7 @@ playDoor();
 
 Task: One common complaint about poorly-built games is when there's a flaw in the game's logic which a player can exploit to win easily. If `(numClosedDoors===0)` is the winning condition, a player can click the same door (even if it's opened) multiple times to decrease the `numClosedDoors` value down to `0` and "cheat" his/her way to victory. You worked hard to build your game - don't let your players exploit the current logic! 
 
-You need logic to make each door clickable only once. Create a new function called `isClicked()` that takes `door` as its argument.
+You need logic to make each door clickable only once. Above your `playDoor()` function, create a new empty function called `isClicked()` that takes `door` as its argument.
 
 Hint:
 ```js
@@ -77,14 +77,19 @@ Task: Now that you've written the `isClicked()` function, put it to use.
 
 Navigate to the three `door.onclick` function and within each function, wrap the current logic within an `if` statement to determine if the `isClicked()` function has __not__ yet happened for that particular `doorImage`. 
 
+Adding this logic now protects your game from shortcut victories by making each closed door clickable only once. 
+
 Hint:
 ```js
-if(!isClicked(doorImage1))
+if(!isClicked(doorImage1)) {
+  // Function code...;
+}
 ```
+Task: The time has come to create your `gameOver()` function so that the `playDoor()` can actually call it when `numClosedDoors` is equivalent to `0`.
 
-Your logic now protects your game from shortcut victories by making each closed door clickable only once. 
+Under your `door.onclick` functions, write an empty function called `gameOver()`.
 
-Task: There's one global variable that still needs to be created before we can expand our `gameOver()` function. 
+Task: Now there's one global variable that still needs to be created before we can expand our `gameOver()` function. 
 
 Create a `startButton` global variable and use a __JavaScript__ DOM method to assign its value to the __HTML__ element with the `id` of `start`.
     
@@ -104,6 +109,13 @@ if (str === 'win') {
 }
 ```
 
-Task: Remember to also add `'win'` as the argument when you call the `gameOver()` function within your `playDoor()` function.
+Task: Within your `playDoor()` function, the `gameOver()` function is called but without passing in an argument. Without an argument, the `startButton` text will not change when you open all three doors.
+
+Add `'win'` as the argument for the `gameOver()` function within your `playDoor()` function.
+
+Hint:
+```js
+gameOver('win');
+```
 
 Refresh the page and open all three doors and look what happens to your 'Good luck' string in the `startButton`! Your winning condition has been reached. The only problem is that the current logic will always have you "win" as long as all the doors are open - regardless of when you find the ChoreBot.

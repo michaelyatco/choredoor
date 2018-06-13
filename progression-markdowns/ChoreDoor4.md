@@ -6,6 +6,7 @@ Task: Your game is beginning to look like a game thanks to your __HTML__ archite
 
 In your __script.js__ file, beneath your global variables, create a `randomChoreDoorGenerator()` function using the arrow syntax.
 
+Hint:
 ```js
 const newFunction = () => {
   // Function code...;
@@ -38,7 +39,7 @@ choreDoor = Math.floor(Math.random() * numClosedDoors);
 
 Task: Now that your `randomChoreDoorGenerator()` randomly returns one of three possible values (`0`, `1`, or `2`), you should write logic that assigns each of these possible values to a different door where the ChoreBot could hide.
 
-Task: Create the global variables `openDoor1`, `openDoor2`, and `openDoor3` but do not assign any value to them globally. They'll be assigned values within your `randomChoreDoorGenerator()` function.
+First, create the global variables `openDoor1`, `openDoor2`, and `openDoor3` but do not assign any value to them globally. They'll be assigned values within your `randomChoreDoorGenerator()` function.
 
 Task: Inside the `randomChoreDoorGenerator()` and directly beneath the `Math` function, write an `if/else` statement where each condition (ie. what needs to be checked inside the `if` or `else if` parentheses) is a possible `choreDoor` value. 
 
