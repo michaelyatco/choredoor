@@ -561,9 +561,15 @@ if(!isClicked(doorImage1)) {
 ```
 
 Task: The time has come to create your `gameOver()` function so that the `playDoor()` can actually call it when `numClosedDoors` is equivalent to `0`.
+<<<<<<< HEAD
 
 Under your `door.onclick` functions, write an empty function called `gameOver()`.
 
+=======
+
+Under your `door.onclick` functions, write an empty function called `gameOver()`.
+
+>>>>>>> d8a765239f76cbc0159d689dfffb78551f065bf1
 Task: now there's one global variable that still needs to be created before we can expand our `gameOver()` function. 
 
 Create a `startButton` global variable and use a __JavaScript__ DOM method to assign its value to the __HTML__ element with the `id` of `start`.
