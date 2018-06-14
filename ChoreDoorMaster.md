@@ -615,14 +615,18 @@ const functionName = (argument) => {
 
 Task: You've written a function to determine if a door's `src` contains the game-ending ChoreBot image. Now you must apply this logic into currently existing __JavaScript__ functions.
 
-The `playOver()` function now needs a `door` argument. After the `if` statement in this function, add an `else/if` condition that checks if the `isBot()` will equate to `true` if you pass the `door` as the `isBot()` argument.
+The `playOver()` function now needs a `door` argument. After the `if` statement in this function, add an `else if` condition that checks if the `isBot()` will equate to `true` if you pass the `door` as the `isBot()` argument.
+
+Hint:
 ```js
-else if (isBot(door)) 
+else if (isBot(door)) {
+  // Function code...;
+} 
 ```
 
 Task: If this `isBot()` function equates to true, call the `gameOver()` function with no argument.
 
-Task: Since the `playDoor()` function now needs an argument, look at the `door.onclick` functions. Pass each `door` respectively as the argument for the `playOver()` function.
+Task: Since the `playDoor()` function now needs an argument, look at the `door.onclick` functions. Pass each `door1`, `door2`, and `door3`, respectively, as the arguments for the `playOver()` function within each `door.onclick` function.
 
 Hint:
 ```js
@@ -670,13 +674,13 @@ Task: The `startRound()` function not only has to start a new game; it also has 
 
 Write this `startRound()` function so that the following variables are reset to their original values:
 
- * All `door.src` values
+ * All `doorImage.src` values
  * `numClosedDoors` variable
  * `startButton.innerHTML` variable
 
-After all these variables are reset, call the `randomChoreDoorGenerator()` function.
+Hint: The `numClosedDoors` variable is set to `3`, each `doorImage.src` variable is set to the `closedDoorPath` variable, and the `startButton.innerHTML` is set to `'Good luck!'`
 
-Hint: The `numClosedDoors` variable is set to `3`, each `door.src` variable is set to the `closedDoorPath` variable, and the `startButton.innerHTML` is set to `'Good luck!'`
+Task: After all these variables are reset, call the `randomChoreDoorGenerator()` function at the bottom of the `startRound()` function.
 
 Task: Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` element needs to be replaced by the `startRound()` function so that the game resets correctly for each new round.
 
@@ -688,7 +692,7 @@ Hint:
 </script>
 ```
 
-Task: You're almost at the finish line! You just need to add some finishing touches. One minor bug is that the game can reset mid-round if the player clicks on the `startRound` button.  
+Task: You're almost at the finish line! You just need to address two bugs in your logic. The first bug is that the game can reset mid-round if the player clicks on the `startRound` button. This bug results in every `doorImage.src` becoming a closed door again before the winning or losing condition is reached.
 
 Wrap the `startButton.onclick` function in an `if` statement where the condition checks if the `currentlyPlaying` variable is `false` so that a player cannot reset the game mid-round. 
 
@@ -697,6 +701,8 @@ Hint:
 if(!currentlyPlaying) 
 ```
 
-Task: Finally, add the `currentlyPlaying` variable within the `startRound()` function and set it to `true`.
+Task: The second bug is only noticed after a player completes one round. If a player clicks the `startButton` to play a new round, each `doorImage.src` value resets to a closed door image again but nothing happens if you click on the door this time. This error occurs because the `currentlyPlaying` variable was set to `false` in the `gameOver()` function. This variable needs to be reset back to `true` when a new round is called.
+
+Within the `startRound()` function, add the `currentlyPlaying` variable and set it to `true`.
 
 Congratulations! You've successfully built your first Milestone Project and created a fun interactive game utilizing your __HTML__, __CSS__, and __JavaScript__ knowledge. Be proud of how far you've come. If you feel like taking this project to the next level (ie. adding more flourish to the __HTML__ and __CSS__, score keeping, determining highest winning streak, etc.), we invite you to take on the challenges presented in the __Next Steps__ section of this Milestone Project.

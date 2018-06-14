@@ -130,16 +130,16 @@ const startRound = () => {
   doorImage3.src = closedDoorPath;
   numClosedDoors = 3;
   currentlyPlaying = true;
-  startButton.innerHTML = 'Good luck!';
+  startButton.innerHTML = "Good luck!";
   randomChoreDoorGenerator();
 }
 
 const gameOver = (str) => {
   if(str === 'win') {
-    startButton.innerHTML = 'You win! Play again?';
+    startButton.innerHTML = "You win! Play again?";
     getYourScore();
   } else {
-    startButton.innerHTML = "Game over! Play again?"
+    startButton.innerHTML = "Game over! Play again?";
     score = 0;
     currentStreak.innerHTML = score;
   }
