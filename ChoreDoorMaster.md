@@ -104,7 +104,7 @@ variableA.src = variableB;
 
 Assessment: What's in store? More doors!
 
-Task: Great job! You've completed your first objective so now you're going add two more closed doors in the same parent `<div>` as your first door.
+Task: You've completed your first objective of getting a door and opening a door. Now you're going add two more closed doors in the same parent `<div>` as your first door.
 
 Under your original `<img>` element, create two new `<img>` elements and assign them the same `src` as your original `<img>` element. Their `id` values, however, will be assigned `door2` and `door3` respectively. Make sure to place the `id` before the `src`.
 
@@ -183,7 +183,7 @@ Hint: A variable's `src` value can be assigned a new 	value held by another vari
 variableA.src = variableB;
 ```
 
-Now when you refresh the page, click on each door and witness how each closed door opens to something different and exciting: a ChoreBot, a beach, and outer space!
+Now when you refresh the page, click on each door and witness how each closed door opens to something different: a ChoreBot, a beach, and outer space.
 
 Assessment: Let's Make This LOOK Like a Game!
 
