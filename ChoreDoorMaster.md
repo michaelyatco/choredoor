@@ -418,7 +418,7 @@ Hint:
 choreDoor = Math.floor(Math.random() * numClosedDoors);
 ```
 
-Task: Now that your `randomChoreDoorGenerator()` randomly returns one of three possible values (`0`, `1`, or `2`), you should write logic that assigns each of these possible values to a different door where the ChoreBot could hide.
+Task: Now that your `randomChoreDoorGenerator()` randomly returns one of three possible values (`0`, `1`, or `2`), write the logic that assigns each of these possible values to a different door where the ChoreBot could hide.
 
 First, create the global variables `openDoor1`, `openDoor2`, and `openDoor3` but do not assign any value to them globally. They'll be assigned values within your `randomChoreDoorGenerator()` function.
 
@@ -435,28 +435,28 @@ if(choreDoor === 0) {
 
 Task: Each condition should have a different door holding the ChoreBot image.
 
-Since there are 3 conditions in this `if/else` statement, assign the `doorBotPath` variable to a different `openDoor` global variable so that `openDoor1` is assigned the `doorBotPath` variable under one condition, `openDoor2` is assigned the `doorBotPath` variable under another condition, and `openDoor3` is assigned the `doorBotPath` variable in the final condition.
+Since there are 3 conditions in this `if/else` statement, assign the `botDoorPath` variable to a different `openDoor` global variable so that `openDoor1` is assigned the `botDoorPath` variable under one condition, `openDoor2` is assigned the `botDoorPath` variable under another condition, and `openDoor3` is assigned the `botDoorPath` variable in the final condition.
 
 Hint:
 ```js 
 if(choreDoor === x) {
-  openDoorA = doorBotPath;
+  openDoorA = botDoorPath;
 } else if (choreDoor === 1) { 
-  openDoorB = doorBotPath;
+  openDoorB = botDoorPath;
 }...
 ```
 
-Task: Within each of the three blocks of code within this `if/else` statement, under the `openDoor` with the `doorBotPath` variable, assign the other `openDoor` global variables so that one is assigned the `beachDoorPath` variable and the other is assigned the `spaceDoorPath` variable.
+Task: Within each of these three blocks of code, under the `openDoor` being assigned the `botDoorPath ` variable, assign the other `openDoor` global variables so that one is assigned the `beachDoorPath` variable and the other is assigned the `spaceDoorPath` variable.
 
 Hint: The syntax for this `if/else` statement follows:
 ```js
 ...
 if(choreDoor === x) {
-  openDoorA = doorBotPath;
+  openDoorA = botDoorPath;
   openDoorB = otherDoor;
   openDoorC = otherDoor;
 } else if (choreDoor === y) {
-  openDoorB = doorBotPath;
+  openDoorB = botDoorPath;
   openDoorA = otherDoor;
   openDoorC = otherDoor;
   ...
@@ -473,7 +473,7 @@ doorImage1.src = openDoor1;
 
 Task: To see if the `randomChoreDoorGenerator()` is working, you should call it! Write the function at the very end of the __script.js__ file.
 
-With each refresh of the page, check to see if the ChoreBot appears in a different door. Great job pushing your __JavaScript__ even further! The gaming logic isn't fully there yet, but you've made significant progress in creating a dynamic webpage that responds to user-interactions.
+With each refresh of the page, check to see if the ChoreBot appears in a different door. While the gaming logic isn't fully there yet, you've made significant progress in creating a dynamic webpage that responds to user-interactions.
 
 Assessment: Let's Make This ACT Like a Game! - Part II (Building a Winner)
 
