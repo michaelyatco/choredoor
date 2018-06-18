@@ -2,7 +2,7 @@
 
 Assessment: Let's Make This LOOK Like a Game!
 
-Task: Nice! You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding your __index.html__ and __style.css__ pages. 
+Task: You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding your __index.html__ and __style.css__ pages. 
 
 Right after the opening `<body>` tag, create a new `<div>` with the class name `"header"`. Inside this new `<div>` parent element, create an `<img>` child element for the logo image.  Copy this url and paste into the `src`:
 ```html
@@ -48,9 +48,7 @@ Hint:
 
 Task: Now to add the actual instructions title.
 
-In between the star images, place a `<p>` sibling element with the class name `"instructions-title"`. Write 'Instructions' inside this `<p>` element. 
-
-When you refresh the page, the stars will have shifted to different lines. The text is also black and barely visible against the dark background. Time to work your __CSS__ skills again!
+In between the star images, place a `<p>` sibling element with the class name `"instructions-title"`. Type `Instructions` inside this `<p>` element. 
 
 Task: The text and the stars are centered but the stars still appear to be on different lines. Put them all on the same line.
 
@@ -65,7 +63,7 @@ Hint:
 }
 ```
 
-Task: Unfortunately, 'Instructions' is still hard to see. Utilize your knowledge of __CSS__ to improve your title's visibility. 
+Task: Unfortunately, `Instructions` is still hard to see. Utilize your knowledge of __CSS__ to improve your title's visibility. 
 
 Look to your `.instructions-title` CSS selector again and pair these properties with their respective values under your already-assigned `display` property:
 
@@ -75,9 +73,9 @@ Look to your `.instructions-title` CSS selector again and pair these properties 
 
 Refresh the page after each new CSS property is assigned so you can see how each individual value influences your title.
 
-Task: Looking good! Now explain the game to anyone who wants to play. 
+Task: With the title now prominently displayed, the next objective is to explain the game to anyone who wants to play. 
 
-Beneath the `<div class="title-row">` element, create a new `<table>` with the class name `"instructions-row"`. Inside of that, create four identical `<tr>` elements. 
+In the __index.html__ file, beneath the `<div class="title-row">` element, create a new `<table>` with the class name `"instructions-row"`. Inside of that, create four identical `<tr>` elements. 
 
 Hint:
 ```html
@@ -117,7 +115,7 @@ Hint:
 </table>
 ``` 
 
-Task: In between each `<td></td>` element with `"instructions-number` class, type the numbers `1` through `4` so that the `<td></td>` element is numbered sequentially.
+Task: In between each `<td></td>` element with the `"instructions-number` class, type the numbers `1` through `4` so that the `<td></td>` element is numbered sequentially.
 
 Hint:
 ```html
@@ -127,16 +125,16 @@ Hint:
 <td>4</td>
 ``` 
 
-Task: Going down each `<td>` element with `"instructions-text"` class sequentially, copy and paste the four directions to the game in order:
+Task: Going down each `<td>` element with the `"instructions-text"` class sequentially, copy and paste the four directions to the game in order:
 
-* Hiding behind one of these doors is the ChoreBot.</td>
-* Your mission is to open all of the doors without running into the ChoreBot.</td>
-* If you manage to avoid the ChoreBot until you open the very last door, you win!</td>
-* See if you can score a winning streak!</td>
+* Hiding behind one of these doors is the ChoreBot.
+* Your mission is to open all of the doors without running into the ChoreBot.
+* If you manage to avoid the ChoreBot until you open the very last door, you win!
+* See if you can score a winning streak!
 
 Refresh your page to ensure that your game has four directions listed.
 
-Task: Almost there! You just have to improve the spacing and visibility of your instructions.
+Task: While the instructions are now listed, it's important to improve the spacing and visibility of these instructions.
 
 In the __style.css__ file, create the `.instructions-row` CSS selector under your `.instructions-title` selector and assign the following properties and values:
 
@@ -171,9 +169,9 @@ Refresh the page to see the three doors centered.
 
 Task: The last HTML feature to build is a button that will respond to the status of the game. 
 
-Beneath the `<door-row>` element create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type "Good luck!" in between the `<div></div>`.
+Beneath the `<door-row>` element of your __index.html__ page, create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type `Good luck!` in between the `<div></div>`.
 
-Refresh the page to see "Good luck!" appear below the doors.
+Refresh the page to see `Good luck!` appear below the doors on the left.
 
 Hint: Make sure to wrap your `id` and `class` values in quotation marks:
 ```html
@@ -188,7 +186,6 @@ Task: In the __style.css__ file, beneath every other CSS selector, create a `.st
 * font-family - 'Work Sans'
 * background-color - #eb6536
 * padding-top - 18px
-* font-family - 'Work Sans'
 * font-size - 18px
 * text-align - center
 * color - #010165
@@ -197,4 +194,4 @@ Task: In the __style.css__ file, beneath every other CSS selector, create a `.st
 
 Refresh the page after each new CSS property is assigned so you can see how each individual value influences your `.start-row`.
 
-Phew! That was a healthy amount of __HTML__ and __CSS__ additions but your game is beginning to look pretty stylish with a logical display of different features. Way to utilize your __HTML__ and __CSS__ skills!
+That was a healthy amount of __HTML__ and __CSS__ additions but your game is beginning to look not only stylish, but also user-intuitive, with a logical display of different features.
