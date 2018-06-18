@@ -9,7 +9,11 @@ Assessment: Creating Winning Streaks & High Scores
 
 Wouldn't it be great to play this game with the opportunity to record consecutive victories and establish a high score for all challengers to beat? You can build this feature using __HTML__, __CSS__, and __JavaScript__!
 
-Task: First in the __index.html__ page beneath the `<div class="start-row">`, add a `<table>` element with the class name `"score-row"` and nested inside this `<table>`, add a `<tr>` element. Inside this `<tr>` parent, add two `<th>` child elements. Both will have the class name `"score-text"`. Type "Current streak:" in between the first `<th></th>` tags and "Best streak:" in between the second `<th></th>` tags.
+Task: First, if you clicked on the link above to play the game, you'll want to clear the Browser Component (the rightmost portion of the page where the game is located) so you can start building your own project with a blank slate.
+
+Click on the __Reset Project__ button next to the __Save__ button on the bottom of the Code Editor.
+
+Task: In the __index.html__ page beneath the `<div class="start-row">`, add a `<table>` element with the class name `"score-row"` and nested inside this `<table>`, add a `<tr>` element. Inside this `<tr>` parent, add two `<th>` child elements. Both will have the class name `"score-text"`. Type `Current streak:` in between the first `<th></th>` tags and `Best streak:` in between the second `<th></th>` tags.
 
 Hint: Make sure that your HTML elements are properly nested to make your code more readable:
 ```html
@@ -76,7 +80,7 @@ Hint: Experiment and look at other selectors for clues:
 }
 ```
 
-Task: This takes care of the __HTML__ and __CSS__ components of the scores. Now it's time to tackle the __JavaScript__ logic! 
+Task: This takes care of the __HTML__ and __CSS__ components of the scores. Now it's time to tackle the __JavaScript__ logic.
 
 Within your __script.js__ file, add two global variables - `score` and `highScore` and set their values to `0`. Then add two more global variables - `currentStreak` and `bestStreak`. The `currentStreak` variable should accept the __HTML__ `id` value of `"score-number"` and the `bestStreak` variable should accept the __HTML__ `id` value of `"high-score-number"`. 
 
@@ -94,7 +98,7 @@ Hint: Use the DOM method:
 variable.innerHTML = 'New text'
 ```
 
-Task: Now add the logic `GameOver()` function.
+Task: Now add the logic `gameOver()` function.
 
 Underneath the line that changes the `startButton.innerHTML`, write a `getYourScore()` function (which has not been written yet).
 
@@ -152,7 +156,7 @@ else {
 }
 ```
 
-Assessment: Convert the randomChoreDoorGenerator to a Switch Statement
+Assessment: Convert the randomChoreDoorGenerator() Function to a Switch Statement
 
 The current logic within the `randomChoreDoorGenerator()` gets away with an `if/else` statement that has only 3 possible door combinations where the ChoreBot is hiding.  As a result, the variety suffers (ie. If the ChoreBot is assigned to `openDoor1`, then `openDoor2` is ALWAYS the beach and `openDoor3` is ALWAYS outer space). Use a `switch` statement, instead, to generate all 6 possible door combinations. 
 
