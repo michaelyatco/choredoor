@@ -2,14 +2,14 @@
 
 Assessment: Let's Make This ACT Like a Game! - Part II (Building a Winner)
 
-How exactly do you determine the winner in your game? Think about the winning condition (ie. you find the ChoreBot when you open the *last* door). If there are no more closed doors left, that means you've opened them all and won the game! So your winning condition must be `if(numClosedDoors===0)`. The question now is where to implement this game-winning condition into your code.
+How exactly do you determine the winner in your game? Think about the winning condition (ie. you find the ChoreBot when you open the *last* door). If there are no more closed doors left, that means you've opened them all and won the game! So your winning condition must be `if (numClosedDoors === 0)`. The question now is where to implement this game-winning condition into your code.
 
 Task: You'll need to create a function called `playDoor()` that serves two important roles:
 
 1. It decreases the `numClosedDoors` variable.
-2. It checks if the game-winning condition has been met and if so, calls a `gameOver()` function (which hasn't been written yet).
+2. It checks if the game-winning condition (`numClosedDoors === 0`) has been met and if so, calls a `gameOver()` function (which hasn't been written yet).
 
-In the __script.js__ file, above the `randomChoreDoorGenerator()` function, create a new empty function called `playDoor()`.
+In the __script.js__ file, right below your list of global variables, create a new empty function called `playDoor()`.
 
 Hint:
 ```js
@@ -34,7 +34,7 @@ if(numClosedDoors === 0) {
 }
 ```
 
-Task: The all-important `playDoor()` function has been written but the question now is where in our __script.js__ file should this function be called? If the `numClosedDoors` variable decreases, that means that a door has been opened. The three `door.onclick` functions are where a door is opened. At the bottom of each event, call the `playDoor()` function.
+Task: The all-important `playDoor()` function has been written but the question now is where in your __script.js__ file should this function be called? If the `numClosedDoors` variable decreases, that means that a door has been opened. The three `door.onclick` functions are where a door is opened. At the bottom of each event, call the `playDoor()` function.
 
 Hint:
 ```js
@@ -53,7 +53,7 @@ const functionName = (argument) => {
 }
 ```
 
-Task: An important global variable must be created at this point since it will be very useful for your `isClicked()` function and as well as other __JavaScript__ functions in this game.
+Task: An important global variable must be created at this point since it will be very useful for your `isClicked()` function as well as other __JavaScript__ functions in this game.
 
 Create another global variable called `closedDoorPath` and assign this url as its value:
 ```html
@@ -85,7 +85,8 @@ if(!isClicked(doorImage1)) {
   // Function code...;
 }
 ```
-Task: The time has come to create your `gameOver()` function so that the `playDoor()` can actually call it when `numClosedDoors` is equivalent to `0`.
+
+Task: The time has come to create a `gameOver()` function so that your `playDoor()` function can actually end the game when `numClosedDoors` is equivalent to `0`.
 
 Under your `door.onclick` functions, write an empty function called `gameOver()`.
 
@@ -98,7 +99,7 @@ Hint: Use the DOM method:
 let variable = document.getElementById('id');
 ```
 
-Task: Now that we have the `startButton` variable and your game is protected from 'cheap' wins, let's expand the `gameOver()` function. 
+Task: Now that you have the `startButton` variable, let's expand the `gameOver()` function. 
 
 Add `str` as its argument and write an `if` statement where the condition checks if `str` is equivalent to `'win'`.  If this condition equates to true, then the `innerHTML` of the `startButton` will change to 'You win! Play again?'. 
 
@@ -118,4 +119,4 @@ Hint:
 gameOver('win');
 ```
 
-Refresh the page and open all three doors and look what happens to your 'Good luck' string in the `startButton`! Your winning condition has been reached. The only problem is that the current logic will always have you "win" as long as all the doors are open - regardless of when you find the ChoreBot.
+Refresh the page and open all three doors and look what happens to your 'Good luck' string in the `startButton`. Your winning condition (`numClosedDoors === 0`) has been reached. The only problem is that the current logic will always have you "win" as long as all the doors are open - regardless of when you find the ChoreBot.
