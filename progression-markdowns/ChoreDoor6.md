@@ -40,6 +40,8 @@ playDoor(door1);
 
 Task: Now reexamine the `gameOver()` function. Beneath the current logic, write an `else` statement that will change the `innerHTML` of the `startButton` variable to 'Game over! Play again?'.
 
+Refresh the page and notice how the text changes to 'Game Over! Play again?' if you find the ChoreBot behind the first door or second door that you open.
+
 Hint: 
 ```js
 else {
@@ -47,7 +49,9 @@ else {
 }
 ```
 
-Task: Great! The text changes to 'Game Over! Play again?' if you find the ChoreBot but notice that you can still open the other doors (and override a loss to victory). Add a new global variable named `currentlyPlaying` and set its value to `true`. 
+Task: There's a problem with the current gaming logic. Notice that even if you find the ChoreBot behind the first door or second door that you open, you can still open the remaining doors and override a loss to victory (See what happens to the `startButton` text once all the doors are open). Adding more logic will fix this gaming flaw.
+
+Add a new global variable named `currentlyPlaying` and set its value to `true`. 
 
 Hint: Global variables are declared outside of     	functions and are listed before all functions.
 
@@ -55,18 +59,18 @@ Task: At the bottom of the `gameOver()` function, set `currentlyPlaying` to `fal
 
 Hint: Set `currentlyPlaying` to `false` outside of the `if/else` statement
 
-Task: Now looking at the `door.onlick` functions, add to the current `if` statement a condition checks whether `currentlyPlaying` returns true AND that the `isClicked(door)` function returns false.
+Task: Now looking at the `door.onlick` functions, add to the current `if` statement a condition that checks whether `currentlyPlaying` returns true AND that the `isClicked(door)` function returns false.
+
+Well done - you've made a game that can't be played once you've hit the losing __game over__ condition of finding the ChoreBot before `(numClosedDoors === 0)`. 
 
 Hint:
 ```js
 if(currentlyPlaying && !isClicked(door))
 ```
 
-Well done - you've made a game that can't be played once you've hit the losing __game over__ condition of finding the ChoreBot before `(numClosedDoors === 0)`. 
+Task: The game is now functioning as it should. It lets you know if you've opened all the doors to victory and it tells you if you've lost because you found the ChoreBot before all the doors were opened. There's one problem though - the only way to reset the values for a new round is to refresh the page. Your next task is to turn your `startButton` into exactly that - a start button for a new round. 
 
-Task: Wow - the game works! It lets you know if you've opened all the doors to victory and it tells you if you've lost because you found the ChoreBot before all the doors were opened. There's one problem though - the only way to reset the values for a new round is to refresh the page. Your next task is to turn your `startButton` into exactly that - a start button for a new round. 
-
-Directly underneath the `door.onclick` functions, write the logic to turn the `startButton` into an `.onclick` arrow function that will trigger a new function called `startRound()`.
+Directly underneath the `door.onclick` functions, write the logic to turn the `startButton` into an `.onclick` arrow function that will trigger a `startRound()` function (which hasn't been written yet).
 
 Hint:
 ```js
@@ -77,17 +81,18 @@ startButton.onclick = () => {
 
 Task: The `startRound()` function not only has to start a new game; it also has to reset the values from the previous rounds. 
 
-Write this `startRound()` function so that the following variables are reset to their original values:
+Create this new `startRound()` function after the `.onclick` functions which resets the following variables back to their original values:
 
  * All `doorImage.src` values
  * `numClosedDoors` variable
  * `startButton.innerHTML` variable
+ * `currentlyPlaying` variable
 
 Hint: The `numClosedDoors` variable is set to `3`, each `doorImage.src` variable is set to the `closedDoorPath` variable, and the `startButton.innerHTML` is set to `'Good luck!'`
 
 Task: After all these variables are reset, call the `randomChoreDoorGenerator()` function at the bottom of the `startRound()` function.
 
-Task: Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` element needs to be replaced by the `startRound()` function so that the game resets correctly for each new round.
+Task: Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` element needs to be replaced by the `startRound()` function so that the game's variables reset to their original values at the start of each new round.
 
 Hint:
 ```js
@@ -97,7 +102,7 @@ Hint:
 </script>
 ```
 
-Task: You're almost at the finish line! You just need to address two bugs in your logic. The first bug is that the game can reset mid-round if the player clicks on the `startRound` button. This bug results in every `doorImage.src` becoming a closed door again before the winning or losing condition is reached.
+Task: Currently, the game can reset mid-round if the player clicks on the `startRound` button. This bug results in every `doorImage.src` becoming a closed door again before the winning or losing condition is reached.
 
 Wrap the `startButton.onclick` function in an `if` statement where the condition checks if the `currentlyPlaying` variable is `false` so that a player cannot reset the game mid-round. 
 
@@ -106,8 +111,4 @@ Hint:
 if(!currentlyPlaying) 
 ```
 
-Task: The second bug is only noticed after a player completes one round. If a player clicks the `startButton` to play a new round, each `doorImage.src` value resets to a closed door image again but nothing happens if you click on the door this time. This error occurs because the `currentlyPlaying` variable was set to `false` in the `gameOver()` function. This variable needs to be reset back to `true` when a new round is called.
-
-Within the `startRound()` function, add the `currentlyPlaying` variable and set it to `true`.
-
-Congratulations! You've successfully built your first Milestone Project and created a fun interactive game utilizing your __HTML__, __CSS__, and __JavaScript__ knowledge. Be proud of how far you've come. If you feel like taking this project to the next level (ie. adding more flourish to the __HTML__ and __CSS__, score keeping, determining highest winning streak, etc.), we invite you to take on the challenges presented in the __Next Steps__ section of this Milestone Project.
+Congratulations! You've successfully built your first Milestone Project and created a fun interactive game utilizing your __HTML__, __CSS__, and __JavaScript__ knowledge. Be proud of how far you've come. If you feel like taking this project to the next level (ie. adding more flourish to the __HTML__ and __CSS__, score keeping, determining highest winning streak, etc.), you're invited to take on the challenges presented in the __Next Steps__ section of this Milestone Project.
