@@ -5,7 +5,7 @@ A guessing game that incorporates HTML, CSS, &amp; VanillaJS
 
 ### mvp-solution-code folder
 
-1. chore_door.html
+1. index.html
 2. style.css
 3. script.js
 
@@ -13,7 +13,7 @@ A guessing game that incorporates HTML, CSS, &amp; VanillaJS
 
 ### next-steps-solution-code folder
 
-1. chore_door.html
+1. index.html
 2. style.css
 3. script.js
 4. next-step-local-images folder
