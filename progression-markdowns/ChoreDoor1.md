@@ -63,7 +63,7 @@ Hint:
 <script type="text/javascript" src="script.js"></script>
 ``` 
 
-Task: Navigate to the __script.js__ file. Create a global variable called `doorImage1`. Use a __JavaScript__ DOM method to assign this global variable to the __HTML__ element with the `id` `door1`.
+Task: Navigate to the __script.js__ file. Create a global variable called `doorImage1`. Use a __JavaScript__ DOM method to assign this global variable to the __HTML__ element with the `id` of `door1`.
 
 Hint: Use the DOM method: 
 ```js

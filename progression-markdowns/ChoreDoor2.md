@@ -29,7 +29,7 @@ Task: Next, in the __style.css__ file, create the `.door-frame` CSS class select
 * cursor - pointer 
 * padding - 10px
 
-Refresh the page after each new CSS property is assigned so you can see how each individual value influences the three doors!
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences the three doors.
 
 Hint: A class's property and value are constructed with:
 ```css

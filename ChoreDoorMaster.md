@@ -63,7 +63,7 @@ Hint:
 <script type="text/javascript" src="script.js"></script>
 ``` 
 
-Task: Navigate to the __script.js__ file. Create a global variable called `doorImage1`. Use a __JavaScript__ DOM method to assign this global variable to the __HTML__ element with the `id` `door1`.
+Task: Navigate to the __script.js__ file. Create a global variable called `doorImage1`. Use a __JavaScript__ DOM method to assign this global variable to the __HTML__ element with the `id` of `door1`.
 
 Hint: Use the DOM method: 
 ```js
@@ -131,7 +131,7 @@ Task: Next, in the __style.css__ file, create the `.door-frame` CSS class select
 * cursor - pointer 
 * padding - 10px
 
-Refresh the page after each new CSS property is assigned so you can see how each individual value influences the three doors!
+Refresh the page after each new CSS property is assigned so you can see how each individual value influences the three doors.
 
 Hint: A class's property and value are constructed with:
 ```css
@@ -189,7 +189,7 @@ Assessment: Let's Make This LOOK Like a Game!
 
 Task: You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding your __index.html__ and __style.css__ pages. 
 
-Right after the opening `<body>` tag, create a new `<div>` with the class name `"header"`. Inside this new `<div>` parent element, create an `<img>` child element for the logo image.  Copy this url and paste into the `src`:
+Right after the opening `<body>` tag, create a new `<div>` element with the class name `"header"`. Inside this new `<div>` parent element, create an `<img>` child element for the logo image.  Copy this url and paste into the `src`:
 ```html
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/logo.svg
 ```
@@ -276,7 +276,10 @@ Hint:
 </table>
 ```
 
-Task: Nested inside each `<tr>` parent element should be two `<td>` child elements: the first `<td>` of each child pair has the class name `"instructions-number"` while the second `<td>` of each child pair has the class name `"instructions-text"`.
+Task: Nested inside each `<tr>` parent element should be two `<td>` child elements: 
+
+  * The first `<td>` of each child pair has the class name `"instructions-number"`.
+  * The second `<td>` of each child pair has the class name `"instructions-text"`.
 
 Hint:
 ```html
@@ -300,7 +303,7 @@ Hint:
 </table>
 ``` 
 
-Task: In between each `<td></td>` element with the `"instructions-number` class, type the numbers `1` through `4` so that the `<td></td>` element is numbered sequentially.
+Task: In between each `<td></td>` element with the `"instructions-number` class, type the numbers `1` through `4` so that these four `<td></td>` elements are numbered sequentially.
 
 Hint:
 ```html
@@ -354,7 +357,7 @@ Refresh the page to see the three doors centered.
 
 Task: The last HTML feature to build is a button that will respond to the status of the game. 
 
-Beneath the `<door-row>` element of your __index.html__ page, create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type `Good luck!` in between the `<div></div>`.
+Beneath the `<door-row>` element of your __index.html__ page, create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type `Good luck!` in between the `<div></div>` tags.
 
 Refresh the page to see `Good luck!` appear below the doors on the left.
 
@@ -576,7 +579,7 @@ let variable = document.getElementById('id');
 
 Task: Now that you have the `startButton` variable, let's expand the `gameOver()` function. 
 
-Add `str` as its argument and write an `if` statement where the condition checks if `str` is equivalent to `'win'`.  If this condition equates to true, then the `innerHTML` of the `startButton` will change to 'You win! Play again?'. 
+Add `str` (an abbreviation for string) as its argument and write an `if` statement where the condition checks if `str` is equivalent to `'win'`.  If this condition equates to true, then the `innerHTML` of the `startButton` will change to 'You win! Play again?'. 
 
 Hint:
 ```js
@@ -587,7 +590,7 @@ if (str === 'win') {
 
 Task: Within your `playDoor()` function, the `gameOver()` function is called but without passing in an argument. Without an argument, the `startButton` text will not change when you open all three doors.
 
-Add `'win'` as the argument for the `gameOver()` function within your `playDoor()` function.
+Add the string `'win'` as the argument for the `gameOver()` function within your `playDoor()` function.
 
 Hint:
 ```js
@@ -598,7 +601,7 @@ Refresh the page and open all three doors and look what happens to your 'Good lu
 
 Assessment: Let's Make This ACT Like a Game! - Part III (Building a Loser)
 
-Your game is randomly hiding the ChoreBot behind one of the doors but the current logic doesn't care whether you find the ChoreBot in the first door you open or the last. Now you're going to work towards incorporating __game over__ logic - for losing! 
+Your game is randomly hiding the ChoreBot behind one of the doors but the current logic doesn't care whether you find the ChoreBot in the first door you open or the last. Now you're going to work towards incorporating __game over__ logic for losing! 
 
 Task: You need to check if a door has the game-ending ChoreBot.
 
@@ -684,11 +687,11 @@ Create this new `startRound()` function after the `.onclick` functions which res
  * `startButton.innerHTML` variable
  * `currentlyPlaying` variable
 
-Hint: The `numClosedDoors` variable is set to `3`, each `doorImage.src` variable is set to the `closedDoorPath` variable, and the `startButton.innerHTML` is set to `'Good luck!'`
+Hint: The `numClosedDoors` variable is set to `3`, each `doorImage.src` variable is set to the `closedDoorPath` variable, the `startButton.innerHTML` is set to `'Good luck!'`, and the `currentlyPlaying` variable is set to true.
 
 Task: After all these variables are reset, call the `randomChoreDoorGenerator()` function at the bottom of the `startRound()` function.
 
-Task: Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` element needs to be replaced by the `startRound()` function so that the game's variables reset to their original values at the start of each new round.
+Task: Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` element needs to be replaced by the `startRound()` function so that the game's variables are set to their original values when the game is initially loaded.
 
 Hint:
 ```js

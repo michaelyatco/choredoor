@@ -2,7 +2,7 @@
 
 Assessment: Let's Make This ACT Like a Game! - Part III (Building a Loser)
 
-Your game is randomly hiding the ChoreBot behind one of the doors but the current logic doesn't care whether you find the ChoreBot in the first door you open or the last. Now you're going to work towards incorporating __game over__ logic - for losing! 
+Your game is randomly hiding the ChoreBot behind one of the doors but the current logic doesn't care whether you find the ChoreBot in the first door you open or the last. Now you're going to work towards incorporating __game over__ logic for losing! 
 
 Task: You need to check if a door has the game-ending ChoreBot.
 
@@ -88,11 +88,11 @@ Create this new `startRound()` function after the `.onclick` functions which res
  * `startButton.innerHTML` variable
  * `currentlyPlaying` variable
 
-Hint: The `numClosedDoors` variable is set to `3`, each `doorImage.src` variable is set to the `closedDoorPath` variable, and the `startButton.innerHTML` is set to `'Good luck!'`
+Hint: The `numClosedDoors` variable is set to `3`, each `doorImage.src` variable is set to the `closedDoorPath` variable, the `startButton.innerHTML` is set to `'Good luck!'`, and the `currentlyPlaying` variable is set to true.
 
 Task: After all these variables are reset, call the `randomChoreDoorGenerator()` function at the bottom of the `startRound()` function.
 
-Task: Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` element needs to be replaced by the `startRound()` function so that the game's variables reset to their original values at the start of each new round.
+Task: Now that the `startRound()` function exists, the `randomChoreDoorGenerator()` function at the bottom of the `<script>` element needs to be replaced by the `startRound()` function so that the game's variables are set to their original values when the game is initially loaded.
 
 Hint:
 ```js

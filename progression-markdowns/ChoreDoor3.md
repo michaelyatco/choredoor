@@ -4,7 +4,7 @@ Assessment: Let's Make This LOOK Like a Game!
 
 Task: You have three doors but they're all huddled in the top left corner. Give your website some flavor and symmetry by expanding your __index.html__ and __style.css__ pages. 
 
-Right after the opening `<body>` tag, create a new `<div>` with the class name `"header"`. Inside this new `<div>` parent element, create an `<img>` child element for the logo image.  Copy this url and paste into the `src`:
+Right after the opening `<body>` tag, create a new `<div>` element with the class name `"header"`. Inside this new `<div>` parent element, create an `<img>` child element for the logo image.  Copy this url and paste into the `src`:
 ```html
 https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/logo.svg
 ```
@@ -91,7 +91,10 @@ Hint:
 </table>
 ```
 
-Task: Nested inside each `<tr>` parent element should be two `<td>` child elements: the first `<td>` of each child pair has the class name `"instructions-number"` while the second `<td>` of each child pair has the class name `"instructions-text"`.
+Task: Nested inside each `<tr>` parent element should be two `<td>` child elements: 
+
+  * The first `<td>` of each child pair has the class name `"instructions-number"`.
+  * The second `<td>` of each child pair has the class name `"instructions-text"`.
 
 Hint:
 ```html
@@ -115,7 +118,7 @@ Hint:
 </table>
 ``` 
 
-Task: In between each `<td></td>` element with the `"instructions-number` class, type the numbers `1` through `4` so that the `<td></td>` element is numbered sequentially.
+Task: In between each `<td></td>` element with the `"instructions-number` class, type the numbers `1` through `4` so that these four `<td></td>` elements are numbered sequentially.
 
 Hint:
 ```html
@@ -169,7 +172,7 @@ Refresh the page to see the three doors centered.
 
 Task: The last HTML feature to build is a button that will respond to the status of the game. 
 
-Beneath the `<door-row>` element of your __index.html__ page, create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type `Good luck!` in between the `<div></div>`.
+Beneath the `<door-row>` element of your __index.html__ page, create a new `<div>` element with an `id` of `"start"` and the class name `"start-row"`. Type `Good luck!` in between the `<div></div>` tags.
 
 Refresh the page to see `Good luck!` appear below the doors on the left.
 

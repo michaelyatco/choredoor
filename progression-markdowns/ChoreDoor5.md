@@ -101,7 +101,7 @@ let variable = document.getElementById('id');
 
 Task: Now that you have the `startButton` variable, let's expand the `gameOver()` function. 
 
-Add `str` as its argument and write an `if` statement where the condition checks if `str` is equivalent to `'win'`.  If this condition equates to true, then the `innerHTML` of the `startButton` will change to 'You win! Play again?'. 
+Add `str` (an abbreviation for string) as its argument and write an `if` statement where the condition checks if `str` is equivalent to `'win'`.  If this condition equates to true, then the `innerHTML` of the `startButton` will change to 'You win! Play again?'. 
 
 Hint:
 ```js
@@ -112,7 +112,7 @@ if (str === 'win') {
 
 Task: Within your `playDoor()` function, the `gameOver()` function is called but without passing in an argument. Without an argument, the `startButton` text will not change when you open all three doors.
 
-Add `'win'` as the argument for the `gameOver()` function within your `playDoor()` function.
+Add the string `'win'` as the argument for the `gameOver()` function within your `playDoor()` function.
 
 Hint:
 ```js
