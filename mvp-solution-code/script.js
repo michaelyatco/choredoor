@@ -76,7 +76,9 @@
     }
 
     startButton.onclick = () => {
+      if(!currentlyPlaying) {
         startRound();
+      }
     }
 
     const startRound = () => {
